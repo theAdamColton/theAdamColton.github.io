@@ -8,8 +8,8 @@ div.sidebarcontainer {
 
 div.sidebar {
   width: 15%;
-  padding-left:5px;
-  padding-right:5px;
+  padding-left:15px;
+  padding-right:15px;
   background-color: black;
 }
 
@@ -20,6 +20,12 @@ div.sidebar.right {
 }
 
 div.pagecontent {
+	padding: 0px 20px;
+}
+
+div.pagecontent > div.main-title {
+	font-size:x-large;
+	text-align:center;
 }
 
 p.desc {
@@ -35,4 +41,22 @@ p.desc > span.title {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+
+.rainbow-text-animated {
+    background: linear-gradient(to right, red, orange, yellow, green, blue, purple);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow-animation 4s linear infinite;
+    background-size: 400% 100%;
+}
+
+@keyframes rainbow-animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
 }
