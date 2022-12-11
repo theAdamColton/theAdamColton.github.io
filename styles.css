@@ -8,9 +8,9 @@ div.sidebarcontainer {
 
 div.sidebar {
   width: 15%;
-  padding-left:15px;
-  padding-right:15px;
   background-color: black;
+  display: flex;
+  flex-direction: column;
 }
 
 div.sidebar.left {
@@ -20,21 +20,31 @@ div.sidebar.right {
 }
 
 div.pagecontent {
-	padding: 0px 20px;
+  padding: 0px 20px;
+  background-color: #366c7c87;
 }
 
 div.pagecontent > div.main-title {
-	font-size:x-large;
-	text-align:center;
+  font-size:xx-large;
+  text-align: center;
 }
 
 p.desc {
-	font-size: large;
-	text-align:center;
+  font-size: large;
+  text-align: center;
 }
 
 p.desc > span.title {
-	font-size:larger;
+  font-size: larger;
+}
+
+div.proj-box {
+	padding: 10px;
+}
+
+div.proj-box-inner {
+	padding: 5px;
+	background-color:#01020214;
 }
 
 .column {
@@ -44,19 +54,28 @@ p.desc > span.title {
 }
 
 .rainbow-text-animated {
-    background: linear-gradient(to right, red, orange, yellow, green, blue, purple);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: rainbow-animation 4s linear infinite;
-    background-size: 400% 100%;
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    purple
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow-animation 4s linear infinite;
+  background-size: 400% 100%;
 }
 
 @keyframes rainbow-animation {
-    0%,100% {
-        background-position: 0 0;
-    }
-    50% {
-        background-position: 100% 0;
-    }
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
 }

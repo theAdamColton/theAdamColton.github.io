@@ -8,7 +8,7 @@
   <body>
     <div class="sidebarcontainer">
       <div class="sidebar left">
-	      Hello
+        <img src="fire.webp" width="100%" />
       </div>
       <div class="pagecontent">
         <div class="column">
@@ -24,74 +24,93 @@
           </div>
         </div>
 
-	<div class="rainbow-text-animated main-title">
-	Adam Colton
-	</div>
+        <div class="rainbow-text-animated main-title">Adam Colton</div>
         <hr />
-        <h2>Projects </h2>
+        <h2>Projects:</h2>
 
-        <p class="desc">
-          <span class="title">
-            <a href="publicfiles/songsfromukraine.pdf"> Songs from Ukraine </a>:
-          </span>
+        <div class="proj-box">
+          <div class="proj-box-inner">
+            <span class="title">
+              <a href="https://1anza.github.io/dataviscourse-pr-gravitymarket/"
+                >Gravity Market</a
+              >:
+            </span>
+            <br />
 
-          <br />
-          I scraped several hundred gigabytes of social media posts and analyzed
-          the music found in them. Videos were scraped from the Telegram social
-          media platform. Music metadata was retrieved from the videos using
-          Shazam. <br /><br />
-          Videos were retrieved over the course of months. The scraping process
-          was scheduled using SystemD units on a linux server. CSV metrics on
-          the data were updated asyncronously via file changes. The code for the
-          scraper and data processing was written in Python.
+            A D3 javascript web app which uses a physics simulation to display
+            the percent change in value of various stocks from the S&P 500. This
+            project was made for Vis for Data Science 2022 taught by Dr.
+            Alexander Lex at the University of Utah.
+          </div>
+        </div>
 
-          <br />
-          <br />
+        <div class="proj-box">
+          <div class="proj-box-inner">
+            <span class="title">
+              <a href="publicfiles/songsfromukraine.pdf"> Songs from Ukraine </a
+              >:
+            </span>
 
-          <span class="title">
-            <a href="publicfiles/scivispreport.pdf">
-              Visualization of a Computationally Derived Fentanyl Binding
-              Protein </a
-            >:
-          </span>
+            <br />
+            I scraped several hundred gigabytes of social media posts and
+            analyzed the music found in them. Videos were scraped from the
+            Telegram social media platform. Music metadata was retrieved from
+            the videos using Shazam. <br /><br />
+            Videos were retrieved over the course of months. The scraping
+            process was scheduled using SystemD units on a linux server. CSV
+            metrics on the data were updated asyncronously via file changes. The
+            code for the scraper and data processing was written in Python.
+          </div>
+        </div>
 
-          <br />
-          I used PyMol to create an animation of a binder enzyme as it
-          transitions to the bound state. The program 'Climber' is used to
-          interpolate between the bound and apo states. The rendered video can
-          be found
-          <a href="publicfiles/cs5635_final_project/output.mp4">here</a>.
+        <div class="proj-box">
+          <div class="proj-box-inner">
+            <span class="title">
+              <a href="publicfiles/scivispreport.pdf">
+                Visualization of a Computationally Derived Fentanyl Binding
+                Protein </a
+              >:
+            </span>
 
-          <br />
-          <br />
+            <br />
+            I used PyMol to create an animation of a binder enzyme as it
+            transitions to the bound state. The program 'Climber' is used to
+            interpolate between the bound and apo states. The rendered video can
+            be found
+            <a href="publicfiles/cs5635_final_project/output.mp4">here</a>.
+          </div>
+        </div>
 
-          <span class="title">
-            <a href="https://github.com/theAdamColton/ascii-autoencoder"
-              >Ascii Art Autoencoder</a
-            >:
-          </span>
-          <br />
-          I trained a adversarial autoencoder on ASCII art. The characters in
-          the art are represented as one hot encoded vectors at each 'pixel' in
-          the string. <br />
+        <div class="proj-box">
+          <div class="proj-box-inner">
+            <span class="title">
+              <a href="https://github.com/theAdamColton/ascii-autoencoder"
+                >Ascii Art Autoencoder</a
+              >:
+            </span>
+            <br />
+            I trained a adversarial autoencoder on ASCII art. The characters in
+            the art are represented as one hot encoded vectors at each 'pixel'
+            in the string.
+          </div>
+        </div>
 
-          <br />
-          <br />
-
-          <span class="title">
-            <a href="https://github.com/theAdamColton/ethminer-gui"
-              >Ethminer GUI</a
-            >:
-          </span>
-          <br />
-          A simple cross platform GUI app written in Rust for the ethminer CLI program. It
-          includes capturing of console output from the program, and asyncronous
-          channel communication using Tokio.
-
-          <br />
-        </p>
+        <div class="proj-box">
+          <div class="proj-box-inner">
+            <span class="title">
+              <a href="https://github.com/theAdamColton/ethminer-gui"
+                >Ethminer GUI</a
+              >:
+            </span>
+            <br />
+            A simple cross platform GUI app written in Rust for the ethminer CLI
+            program. It includes capturing of console output from the program,
+            and asyncronous channel communication using Tokio.
+          </div>
+        </div>
 
         <hr />
+
         <p class="desc">
           <a href="mailto:atcolton@tutanota.com">atcolton@tutanota.com</a> |
           <a href="https://github.com/theAdamColton"
@@ -99,7 +118,10 @@
           >
         </p>
       </div>
-      <div class="sidebar right"></div>
+
+      <div class="sidebar right">
+        <img src="fire.webp" width="100%" />
+      </div>
     </div>
   </body>
 </html>
