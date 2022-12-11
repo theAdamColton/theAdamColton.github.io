@@ -1,0 +1,38 @@
+body {
+  margin: 0px;
+}
+
+div.sidebarcontainer {
+  display: flex;
+}
+
+div.sidebar {
+  width: 15%;
+  padding-left:5px;
+  padding-right:5px;
+  background-color: black;
+}
+
+div.sidebar.left {
+}
+
+div.sidebar.right {
+}
+
+div.pagecontent {
+}
+
+p.desc {
+	font-size: large;
+	text-align:center;
+}
+
+p.desc > span.title {
+	font-size:larger;
+}
+
+.column {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}

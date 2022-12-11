@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Adam Colton</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="sidebarcontainer">
+      <div class="sidebar left">
+	      Hello
+      </div>
+      <div class="pagecontent">
+        <div class="column">
+          <div class="row">
+            <img
+              src="me.jpg"
+              alt="My picture from the Berlin wall"
+              height="500"
+            />
+          </div>
+          <div class="row">
+            <img src="facepic.jpeg" alt="My mug" height="500" />
+          </div>
+        </div>
+
+        <p class="desc">
+          Hi, and welcome to my website! I am a junior studying data science at
+          the University of Utah.
+        </p>
+        <hr />
+        <h2 style="text-align: center">Some of my projects:</h2>
+
+        <p class="desc">
+          <span class="title">
+            <a href="publicfiles/songsfromukraine.pdf"> Songs from Ukraine </a>:
+          </span>
+
+          <br />
+          I scraped several hundred gigabytes of social media posts and analyzed
+          the music found in them. Videos were scraped from the Telegram social
+          media platform. Music metadata was retrieved from the videos using
+          Shazam. <br /><br />
+          Videos were retrieved over the course of months. The scraping process
+          was scheduled using SystemD units on a linux server. CSV metrics on
+          the data were updated asyncronously via file changes. The code for the
+          scraper and data processing was written in Python.
+
+          <br />
+          <br />
+
+          <span class="title">
+            <a href="publicfiles/scivispreport.pdf">
+              Visualization of a Computationally Derived Fentanyl Binding
+              Protein </a
+            >:
+          </span>
+
+          <br />
+          I used PyMol to create an animation of a binder enzyme as it
+          transitions to the bound state. The program 'Climber' is used to
+          interpolate between the bound and apo states. The rendered video can
+          be found
+          <a href="publicfiles/cs5635_final_project/output.mp4">here</a>.
+
+          <br />
+          <br />
+
+          <span class="title">
+            <a href="https://github.com/theAdamColton/ascii-autoencoder"
+              >Ascii Art Autoencoder</a
+            >:
+          </span>
+          <br />
+          I trained a adversarial autoencoder on ASCII art. The characters in
+          the art are represented as one hot encoded vectors at each 'pixel' in
+          the string. <br />
+
+          <br />
+          <br />
+
+          <span class="title">
+            <a href="https://github.com/theAdamColton/ethminer-gui"
+              >Ethminer GUI</a
+            >:
+          </span>
+          <br />
+          A simple native GUI written in Rust for the ethminer CLI program. It
+          includes capturing of console output from the program, and asyncronous
+          channel communication using Tokio.
+
+          <br />
+        </p>
+
+        <hr />
+        <p class="desc">
+          <a href="mailto:atcolton@tutanota.com">atcolton@tutanota.com</a> |
+          <a href="https://github.com/theAdamColton"
+            >https://github.com/theAdamColton</a
+          >
+        </p>
+      </div>
+      <div class="sidebar right"></div>
+    </div>
+  </body>
+</html>
