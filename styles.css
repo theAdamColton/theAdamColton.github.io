@@ -1,9 +1,15 @@
+html {
+  height: 100%;
+}
+
 body {
   margin: 0px;
+  height: 100%;
 }
 
 div.sidebarcontainer {
   display: flex;
+  min-height: 100%;
 }
 
 div.sidebar {
@@ -25,26 +31,28 @@ div.pagecontent {
 }
 
 div.pagecontent > div.main-title {
-  font-size:xx-large;
+  font-size: xx-large;
   text-align: center;
 }
 
-p.desc {
-  font-size: large;
+.footer {
   text-align: center;
 }
 
-p.desc > span.title {
+div.section-title {
+  padding: 15px;
   font-size: larger;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 div.proj-box {
-	padding: 10px;
+  padding: 10px;
 }
 
 div.proj-box-inner {
-	padding: 5px;
-	background-color:#01020214;
+  padding: 5px;
+  background-color: #01020214;
 }
 
 .column {
