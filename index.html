@@ -89,14 +89,16 @@
         <div class="proj-box">
           <div class="proj-box-inner">
             <span class="title">
-              <a href="https://github.com/theAdamColton/ascii-autoencoder"
-                >Ascii Art Autoencoder</a
+              <a href="https://github.com/theAdamColton/ascii-unmasked"
+                >Ascii Art Latent Masked Transformer Model</a
               >:
             </span>
             <br />
-            I trained a adversarial autoencoder on ASCII art. The characters in
+            I trained a variational quantized autoencoder on ASCII art. The characters in
             the art are represented as one hot encoded vectors at each 'pixel'
-            in the string.
+            in the string. The discrete latents learned by this model were used to train
+	    a bidirectional transformer. The transformer was trained to predict masked 
+	    latent tokens, akin to <a href="https://arxiv.org/pdf/2202.04200.pdf">MaskGit</a> by Google research.
           </div>
         </div>
 
