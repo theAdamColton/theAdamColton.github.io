@@ -19,15 +19,13 @@ div.sidebar {
   flex-direction: column;
 }
 
-div.sidebar.left {
-}
-
-div.sidebar.right {
-}
-
 div.pagecontent {
   padding: 0px 20px;
   background-color: #366c7c87;
+}
+
+div.pagecontent div {
+  border-radius: 10px;
 }
 
 div.pagecontent > div.main-title {
@@ -37,6 +35,7 @@ div.pagecontent > div.main-title {
 
 .footer {
   text-align: center;
+  padding:40px;
 }
 
 div.section-title {
@@ -53,6 +52,32 @@ div.proj-box {
 div.proj-box-inner {
   padding: 5px;
   background-color: #01020214;
+}
+
+div.video-container,
+div.video-box {
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+div.video-box {
+  padding: 10px;
+  background-color: #acbabf;
+  width: min-content;
+}
+
+div.video-box video {
+  width: clamp(300px, 40vw, 600px);
+}
+
+div.video-description {
+  width: 80%;
+  padding: 10px;
+  font-size: small;
 }
 
 .column {
@@ -86,4 +111,34 @@ div.proj-box-inner {
   50% {
     background-position: 100% 0;
   }
+}
+
+div.rainbow {
+  --angle: 0deg;
+  border: 10px solid;
+  border-image: conic-gradient(
+      from var(--angle),
+      red,
+      yellow,
+      lime,
+      aqua,
+      blue,
+      magenta,
+      red
+    )
+    1;
+
+  animation: 10s rotate linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }

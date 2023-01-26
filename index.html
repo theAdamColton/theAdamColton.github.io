@@ -54,8 +54,7 @@
         <div class="proj-box">
           <div class="proj-box-inner">
             <span class="title">
-              <a href="songsfromukraine.pdf"> Songs from Ukraine </a
-              >:
+              <a href="songsfromukraine.pdf"> Songs from Ukraine </a>:
             </span>
 
             <br />
@@ -82,7 +81,7 @@
             <br />
             I used PyMol to create an animation of a binder enzyme as it
             transitions to the bound state. The program 'Climber' is used to
-            interpolate between the bound and apo states. 
+            interpolate between the bound and apo states.
           </div>
         </div>
 
@@ -94,11 +93,52 @@
               >:
             </span>
             <br />
-            I trained a variational quantized autoencoder on ASCII art. The characters in
-            the art are represented as one hot encoded vectors at each 'pixel'
-            in the string. The discrete latents learned by this model were used to train
-	    a bidirectional transformer. The transformer was trained to predict masked 
-	    latent tokens, akin to <a href="https://arxiv.org/pdf/2202.04200.pdf">MaskGit</a> by Google research.
+            I trained a variational quantized autoencoder on ASCII art. The
+            characters in the art are represented as one hot encoded vectors at
+            each 'pixel' in the string. The discrete latents learned by this
+            model were used to train a bidirectional transformer. The
+            transformer was trained to predict masked latent tokens, akin to
+            <a href="https://arxiv.org/pdf/2202.04200.pdf">MaskGit</a> by Google
+            research.
+
+            <div class="video-container">
+              <div class="video-box">
+                <video object-fit="fill" autoplay controls muted loop>
+                  <source src="ascii-unmasked-demo.mp4" type="video/mp4" />
+                </video>
+
+                <div class="video-description">
+                  <p>
+                    This video shows the interpolation of the latent space of
+                    the VQ VAE. In the top left corner you can see a
+                    visualization of the discrete tokens which compose the
+                    latent space. The left ascii art is the decoded
+                    representation of the current embedding. On the right is the
+                    unaltered ascii art that is being interpolated to.
+                  </p>
+
+                  <p>
+                    First, a new datapoint is randomly pulled from the set of
+                    training items. This is shown as the ascii art on the right
+                    side. Interpolation is done over spacial dimensions,
+                    truncating or padding with zeros the interpolated-from and
+                    interpolated-to embedding tensors and linearly combining
+                    them based on the current step in the interpolation. You can
+                    observe the dimensions of the embedding space shift with
+                    this interpolation.
+                  </p>
+
+                  <p>
+                    Next, the masking step can be observed. Randomly, tokens in
+                    the top right are masked and turn red. The bidirectional
+                    transformer then in one pass reconstructs the set of tokens.
+                    The reconstructed tokens and decoded ascii art are then
+                    shown for about a second before again starting interpolation
+                    to the next data point.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -120,9 +160,7 @@
 
         <div class="footer">
           <a href="mailto:atcolton@tutanota.com">atcolton@tutanota.com</a> |
-          <a href="https://github.com/theAdamColton"
-            >github</a
-          >
+          <a href="https://github.com/theAdamColton">github</a>
         </div>
       </div>
 
