@@ -37,6 +37,47 @@
         <div class="proj-box">
           <div class="proj-box-inner">
             <span class="title">
+              <a href="/a-picture-is-worth-8x8x8-words.html"
+                >Image Retrieval: A Picture is worth 8x8x8 Words</a
+              >:
+            </span>
+
+            SOTA image retrieval models usually use global real-number
+            embeddings, obtained from big neural networks. But why is there no
+            love for more traditional information retrieval techniques such as
+            BoW? Given a 256x256 image, we encode it into a 8x8x8 matrix of
+            discrete integer tokens. We do this using a ResNet model trained
+            with a learned
+            <a href="https://github.com/lucidrains/vector-quantize-pytorch"
+              >vector quantization</a
+            >
+            layer. Using these tokens, we use
+            <div class="rainbow-text-animated" style="display: inline">
+              2D Kgrams
+            </div>
+            to obtain global vectors containing term frequencies.
+
+            <div class="video-container">
+              <div class="video-box">
+                <img src="2d_kgrams.png" alt="2d kgrams diagram"/ height="300">
+                <div class="video-description">
+                  <div class="rainbow-text-animated" style="display: inline">
+                    2D Kgrams
+                  </div>
+                  : Given an arbitrarily sized 3D input tensor of token IDs, we
+                  can obtain a vector of gram frequencies, also called a
+                  bag-of-words (BoW). For tokens obtained from CNNs with vector
+                  quantization, this BoW can contain rich information about the
+                  activation at this layer.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-box">
+          <div class="proj-box-inner">
+            <span class="title">
               <a href="https://1anza.github.io/dataviscourse-pr-gravitymarket/"
                 >Gravity Market</a
               >:
