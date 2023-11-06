@@ -245,12 +245,15 @@
 
 						<br />
 						<br />
-						TODO TODO As a side note, maybe a promising future research
-						direction is to only have your generative image model generate
+						A cool idea is to only have your generative image model generate
 						features directly in feature space, only requiring your model to
 						produce the low frequency parts of an image. This would let you by
 						default take advantage of the juicy 20 compression that you'd get
-						from simply dropping the high frequency signals.
+						from simply dropping the high frequency signals. You can order the DCT weights from most important to least important, by using zigzag indexing (as done in jpg) or sorting them by distance to the top left corner. 
+
+						<br />
+
+						This motivated me to explore DCT features as inputs/outputs for generative image modeling, which is what the rest of this article is about.
 
 						<div class="section-title">
 							DCT loss, and the distribution of DCT features
