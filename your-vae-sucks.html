@@ -249,11 +249,20 @@
 						features directly in feature space, only requiring your model to
 						produce the low frequency parts of an image. This would let you by
 						default take advantage of the juicy 20 compression that you'd get
-						from simply dropping the high frequency signals. You can order the DCT weights from most important to least important, by using zigzag indexing (as done in jpg) or sorting them by distance to the top left corner. 
+						from simply dropping the high frequency signals. You can order the
+						DCT weights from most important to least important, by using zigzag
+						indexing (as done in jpg) or sorting them by distance to the top
+						left corner.
 
 						<br />
 
-						This motivated me to explore DCT features as inputs/outputs for generative image modeling, which is what the rest of this article is about.
+						This motivated me to explore DCT features as inputs/outputs for
+						generative image modeling, which is what the rest of this article is
+						about.
+						<a href="https://arxiv.org/abs/2309.11417">Other works</a> have
+						looked at using DCT features for machine learning models. I am
+						specifically interested in using DCT features of an entire image for
+						generative image modeling.
 
 						<div class="section-title">
 							DCT loss, and the distribution of DCT features
@@ -322,9 +331,9 @@
 						variance, or in other words be very far spread out.For example,
 						across many different images, the DCT feature at (0,0) varies
 						wildly, and is usually very large. This high variability is not good
-						for our machine learning models; we the DCT loss function to be more
-						stable in order to prevent massive loss spikes and erratic weight
-						updates.
+						for our machine learning models; we need the DCT loss function to be
+						more stable in order to prevent massive loss spikes and erratic
+						weight updates.
 						<br />
 
 						Additionally, not using loss over normalized DCT features will cause
