@@ -1,0 +1,227 @@
+body {
+	margin: 0px;
+	height: 100%;
+}
+
+div.sidebarcontainer {
+	display: flex;
+	min-height: 100%;
+}
+
+div.sidebar {
+	width: 15%;
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+}
+
+div.pagecontent {
+	padding: 0px 20px;
+	background-color: #366c7c87;
+}
+
+div.pagecontent div {
+	border-radius: 10px;
+}
+
+div.pagecontent > div.main-title {
+	font-size: xx-large;
+	text-align: center;
+}
+
+.footer {
+	text-align: center;
+	padding: 40px;
+}
+
+div.section-title {
+	padding: 15px;
+	font-size: larger;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+div.proj-box {
+	padding: 10px;
+}
+
+div.proj-box-inner {
+	padding: 5px;
+	background-color: #01020214;
+}
+
+div.video-container,
+div.video-box {
+	padding: 8px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	flex-wrap: nowrap;
+}
+
+div.video-box {
+	padding: 10px;
+	background-color: #acbabf;
+	width: min-content;
+}
+
+div.video-box video {
+	width: clamp(300px, 40vw, 600px);
+}
+
+div.video-description {
+	width: 80%;
+	padding: 10px;
+	font-size: small;
+}
+
+.column {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.code-verbatim {
+	font-size:small;
+	font-family:monospace;
+	font-style:normal;
+	color: lightgreen;
+	background-color:black;
+}
+
+.rainbow-text-animated {
+	background: linear-gradient(
+		to right,
+		red,
+		orange,
+		yellow,
+		green,
+		blue,
+		purple
+	);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	animation: rainbow-animation 4s linear infinite;
+	background-size: 400% 100%;
+}
+
+@keyframes rainbow-animation {
+	0%,
+	100% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 100% 0;
+	}
+}
+
+div.rainbow {
+	--angle: 0deg;
+	border: 10px solid;
+	border-image: conic-gradient(
+			from var(--angle),
+			red,
+			yellow,
+			lime,
+			aqua,
+			blue,
+			magenta,
+			red
+		)
+		1;
+
+	animation: 10s rotate linear infinite;
+}
+
+@keyframes rotate {
+	to {
+		--angle: 360deg;
+	}
+}
+
+@property --angle {
+	syntax: "<angle>";
+	initial-value: 0deg;
+	inherits: false;
+}
+
+#spinningcube {
+	position: relative;
+	transform-style: preserve-3d;
+	animation: spin 20s linear infinite;
+}
+
+#spinningcube > div {
+	position: absolute;
+	transform-style: preserve-3d;
+}
+
+@keyframes spin {
+	from {
+		transform: rotateX(-0.1turn) rotateY(0turn);
+	}
+	to {
+		transform: rotateX(-0.1turn) rotateY(3turn);
+	}
+}
+
+#spinningcube > div > div {
+	animation: un-spin 20s linear infinite;
+}
+
+@keyframes un-spin {
+	from {
+		transform: rotateY(0turn);
+	}
+	to {
+		transform: rotateY(-1turn);
+	}
+}
+
+.bouncingText span {
+	position: relative;
+	top: 10px;
+	display: inline-block;
+	animation: bounce 0.9s ease infinite alternate;
+}
+@keyframes bounce {
+	100% {
+		top: -10px;
+	}
+}
+.bouncingText span:nth-child(2) {
+	animation-delay: 0.1s;
+}
+.bouncingText span:nth-child(3) {
+	animation-delay: 0.2s;
+}
+.bouncingText span:nth-child(4) {
+	animation-delay: 0.3s;
+}
+.bouncingText span:nth-child(5) {
+	animation-delay: 0.4s;
+}
+.bouncingText span:nth-child(6) {
+	animation-delay: 0.5s;
+}
+.bouncingText span:nth-child(7) {
+	animation-delay: 0.6s;
+}
+.bouncingText span:nth-child(8) {
+	animation-delay: 0.7s;
+}
+.bouncingText span:nth-child(9) {
+	animation-delay: 0.8s;
+}
+.bouncingText span:nth-child(10) {
+	animation-delay: 0.9s;
+}
+.bouncingText span:nth-child(11) {
+	animation-delay: 1s;
+}
+.bouncingText span:nth-child(12) {
+	animation-delay: 1.1s;
+}
+
