@@ -26,10 +26,6 @@
 	</div>
 </div>
 
-<div class="rainbow-text-animated main-title">
-	Adam Colton: University of Utah 2023
-</div>
-
 <hr />
 <div class="section-title">Projects:</div>
 

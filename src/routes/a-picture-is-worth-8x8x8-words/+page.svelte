@@ -1,3 +1,7 @@
+<script>
+import './styles.css';
+</script>
+
 <svelte:head>
 	<title>
 		Image Retrieval: A Picture is worth 8 &#x00D7; 8 &#x00D7; 8 Words
@@ -7,12 +11,6 @@
 	<meta name="originator" content="TeX4ht (https://tug.org/tex4ht/)" />
 	<!-- html -->
 	<meta name="src" content="main.tex" />
-	<link
-		rel="stylesheet"
-		type="text/css"
-		href="a-picture-is-worth-8x8x8-words.css"
-	/>
-	<link rel="stylesheet" type="text/css" href="styles.css" />
 </svelte:head>
 
 <div class="maketitle">

@@ -1,15 +1,10 @@
 <svelte:head>
 	<title>Your VAE Sucks</title>
-	<link rel="stylesheet" href="styles.css" />
 </svelte:head>
 
 <div class="column">
 	<div class="row"></div>
 </div>
-
-<h1>
-	<a href="/">home</a>
-</h1>
 
 <div class="rainbow-text-animated main-title">Your VAE Sucks</div>
 
