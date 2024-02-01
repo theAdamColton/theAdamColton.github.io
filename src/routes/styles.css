@@ -83,11 +83,11 @@ div.video-description {
 }
 
 .code-verbatim {
-	font-size:small;
-	font-family:monospace;
-	font-style:normal;
+	font-size: small;
+	font-family: monospace;
+	font-style: normal;
 	color: lightgreen;
-	background-color:black;
+	background-color: black;
 }
 
 .rainbow-text-animated {
@@ -224,4 +224,3 @@ div.rainbow {
 .bouncingText span:nth-child(12) {
 	animation-delay: 1.1s;
 }
-

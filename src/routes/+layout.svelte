@@ -1,33 +1,29 @@
 <script>
-import Header from './Header.svelte';
-import Footer from './Footer.svelte';
-import './styles.css';
-import Sidebar from './Sidebar.svelte';
+	import Header from "./Header.svelte";
+	import Footer from "./Footer.svelte";
+	import "./styles.css";
+	import Sidebar from "./Sidebar.svelte";
 
-import { page } from '$app/stores';
-$: ishome = $page.route.id === "/";
+	import { page } from "$app/stores";
+	$: ishome = $page.route.id === "/";
 </script>
 
 <div class="app">
 	<div class="sidebarcontainer">
-		<Sidebar animated={ishome}/>
+		<Sidebar animated={ishome} />
 		<div class="pagecontent">
-
-			<Header ishome={ishome}/>
+			<Header {ishome} />
 			<main>
 				<slot />
 			</main>
 
-
 			<hr />
 
 			<footer>
-			<Footer/>
+				<Footer />
 			</footer>
-
 		</div>
 
-		<Sidebar animated={ishome}/>
+		<Sidebar animated={ishome} />
 	</div>
-
 </div>

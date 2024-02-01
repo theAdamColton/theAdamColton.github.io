@@ -1,5 +1,5 @@
 <script>
-import './styles.css';
+	import "./styles.css";
 </script>
 
 <svelte:head>
@@ -14,7 +14,6 @@ import './styles.css';
 </svelte:head>
 
 <div class="maketitle">
-	<a href="/">Home</a>
 	<h2 class="titleHead">
 		Image Retrieval: A Picture is worth 8 &#x00D7; 8 &#x00D7; 8 Words
 	</h2>
@@ -30,16 +29,15 @@ import './styles.css';
 <h3 class="likesectionHead"><a id="x1-1000"></a>Introduction</h3>
 <!--l. 44-->
 <p class="noindent">
-	We tested and designed an image retrieval system that leverages
-	traditional document similarity metrics during retrieval time. Our
-	method first encodes input images into a 3D matrix of discrete tokens,
-	and then computes k-grams in multiple dimensions. We then index images
-	as a global Bag-of-Words (BoW) vector. We assessed the performance of
-	our model on the GPR1200 dataset, and experimented with various
-	similarity scoring methods for BoW. Using term frequency-inverse
-	document frequency (tf-idf), we achieved a mean average precision (mAP)
-	that is 6% worse than the comparable non-quantized method reported by
-	the authors of GPR1200.
+	We tested and designed an image retrieval system that leverages traditional
+	document similarity metrics during retrieval time. Our method first encodes
+	input images into a 3D matrix of discrete tokens, and then computes k-grams in
+	multiple dimensions. We then index images as a global Bag-of-Words (BoW)
+	vector. We assessed the performance of our model on the GPR1200 dataset, and
+	experimented with various similarity scoring methods for BoW. Using term
+	frequency-inverse document frequency (tf-idf), we achieved a mean average
+	precision (mAP) that is 6% worse than the comparable non-quantized method
+	reported by the authors of GPR1200.
 	<!--l. 49-->
 </p>
 
@@ -47,30 +45,29 @@ import './styles.css';
 <h4 class="likesubsectionHead"><a id="x1-2000"></a>Background</h4>
 <!--l. 51-->
 <p class="noindent">
-	A common strategy for information retrieval is to compare the
-	frequencies of different terms between different documents. Search
-	engines such as
+	A common strategy for information retrieval is to compare the frequencies of
+	different terms between different documents. Search engines such as
 	<a href="https://docs.rs/tantivy/latest/tantivy/">Tantivy</a> and
-	<a href="https://lucene.apache.org/">Lucene</a> retrieve documents using
-	an inverted term index. BoW representations fit naturally into these
-	implementations, and as a result have been widely implemented in
-	different image retrieval solutions [<a id="x1-2001"></a
-	><a href="#cite.0@DBLP:journals/corr/ZhouLT17">8</a>].
+	<a href="https://lucene.apache.org/">Lucene</a> retrieve documents using an
+	inverted term index. BoW representations fit naturally into these
+	implementations, and as a result have been widely implemented in different
+	image retrieval solutions [<a id="x1-2001"></a><a
+		href="#cite.0@DBLP:journals/corr/ZhouLT17">8</a
+	>].
 	<!--l. 53-->
 </p>
 
 <p class="indent">
-	<a id="x1-2002"></a>Cao et al. [<a
-		href="#cite.0@10.5555/3016387.3016390"
-		>1</a
+	<a id="x1-2002"></a>Cao et al. [<a href="#cite.0@10.5555/3016387.3016390">1</a
 	>] obtained image tokens using k-means clustering of the intermediate
-	activation of a convolutional network. Other methods have been proposed
-	that use end to end training of the token representations for image
-	retrieval [<a id="x1-2003"></a><a href="#cite.0@liu2017e2bows">4</a>,
-	<a href="#cite.0@10.5555/3016387.3016390">1</a>, <a id="x1-2004"></a
-	><a href="#cite.0@DBLP:journals/corr/abs-2012-00641">2</a>]. Despite
-	training our token representations without much consideration of their
-	downstream usage in for image retrieval, our method still obtains
+	activation of a convolutional network. Other methods have been proposed that
+	use end to end training of the token representations for image retrieval [<a
+		id="x1-2003"
+	></a><a href="#cite.0@liu2017e2bows">4</a>,
+	<a href="#cite.0@10.5555/3016387.3016390">1</a>, <a id="x1-2004"></a><a
+		href="#cite.0@DBLP:journals/corr/abs-2012-00641">2</a
+	>]. Despite training our token representations without much consideration of
+	their downstream usage in for image retrieval, our method still obtains
 	reasonable benchmark results.
 	<!--l. 57-->
 </p>
@@ -85,9 +82,9 @@ import './styles.css';
 	We fine tune our VQ-ResNet models using the
 	<a href="https://www.image-net.org/challenges/LSVRC/2012/"
 		>ImageNet LSVRC 2012 Training Set</a
-	>. We then evaluate the accuracy of VQ-ResNet on the validation set,
-	ImageNet LSVRC 2012 Validation Set. Both of these datasets were
-	retrieved from Academic Torrents.
+	>. We then evaluate the accuracy of VQ-ResNet on the validation set, ImageNet
+	LSVRC 2012 Validation Set. Both of these datasets were retrieved from Academic
+	Torrents.
 
 	<!--l. 61-->
 </p>
@@ -95,24 +92,21 @@ import './styles.css';
 <p class="indent">
 	We evaluate image retrieval performance on the GPR1200 dataset [<a
 		id="x1-4001"
-	></a
-	><a href="#cite.0@DBLP:journals/corr/abs-2111-13122">7</a>]. This
-	benchmark set contains a diverse collection of general-purpose images,
-	and measures the ability of a model to retrieve images in similar
-	categories such as objects, places, or people. The authors provided
-	baseline scores for the embeddings of various image models, and their
-	reported retrieval mAP (mean average presicion) using embeddings from a
-	ResNet101, was 42.8.
+	></a><a href="#cite.0@DBLP:journals/corr/abs-2111-13122">7</a>]. This
+	benchmark set contains a diverse collection of general-purpose images, and
+	measures the ability of a model to retrieve images in similar categories such
+	as objects, places, or people. The authors provided baseline scores for the
+	embeddings of various image models, and their reported retrieval mAP (mean
+	average presicion) using embeddings from a ResNet101, was 42.8.
 	<!--l. 63-->
 </p>
 
 <p class="indent">
-	In prior reports we were considering the FlickrFaces dataset and
-	Oxford5k dataset. Both were ultimately dropped: The FlickrFaces dataset
-	did not provide the nececssary image labels to conduct accurate image
-	retrieval; and the Oxford5k dataset didn&#8217;t encompass a wide enough
-	image category to prove the robustness of our methods. This led to
-	selecting the GPR1200 dataset.
+	In prior reports we were considering the FlickrFaces dataset and Oxford5k
+	dataset. Both were ultimately dropped: The FlickrFaces dataset did not provide
+	the nececssary image labels to conduct accurate image retrieval; and the
+	Oxford5k dataset didn&#8217;t encompass a wide enough image category to prove
+	the robustness of our methods. This led to selecting the GPR1200 dataset.
 	<!--l. 65-->
 </p>
 
@@ -125,51 +119,50 @@ import './styles.css';
 <h4 class="likesubsectionHead"><a id="x1-6000"></a>Indexing Pipeline</h4>
 <!--l. 68-->
 <p class="noindent">
-	Our unoptimized pipline takes about 60 seconds on a Nvidia 3070 GPU and
-	Ryzen 3700 CPU to fully index the GPR1200 dataset. This is with an image
-	resolution of 256, batch size of 64, and for k grams,
-	<span class="cmmi-10">k </span>= 3 with no padding or stride, on our
-	RN50 model.
+	Our unoptimized pipline takes about 60 seconds on a Nvidia 3070 GPU and Ryzen
+	3700 CPU to fully index the GPR1200 dataset. This is with an image resolution
+	of 256, batch size of 64, and for k grams,
+	<span class="cmmi-10">k </span>= 3 with no padding or stride, on our RN50
+	model.
 	<!--l. 70-->
 </p>
 
 <p class="indent">
-	In compute limited settings, such as on a 4-core laptop, the indexing
-	time of GPR1200 is about 30 minutes, with most of the time being spent
-	running image batches through the VQ-Resnet.
+	In compute limited settings, such as on a 4-core laptop, the indexing time of
+	GPR1200 is about 30 minutes, with most of the time being spent running image
+	batches through the VQ-Resnet.
 	<!--l. 72-->
 </p>
 
 <p class="indent">
-	Our indexing pipeline is invariant to input image resolution. Our
-	pipeline indexes any image of any input resolution, (as long as the
-	embedding shape is larger than the k-grams kernel size). The result of
-	the indexing pipeline is that all images are stored in memory as a BoW
-	vector.
+	Our indexing pipeline is invariant to input image resolution. Our pipeline
+	indexes any image of any input resolution, (as long as the embedding shape is
+	larger than the k-grams kernel size). The result of the indexing pipeline is
+	that all images are stored in memory as a BoW vector.
 </p>
 
 <ul class="itemize1">
 	<li class="itemize">
 		<!--l. 75-->
 		<p class="noindent">
-			Batching images: We sort images by aspect ratio, and then group
-			images into batches. The same aspect ratio is maintained across all
-			images in a batch. Different batches of images have different
-			spatial resolutions. Images in the same batch were slightly scaled
-			to have the same resolution. The max of height/width of the image
-			batches can be modified as a hyperparameter. This batching step
-			parallelizes following pipeline operations.
+			Batching images: We sort images by aspect ratio, and then group images
+			into batches. The same aspect ratio is maintained across all images in a
+			batch. Different batches of images have different spatial resolutions.
+			Images in the same batch were slightly scaled to have the same resolution.
+			The max of height/width of the image batches can be modified as a
+			hyperparameter. This batching step parallelizes following pipeline
+			operations.
 		</p>
 	</li>
 
 	<li class="itemize">
 		<!--l. 77-->
 		<p class="noindent">
-			VQ-ResNet Model: Image batches are passed through our VQ-ResNet
-			model to obtain 3D arrays of tokens, or &#8221;words,&#8221; that
-			encode meaningful information about the contents of the images. The
-			shape of these embeddings depended on the input batch&#8217;s
-			spatial resolution, and the number of codebook heads.
+			VQ-ResNet Model: Image batches are passed through our VQ-ResNet model to
+			obtain 3D arrays of tokens, or &#8221;words,&#8221; that encode meaningful
+			information about the contents of the images. The shape of these
+			embeddings depended on the input batch&#8217;s spatial resolution, and the
+			number of codebook heads.
 		</p>
 	</li>
 
@@ -177,14 +170,15 @@ import './styles.css';
 		<!--l. 79-->
 		<p class="noindent">
 			Calculating kgrams: For each embedding, a window of size
-			<span class="cmmi-10">k</span><span class="cmsy-10">&#x00D7;</span
-			><span class="cmmi-10">k</span><span class="cmsy-10">&#x00D7;</span
-			><span class="cmmi-10">c</span>, where
-			<span class="cmmi-10">c </span>is the number of codebook heads, is
-			slid across all possible positions over the batched embeddings. The
-			value counts of different tokens within this window are stored,
-			resulting in a tensor of shape (k by k by k by the number of
-			possible tokens). This tensor is the Bag-of-Words for each image.
+			<span class="cmmi-10">k</span><span class="cmsy-10">&#x00D7;</span><span
+				class="cmmi-10">k</span
+			><span class="cmsy-10">&#x00D7;</span><span class="cmmi-10">c</span>,
+			where
+			<span class="cmmi-10">c </span>is the number of codebook heads, is slid
+			across all possible positions over the batched embeddings. The value
+			counts of different tokens within this window are stored, resulting in a
+			tensor of shape (k by k by k by the number of possible tokens). This
+			tensor is the Bag-of-Words for each image.
 		</p>
 	</li>
 </ul>
@@ -193,133 +187,135 @@ import './styles.css';
 <h4 class="likesubsectionHead"><a id="x1-7000"></a>VQ-ResNet Model</h4>
 <!--l. 84-->
 <p class="noindent">
-	ResNet is a deep learning model widely used in the computer vision task
-	of image classification. The intermediate activation&#8217;s contain
-	information about the types of objects that are present in an input
-	image, which is useful for image retrieval, as images containing similar
-	objects should ideally have similar intermediate activation&#8217;s
-	within ResNet.
+	ResNet is a deep learning model widely used in the computer vision task of
+	image classification. The intermediate activation&#8217;s contain information
+	about the types of objects that are present in an input image, which is useful
+	for image retrieval, as images containing similar objects should ideally have
+	similar intermediate activation&#8217;s within ResNet.
 	<!--l. 86-->
 </p>
 
 <p class="indent">
-	We took inspiration from learned vector quantization models [<a
-		id="x1-7001"
-	></a
-	><a href="#cite.0@DBLP:journals/corr/abs-1711-00937">6</a>], and obtain
-	our token representation of images using a learned vector quantization
-	layer. We modified a pretrained ResNet50 model from
+	We took inspiration from learned vector quantization models [<a id="x1-7001"
+	></a><a href="#cite.0@DBLP:journals/corr/abs-1711-00937">6</a>], and obtain
+	our token representation of images using a learned vector quantization layer.
+	We modified a pretrained ResNet50 model from
 	<a href="https://pytorch.org/vision/stable/models.html">torchvision</a>,
-	placing a Vector Quantization (VQ) layer after the last convolutional
-	layer. We froze the first three convolutional blocks of ResNet, and
-	train the model for four epochs on the ImageNet LSVRC 2012 training set.
-	Our best performing VQ-Resnet reached close to original accuracy@5
-	(within 5%) and accuracy@1 (within 3%) on the validation set.
+	placing a Vector Quantization (VQ) layer after the last convolutional layer.
+	We froze the first three convolutional blocks of ResNet, and train the model
+	for four epochs on the ImageNet LSVRC 2012 training set. Our best performing
+	VQ-Resnet reached close to original accuracy@5 (within 5%) and accuracy@1
+	(within 3%) on the validation set.
 	<!--l. 89-->
 </p>
 
 <p class="indent">
-	It would have been interesting to compare the performance of a
-	non-learned vs learned vector quantization layer. Our learned VQ layer
-	did require training the weights of the original model. In particular,
-	freezing all of the ResNet layers led to more inaccuracies on ImageNet,
-	but overall, the validation accuracy of our best model has shown that
-	the tokens do contain meaningful &#8221;words&#8221; that describe the
-	objects classes present in images.
+	It would have been interesting to compare the performance of a non-learned vs
+	learned vector quantization layer. Our learned VQ layer did require training
+	the weights of the original model. In particular, freezing all of the ResNet
+	layers led to more inaccuracies on ImageNet, but overall, the validation
+	accuracy of our best model has shown that the tokens do contain meaningful
+	&#8221;words&#8221; that describe the objects classes present in images.
 
 	<!--l. 91-->
 </p>
 
 <p class="indent">
-	In all of our experiments we use a multi-headed vector quantization
-	layer [<a id="x1-7002"></a><a href="#cite.0@mama2021nwt">5</a>]. For a
-	single image, the resulting tokens from VQ-Resnet are shaped
-	<span class="cmmi-10">c</span><span class="cmsy-10">&#x00D7;</span
-	><span class="cmmi-10">H </span><span class="cmsy-10">&#x00D7;</span
-	><span class="cmmi-10">W</span>, where <span class="cmmi-10">c </span>is
-	the number of VQ heads. The codebook IDs are integers from 0 to the
-	number of codebooks, which we varied in our experiments.
+	In all of our experiments we use a multi-headed vector quantization layer [<a
+		id="x1-7002"
+	></a><a href="#cite.0@mama2021nwt">5</a>]. For a single image, the resulting
+	tokens from VQ-Resnet are shaped
+	<span class="cmmi-10">c</span><span class="cmsy-10">&#x00D7;</span><span
+		class="cmmi-10"
+		>H
+	</span><span class="cmsy-10">&#x00D7;</span><span class="cmmi-10">W</span>,
+	where <span class="cmmi-10">c </span>is the number of VQ heads. The codebook
+	IDs are integers from 0 to the number of codebooks, which we varied in our
+	experiments.
 	<!--l. 94-->
 </p>
 
 <p class="noindent"></p>
 <h4 class="likesubsectionHead">
-	<a id="x1-8000"></a>From 3D Token Embeddings to BoW: Multidimensional K
-	Grams
+	<a id="x1-8000"></a>From 3D Token Embeddings to BoW: Multidimensional K Grams
 </h4>
 <!--l. 96-->
 <p class="noindent">
-	We obtain Bag-of-Words (BoW) representations of our discrete tokens by
-	using K grams. This allows us to obtain a global vector representation
-	of gram frequencies. We define a gram as all possible token values in a
-	k by k window over the last two dimensions of an input embedding.
+	We obtain Bag-of-Words (BoW) representations of our discrete tokens by using K
+	grams. This allows us to obtain a global vector representation of gram
+	frequencies. We define a gram as all possible token values in a k by k window
+	over the last two dimensions of an input embedding.
 	<!--l. 98-->
 </p>
 
 <p class="indent">
-	Our intuition is that given the fully convolutional architecture of the
-	first four blocks of ResNet, the information in the intermediate
-	activations is highly localized, meaning much of the spatial information
-	in the intermediate activation&#8217;s of a convolutional network is
-	kept to small sub-areas. Discarding long-range information in this
-	activation should not have left out much detail about how the network
-	interprets different activation&#8217;s, as convolutional networks
-	usually have small kernels; at any given single layer, long-range
-	information is not able to be interpreted or transmitted.
+	Our intuition is that given the fully convolutional architecture of the first
+	four blocks of ResNet, the information in the intermediate activations is
+	highly localized, meaning much of the spatial information in the intermediate
+	activation&#8217;s of a convolutional network is kept to small sub-areas.
+	Discarding long-range information in this activation should not have left out
+	much detail about how the network interprets different activation&#8217;s, as
+	convolutional networks usually have small kernels; at any given single layer,
+	long-range information is not able to be interpreted or transmitted.
 	<!--l. 100-->
 </p>
 
 <p class="indent">
-	We extend the notion of K-grams into 2 dimensions; given a 3D input
-	tensor of discrete integer class values, 2D K-grams returns the value
-	counts of the tokens over all positions of a k by k window over the last
-	two dimensions of the input tensor. Conceptually, a k by k window is
-	slid across the input tensor, and then the counts of integer classes at
-	each position in the window are stored. On an 8 by 8 by 8 input tensor,
-	with integer class ids from 0 to 63, 2D 3-grams returns an 8 by 3 by 3
-	by 64 tensor containing the value counts of each class id at each
-	position in the 3<sup><span class="cmr-7">3</span></sup>
+	We extend the notion of K-grams into 2 dimensions; given a 3D input tensor of
+	discrete integer class values, 2D K-grams returns the value counts of the
+	tokens over all positions of a k by k window over the last two dimensions of
+	the input tensor. Conceptually, a k by k window is slid across the input
+	tensor, and then the counts of integer classes at each position in the window
+	are stored. On an 8 by 8 by 8 input tensor, with integer class ids from 0 to
+	63, 2D 3-grams returns an 8 by 3 by 3 by 64 tensor containing the value counts
+	of each class id at each position in the 3<sup
+		><span class="cmr-7">3</span></sup
+	>
 	window.
 	<!--l. 102-->
 </p>
 
 <p class="indent">
-	We also experiment with using 3D k grams. 3D K grams applies the kernel
-	along the channel dimension, as well as the height and width of the
-	embedded 3D tokens. This results in a much smaller total BoW size.
+	We also experiment with using 3D k grams. 3D K grams applies the kernel along
+	the channel dimension, as well as the height and width of the embedded 3D
+	tokens. This results in a much smaller total BoW size.
 	<!--l. 104-->
 </p>
 
 <p class="indent">
-	Using 2D k grams, the size of the BoW descriptive vector for a single
-	image is equal to <span class="cmmi-10">c</span
-	><span class="cmsy-10">&#x22C5;</span><span class="cmmi-10">k </span
-	><span class="cmsy-10">&#x22C5;</span><span class="cmmi-10">k </span
-	><span class="cmsy-10">&#x22C5;</span><span class="cmmi-10">n</span>,
+	Using 2D k grams, the size of the BoW descriptive vector for a single image is
+	equal to <span class="cmmi-10">c</span><span class="cmsy-10">&#x22C5;</span
+	><span class="cmmi-10">k </span><span class="cmsy-10">&#x22C5;</span><span
+		class="cmmi-10"
+		>k
+	</span><span class="cmsy-10">&#x22C5;</span><span class="cmmi-10">n</span>,
 	where <span class="cmmi-10">c </span>is the number of channels in the 3D
-	tensor, and <span class="cmmi-10">n </span
-	><span class="cmsy-10">- </span>1 is the max possible integer class id.
+	tensor, and <span class="cmmi-10">n </span><span class="cmsy-10">- </span>1 is
+	the max possible integer class id.
 	<!--l. 106-->
 </p>
 
 <p class="indent">
-	Using 3D k grams, the size of the BoW descriptive vector for a single
-	image is equal to <span class="cmmi-10">k </span
-	><span class="cmsy-10">&#x22C5; </span><span class="cmmi-10">k </span
-	><span class="cmsy-10">&#x22C5; </span><span class="cmmi-10">k </span
-	><span class="cmsy-10">&#x22C5; </span><span class="cmmi-10">n</span>.
+	Using 3D k grams, the size of the BoW descriptive vector for a single image is
+	equal to <span class="cmmi-10">k </span><span class="cmsy-10"
+		>&#x22C5;
+	</span><span class="cmmi-10">k </span><span class="cmsy-10"
+		>&#x22C5;
+	</span><span class="cmmi-10">k </span><span class="cmsy-10"
+		>&#x22C5;
+	</span><span class="cmmi-10">n</span>.
 	<!--l. 108-->
 </p>
 
 <p class="noindent"></p>
 <h4 class="likesubsectionHead">
-	<a id="x1-9000"></a>Similarity Calculation: Evaluating Image
-	Similarities Using Various Techniques
+	<a id="x1-9000"></a>Similarity Calculation: Evaluating Image Similarities
+	Using Various Techniques
 </h4>
 <!--l. 109-->
 <p class="noindent">
-	In this project, we compare the mAP scores obtained from different
-	similarity scorings between image embeddings.
+	In this project, we compare the mAP scores obtained from different similarity
+	scorings between image embeddings.
 	<!--l. 111-->
 </p>
 
@@ -329,11 +325,11 @@ import './styles.css';
 </p>
 
 <p class="indent">
-	The choice of using Jaccard Similarity and TF-IDF as similarity measures
-	in this project is based on their widespread use and proven
-	effectiveness in comparing sets and weighing the importance of tokens,
-	respectively. The Jaccard similarity is calculated as the intersection
-	of two sets divided by their union:
+	The choice of using Jaccard Similarity and TF-IDF as similarity measures in
+	this project is based on their widespread use and proven effectiveness in
+	comparing sets and weighing the importance of tokens, respectively. The
+	Jaccard similarity is calculated as the intersection of two sets divided by
+	their union:
 </p>
 
 <div class="math-display">
@@ -353,14 +349,13 @@ J(A,B) = |A&#x222A;-B-|
 </p>
 
 <p class="indent">
-	The Jaccard similarity is intuitive and easy to compute, though it may
-	not be the best choice for our tokens. We experimented with cropping all
-	dataset images to the same size, and then measuring similarity based on
-	elementwise equality of the tokens. This produced lackluster scores
-	compared to our BoW method, probably because it doesn&#8217;t take into
-	account the frequency of different terms. The importance of different
-	tokens being equal between two embeddings is likely not the same for all
-	tokens.
+	The Jaccard similarity is intuitive and easy to compute, though it may not be
+	the best choice for our tokens. We experimented with cropping all dataset
+	images to the same size, and then measuring similarity based on elementwise
+	equality of the tokens. This produced lackluster scores compared to our BoW
+	method, probably because it doesn&#8217;t take into account the frequency of
+	different terms. The importance of different tokens being equal between two
+	embeddings is likely not the same for all tokens.
 	<!--l. 119-->
 </p>
 
@@ -370,9 +365,9 @@ J(A,B) = |A&#x222A;-B-|
 </p>
 
 <p class="indent">
-	The TF-IDF technique takes into account the frequency of tokens in a
-	document and their rarity across a collection of documents. The TF-IDF
-	weight for a token <span class="cmmi-10">t </span>in a document
+	The TF-IDF technique takes into account the frequency of tokens in a document
+	and their rarity across a collection of documents. The TF-IDF weight for a
+	token <span class="cmmi-10">t </span>in a document
 	<span class="cmmi-10">d </span>is calculated as:
 </p>
 
@@ -386,30 +381,28 @@ J(A,B) = |A&#x222A;-B-|
 </div>
 <!--l. 123-->
 <p class="nopar">
-	where TF(<span class="cmmi-10">t,d</span>) is the term frequency of
-	token <span class="cmmi-10">t </span>in document
-	<span class="cmmi-10">d</span>, and IDF(<span class="cmmi-10">t</span>)
-	= log
+	where TF(<span class="cmmi-10">t,d</span>) is the term frequency of token
+	<span class="cmmi-10">t </span>in document
+	<span class="cmmi-10">d</span>, and IDF(<span class="cmmi-10">t</span>) = log
 	<img src="main2x.png" alt="DFN(t)" class="frac" align="middle" /> is the
 	inverse document frequency of token <span class="cmmi-10">t</span>, with
-	<span class="cmmi-10">N </span>being the total number of documents and
-	DF(<span class="cmmi-10">t</span>) representing the number of documents
-	containing the token <span class="cmmi-10">t</span>.
+	<span class="cmmi-10">N </span>being the total number of documents and DF(<span
+		class="cmmi-10">t</span
+	>) representing the number of documents containing the token
+	<span class="cmmi-10">t</span>.
 	<!--l. 126-->
 </p>
 
 <p class="indent">
-	<span class="cmbx-10"
-		>Similarity Measure Comparison and Selection:</span
-	>
+	<span class="cmbx-10">Similarity Measure Comparison and Selection:</span>
 	<!--l. 128-->
 </p>
 
 <p class="indent">
-	We compare the performance of Jaccard Similarity and TF-IDF using the
-	Mean Average Precision (mAP) evaluation metric. Our experiments indicate
-	that the TF-IDF applied on our obtained BoW, outperforms Jaccard
-	Similarity applied on the VQ-Resnet tokens.
+	We compare the performance of Jaccard Similarity and TF-IDF using the Mean
+	Average Precision (mAP) evaluation metric. Our experiments indicate that the
+	TF-IDF applied on our obtained BoW, outperforms Jaccard Similarity applied on
+	the VQ-Resnet tokens.
 
 	<!--l. 131-->
 </p>
@@ -421,17 +414,15 @@ J(A,B) = |A&#x222A;-B-|
 <!--l. 133-->
 <p class="noindent"></p>
 <h4 class="likesubsectionHead">
-	<a id="x1-11000"></a>Mean Average Precision: Calculation and
-	Interpretation
+	<a id="x1-11000"></a>Mean Average Precision: Calculation and Interpretation
 </h4>
 <!--l. 135-->
 <p class="noindent">
-	The Mean Average Precision (mAP) metric is calculated by first
-	determining the Average Precision (AP) for each query in the dataset. AP
-	is computed as the average of the precision values obtained at each
-	relevant item in the ranked retrieval results. We analyze the mAP values
-	obtained for various parameter configurations and similarity measures on
-	GPR1200.
+	The Mean Average Precision (mAP) metric is calculated by first determining the
+	Average Precision (AP) for each query in the dataset. AP is computed as the
+	average of the precision values obtained at each relevant item in the ranked
+	retrieval results. We analyze the mAP values obtained for various parameter
+	configurations and similarity measures on GPR1200.
 	<!--l. 138-->
 </p>
 
@@ -450,35 +441,33 @@ J(A,B) = |A&#x222A;-B-|
 	<li class="itemize">
 		<!--l. 144-->
 		<p class="noindent">
-			Heads: Number of codebook attention heads [<a id="x1-12001"></a
-			><a href="#cite.0@mama2021nwt">5</a>]. All of our experiments used a
-			shared codebook.
+			Heads: Number of codebook attention heads [<a id="x1-12001"></a><a
+				href="#cite.0@mama2021nwt">5</a
+			>]. All of our experiments used a shared codebook.
 		</p>
 	</li>
 
 	<li class="itemize">
 		<!--l. 145-->
 		<p class="noindent">
-			Codebook Dim: The z-dimension of the codebook. A linear layer
-			projects each input vector of size Dim, to the codebook space.
+			Codebook Dim: The z-dimension of the codebook. A linear layer projects
+			each input vector of size Dim, to the codebook space.
 		</p>
 	</li>
 
 	<li class="itemize">
 		<!--l. 146-->
 		<p class="noindent">
-			Codebook Size: The number <span class="cmmi-10">k</span>, or the
-			number of codebook vectors.
+			Codebook Size: The number <span class="cmmi-10">k</span>, or the number of
+			codebook vectors.
 		</p>
 	</li>
 
 	<li class="itemize">
 		<!--l. 147-->
 		<p class="noindent">
-			Commitment Weight: See equation 3 from <a id="x1-12002"></a>Oord,
-			Vinyals, and Kavukcuoglu [<a
-				href="#cite.0@DBLP:journals/corr/abs-1711-00937"
-				>6</a
+			Commitment Weight: See equation 3 from <a id="x1-12002"></a>Oord, Vinyals,
+			and Kavukcuoglu [<a href="#cite.0@DBLP:journals/corr/abs-1711-00937">6</a
 			>]
 		</p>
 	</li>
@@ -486,16 +475,15 @@ J(A,B) = |A&#x222A;-B-|
 	<li class="itemize">
 		<!--l. 148-->
 		<p class="noindent">
-			Threshold EMA Dead Code: Randomly reinitializes codes that are not
-			being selected by the network.
+			Threshold EMA Dead Code: Randomly reinitializes codes that are not being
+			selected by the network.
 		</p>
 	</li>
 
 	<li class="itemize">
 		<!--l. 149-->
 		<p class="noindent">
-			Dim: The input dimension, which is from the preceding ResNet Conv
-			layer.
+			Dim: The input dimension, which is from the preceding ResNet Conv layer.
 		</p>
 	</li>
 </ul>
@@ -508,24 +496,24 @@ J(A,B) = |A&#x222A;-B-|
 	<li class="itemize">
 		<!--l. 155-->
 		<p class="noindent">
-			SimilarityMeasurement: Labels what methods was used to measure
-			similarity, Jaccard or TF-IDF.
+			SimilarityMeasurement: Labels what methods was used to measure similarity,
+			Jaccard or TF-IDF.
 		</p>
 	</li>
 
 	<li class="itemize">
 		<!--l. 156-->
 		<p class="noindent">
-			Model: Indicates which model was used from the model table prior to
-			the similarity measurements.
+			Model: Indicates which model was used from the model table prior to the
+			similarity measurements.
 		</p>
 	</li>
 
 	<li class="itemize">
 		<!--l. 157-->
 		<p class="noindent">
-			Resolution: Indicates the size of the image space across various
-			aspect ratios.
+			Resolution: Indicates the size of the image space across various aspect
+			ratios.
 		</p>
 	</li>
 
@@ -549,25 +537,24 @@ J(A,B) = |A&#x222A;-B-|
 		<!--l. 160-->
 		<p class="noindent">
 			should_channel_kgrams: Whether k grams is applied to the channel
-			dimension. If this is true, then the k-grams window is applied to
-			the channel dimension, or the &#8216;codebook head&#8216; dimension.
+			dimension. If this is true, then the k-grams window is applied to the
+			channel dimension, or the &#8216;codebook head&#8216; dimension.
 		</p>
 	</li>
 
 	<li class="itemize">
 		<!--l. 161-->
 		<p class="noindent">
-			GPR1200 mAP (shown as mAP): mean average precision across all
-			categories
+			GPR1200 mAP (shown as mAP): mean average precision across all categories
 		</p>
 	</li>
 
 	<li class="itemize">
 		<!--l. 162-->
 		<p class="noindent">
-			Landmarks, IMSketch, iNat, Instre, SOP, Faces: categories of images
-			found within the GPR1200 dataset. Each value is the mAP value for
-			the relevant category.
+			Landmarks, IMSketch, iNat, Instre, SOP, Faces: categories of images found
+			within the GPR1200 dataset. Each value is the mAP value for the relevant
+			category.
 		</p>
 	</li>
 </ul>
@@ -587,8 +574,8 @@ J(A,B) = |A&#x222A;-B-|
 	<hr class="float" />
 	<div class="float">
 		<div class="caption">
-			<span class="id">Table&#x00A0;1: </span
-			><span class="content">Models</span>
+			<span class="id">Table&#x00A0;1: </span><span class="content">Models</span
+			>
 		</div>
 		<!--tex4ht:label?: x1-130011 -->
 		<!--tex4ht:inline-->
@@ -846,8 +833,9 @@ J(A,B) = |A&#x222A;-B-|
 	<hr class="float" />
 	<div class="float">
 		<div class="caption">
-			<span class="id">Table&#x00A0;2: </span
-			><span class="content">SimilarityResults</span>
+			<span class="id">Table&#x00A0;2: </span><span class="content"
+				>SimilarityResults</span
+			>
 		</div>
 		<!--tex4ht:label?: x1-130022 -->
 		<!--tex4ht:inline-->
@@ -4707,38 +4695,36 @@ J(A,B) = |A&#x222A;-B-|
 <!--l. 252-->
 <p class="noindent">
 	Our image retrieval system retrieves relevant images across the GPR1200
-	dataset, with reasonable mAP values for different kernel sizes and
-	similarity measures. 3D-Kgrams usually performed much worse than
-	2d-kgrams. Raising the input image resolution to 614 did not increase
-	mAP scores. Increasing the kernel size past 4, did not improve scores on
-	our best VQ-ResNet50 model. This method still needs more refinement, but
-	overall we recommend finetuning larger, more accurate VQ-ResNet models
-	for obtaining the tokens, and then using 2D k-grams, with a kernel size
-	of 3.
+	dataset, with reasonable mAP values for different kernel sizes and similarity
+	measures. 3D-Kgrams usually performed much worse than 2d-kgrams. Raising the
+	input image resolution to 614 did not increase mAP scores. Increasing the
+	kernel size past 4, did not improve scores on our best VQ-ResNet50 model. This
+	method still needs more refinement, but overall we recommend finetuning
+	larger, more accurate VQ-ResNet models for obtaining the tokens, and then
+	using 2D k-grams, with a kernel size of 3.
 	<!--l. 254-->
 </p>
 
 <p class="indent">
-	The choice of similarity measure and kernel size significantly impact
-	the retrieval performance; in general, the BoW and TF-IDF approach
-	provides better results than the Jaccard similarity measure. This shows
-	that multi dimensional K-Grams extracted meaningful information from
-	discretized tokens from our VQ-Resnet.
+	The choice of similarity measure and kernel size significantly impact the
+	retrieval performance; in general, the BoW and TF-IDF approach provides better
+	results than the Jaccard similarity measure. This shows that multi dimensional
+	K-Grams extracted meaningful information from discretized tokens from our
+	VQ-Resnet.
 	<!--l. 256-->
 </p>
 
 <p class="indent">
-	The authors of GPR 1200 obtained a mAP score of 42.8 % using kNN from
-	the output of the last activation of a ResNet101 V2 [<a
-		id="x1-14001"
-	></a
-	><a href="#cite.0@DBLP:journals/corr/abs-2111-13122">7</a>]. They obtain
-	higher scores using models with BiT pretraining [<a id="x1-14002"></a
-	><a href="#cite.0@kolesnikov2020big">3</a>]. Our score from our best
-	configuration is 6 % worse. With pretraining of our VQ-ResNet on
-	ImageNet 21k, we may be able to improve our scores somewhat. Generally,
-	this reduction in score may be acceptable; our indexed features can be
-	inputted into traditional text search engines.
+	The authors of GPR 1200 obtained a mAP score of 42.8 % using kNN from the
+	output of the last activation of a ResNet101 V2 [<a id="x1-14001"></a><a
+		href="#cite.0@DBLP:journals/corr/abs-2111-13122">7</a
+	>]. They obtain higher scores using models with BiT pretraining [<a
+		id="x1-14002"
+	></a><a href="#cite.0@kolesnikov2020big">3</a>]. Our score from our best
+	configuration is 6 % worse. With pretraining of our VQ-ResNet on ImageNet 21k,
+	we may be able to improve our scores somewhat. Generally, this reduction in
+	score may be acceptable; our indexed features can be inputted into traditional
+	text search engines.
 	<!--l. 258-->
 </p>
 
@@ -4746,22 +4732,21 @@ J(A,B) = |A&#x222A;-B-|
 <h3 class="likesectionHead"><a id="x1-15000"></a>Conclusion</h3>
 <!--l. 259-->
 <p class="noindent">
-	In this data mining project, we aimed to develop an efficient and
-	accurate image retrieval system for large-scale datasets by combining
-	deep learning models with traditional data mining techniques. We chose
-	the diverse GPR1200 dataset and employed a VQ-ResNet model along with
-	Kgrams for image preprocessing. Our approach integrated image
-	preprocessing, Bag-of-Words representations, and various similarity
-	calculation methods.
+	In this data mining project, we aimed to develop an efficient and accurate
+	image retrieval system for large-scale datasets by combining deep learning
+	models with traditional data mining techniques. We chose the diverse GPR1200
+	dataset and employed a VQ-ResNet model along with Kgrams for image
+	preprocessing. Our approach integrated image preprocessing, Bag-of-Words
+	representations, and various similarity calculation methods.
 	<!--l. 261-->
 </p>
 
 <p class="indent">
-	We compared different methods, such as Jaccard Similarity and TF-IDF,
-	and assessed the performance using the Mean Average Precision (mAP)
-	metric. Our results revealed that the VQ-ResNet model, combined with
-	preprocessing, Bag-of-Words representation, and TF-IDF similarity
-	measure, delivered a robust image retrieval system.
+	We compared different methods, such as Jaccard Similarity and TF-IDF, and
+	assessed the performance using the Mean Average Precision (mAP) metric. Our
+	results revealed that the VQ-ResNet model, combined with preprocessing,
+	Bag-of-Words representation, and TF-IDF similarity measure, delivered a robust
+	image retrieval system.
 	<!--l. 263-->
 </p>
 
@@ -4776,11 +4761,10 @@ J(A,B) = |A&#x222A;-B-|
 	</p>
 
 	<div class="caption">
-		<span class="id">Figure&#x00A0;1: </span
-		><span class="content"
-			>Example of returned query by VQ-ResNet50, with k-grams kernel size
-			of 3. Top 20 closest BoW vectors, as measured from TFIDF similarity.
-			The query index from the GPR dataset was item 69.</span
+		<span class="id">Figure&#x00A0;1: </span><span class="content"
+			>Example of returned query by VQ-ResNet50, with k-grams kernel size of 3.
+			Top 20 closest BoW vectors, as measured from TFIDF similarity. The query
+			index from the GPR dataset was item 69.</span
 		>
 	</div>
 	<!--tex4ht:label?: x1-150011 -->
@@ -4801,9 +4785,8 @@ J(A,B) = |A&#x222A;-B-|
 	<dd id="bib-1" class="thebibliography">
 		<!--l. 273-->
 		<p class="noindent">
-			<a id="cite.0@10.5555/3016387.3016390"></a>Yue Cao et al.
-			&#8220;Deep Quantization Network for Efficient Image
-			Retrieval&#8221;. In:
+			<a id="cite.0@10.5555/3016387.3016390"></a>Yue Cao et al. &#8220;Deep
+			Quantization Network for Efficient Image Retrieval&#8221;. In:
 			<span class="cmti-10">Proceedings of the</span>
 			<span class="cmti-10"
 				>Thirtieth AAAI Conference on Artificial Intelligence</span
@@ -4812,9 +4795,7 @@ J(A,B) = |A&#x222A;-B-|
 		</p>
 	</dd>
 
-	<dt id="X0-DBLP:journals/corr/abs-2012-00641" class="thebibliography">
-		[2]
-	</dt>
+	<dt id="X0-DBLP:journals/corr/abs-2012-00641" class="thebibliography">[2]</dt>
 	<dd id="bib-2" class="thebibliography">
 		<!--l. 273-->
 		<p class="noindent">
@@ -4826,8 +4807,9 @@ J(A,B) = |A&#x222A;-B-|
 				><span class="cmtt-10">2012.00641</span></a
 			>.
 			<span class="cmcsc-10"
-				><span class="small-caps">u</span><span class="small-caps">r</span
-				><span class="small-caps">l</span></span
+				><span class="small-caps">u</span><span class="small-caps">r</span><span
+					class="small-caps">l</span
+				></span
 			>:
 			<a href="https://arxiv.org/abs/2012.00641" class="url"
 				><span class="cmtt-10">https://arxiv.org/abs/2012.00641</span></a
@@ -4854,10 +4836,9 @@ J(A,B) = |A&#x222A;-B-|
 		<!--l. 273-->
 		<p class="noindent">
 			<a id="cite.0@liu2017e2bows"></a>Xiaobin Liu et al.
-			<span class="cmti-10">E</span><span class="cmr-7">2</span
-			><span class="cmti-10"
-				>BoWs: An End-to-End Bag-of-Words Model via Deep Convolutional
-				Neural</span
+			<span class="cmti-10">E</span><span class="cmr-7">2</span><span
+				class="cmti-10"
+				>BoWs: An End-to-End Bag-of-Words Model via Deep Convolutional Neural</span
 			>
 			<span class="cmti-10">Network</span>. 2017. arXiv:
 			<a href="https://arxiv.org/abs/1709.05903"
@@ -4872,8 +4853,8 @@ J(A,B) = |A&#x222A;-B-|
 		<p class="noindent">
 			<a id="cite.0@mama2021nwt"></a>Rayhane Mama et al.
 			<span class="cmti-10"
-				>NWT: Towards natural audio-to-video generation with
-				representation learning</span
+				>NWT: Towards natural audio-to-video generation with representation
+				learning</span
 			>. 2021. arXiv:
 			<a href="https://arxiv.org/abs/2106.04283"
 				><span class="cmtt-10">2106.04283 [cs.SD]</span></a
@@ -4881,22 +4862,21 @@ J(A,B) = |A&#x222A;-B-|
 		</p>
 	</dd>
 
-	<dt id="X0-DBLP:journals/corr/abs-1711-00937" class="thebibliography">
-		[6]
-	</dt>
+	<dt id="X0-DBLP:journals/corr/abs-1711-00937" class="thebibliography">[6]</dt>
 	<dd id="bib-6" class="thebibliography">
 		<!--l. 273-->
 		<p class="noindent">
-			<a id="cite.0@DBLP:journals/corr/abs-1711-00937"></a>A�ron van den
-			Oord, Oriol Vinyals, and Koray Kavukcuoglu. &#8220;Neural Discrete
+			<a id="cite.0@DBLP:journals/corr/abs-1711-00937"></a>A�ron van den Oord,
+			Oriol Vinyals, and Koray Kavukcuoglu. &#8220;Neural Discrete
 			Representation Learning&#8221;. In:
 			<span class="cmti-10">CoRR </span>abs/1711.00937 (2017). arXiv:
 			<a href="https://arxiv.org/abs/1711.00937"
 				><span class="cmtt-10">1711.00937</span></a
 			>.
 			<span class="cmcsc-10"
-				><span class="small-caps">u</span><span class="small-caps">r</span
-				><span class="small-caps">l</span></span
+				><span class="small-caps">u</span><span class="small-caps">r</span><span
+					class="small-caps">l</span
+				></span
 			>:
 			<a href="http://arxiv.org/abs/1711.00937" class="url"
 				><span class="cmtt-10">http://arxiv.org/abs/1711.00937</span></a
@@ -4904,22 +4884,21 @@ J(A,B) = |A&#x222A;-B-|
 		</p>
 	</dd>
 
-	<dt id="X0-DBLP:journals/corr/abs-2111-13122" class="thebibliography">
-		[7]
-	</dt>
+	<dt id="X0-DBLP:journals/corr/abs-2111-13122" class="thebibliography">[7]</dt>
 	<dd id="bib-7" class="thebibliography">
 		<!--l. 273-->
 		<p class="noindent">
-			<a id="cite.0@DBLP:journals/corr/abs-2111-13122"></a>Konstantin
-			Schall et al. &#8220;GPR1200: A Benchmark for General-Purpose
-			Content-Based Image Retrieval&#8221;. In:
+			<a id="cite.0@DBLP:journals/corr/abs-2111-13122"></a>Konstantin Schall et
+			al. &#8220;GPR1200: A Benchmark for General-Purpose Content-Based Image
+			Retrieval&#8221;. In:
 			<span class="cmti-10">CoRR </span>abs/2111.13122 (2021). arXiv:
 			<a href="https://arxiv.org/abs/2111.13122"
 				><span class="cmtt-10">2111.13122</span></a
 			>.
 			<span class="cmcsc-10"
-				><span class="small-caps">u</span><span class="small-caps">r</span
-				><span class="small-caps">l</span></span
+				><span class="small-caps">u</span><span class="small-caps">r</span><span
+					class="small-caps">l</span
+				></span
 			>:
 			<a href="https://arxiv.org/abs/2111.13122" class="url"
 				><span class="cmtt-10">https://arxiv.org/abs/2111.13122</span></a
@@ -4931,16 +4910,17 @@ J(A,B) = |A&#x222A;-B-|
 	<dd id="bib-8" class="thebibliography">
 		<!--l. 273-->
 		<p class="noindent">
-			<a id="cite.0@DBLP:journals/corr/ZhouLT17"></a>Wengang Zhou,
-			Houqiang Li, and Qi Tian. &#8220;Recent Advance in Content-based
-			Image Retrieval: A Literature Survey&#8221;. In:
+			<a id="cite.0@DBLP:journals/corr/ZhouLT17"></a>Wengang Zhou, Houqiang Li,
+			and Qi Tian. &#8220;Recent Advance in Content-based Image Retrieval: A
+			Literature Survey&#8221;. In:
 			<span class="cmti-10">CoRR </span>abs/1706.06064 (2017). arXiv:
 			<a href="https://arxiv.org/abs/1706.06064"
 				><span class="cmtt-10">1706 . 06064</span></a
 			>.
 			<span class="cmcsc-10"
-				><span class="small-caps">u</span><span class="small-caps">r</span
-				><span class="small-caps">l</span></span
+				><span class="small-caps">u</span><span class="small-caps">r</span><span
+					class="small-caps">l</span
+				></span
 			>:
 			<a href="http://arxiv.org/abs/1706.06064" class="url"
 				><span class="cmtt-10">http://arxiv.org/abs/1706.06064</span></a
