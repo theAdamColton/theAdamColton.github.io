@@ -10,7 +10,7 @@ $: ishome = $page.route.id === "/";
 
 <div class="app">
 	<div class="sidebarcontainer">
-		<Sidebar/>
+		<Sidebar animated={ishome}/>
 		<div class="pagecontent">
 
 			<Header ishome={ishome}/>
@@ -27,7 +27,7 @@ $: ishome = $page.route.id === "/";
 
 		</div>
 
-		<Sidebar/>
+		<Sidebar animated={ishome}/>
 	</div>
 
 </div>
