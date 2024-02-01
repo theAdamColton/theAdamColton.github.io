@@ -1,6 +1,5 @@
 <script>
 export let animated=false;
-console.log(animated);
 </script>
 <div class="sidebar">
 	{#if animated}

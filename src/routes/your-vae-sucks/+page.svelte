@@ -6,7 +6,8 @@
 	<div class="row"></div>
 </div>
 
-<div class="rainbow-text-animated main-title">Your VAE Sucks</div>
+<div class="rainbow-text-animated">
+<h1>Your VAE Sucks</h1></div>
 
 <hr />
 

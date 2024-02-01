@@ -19,7 +19,9 @@
 </div>
 
 <div class="rainbow-text-animated main-title">
+<h1>
 	LLMs and faithfulness to reasoning
+</h1>
 </div>
 
 <hr />
