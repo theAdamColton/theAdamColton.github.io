@@ -31,6 +31,33 @@
 <div class="section-title">Projects:</div>
 
 <ProjectBox>
+	<a href="https://github.com/theAdamColton/spiht-py">spiht-py</a>: An
+	implementation of the <a href="https://spiht.com/">SPIHT</a> algorithm in
+	Rust, with Python bindings SPIHT is an lossy image compression algorithm. Like
+	JPG, it can reduce the amount of bits required to store images. Unlike JPG,
+	the SPIHT bitstream can be interrupted at any point and the entire image
+	decoded. There are no 'blocks' in the SPIHT algorithm.
+
+	<MediaBox>
+		<img
+			src="spiht/motorcycle.gif"
+			height="300"
+			alt="animation of the spiht algorithm"
+		/>
+		Left: Intermediate decoded image
+		<br />
+		Right: Intermediate coefficients from the discrete wavelet transform.
+		<br />
+		Bits per pixel (BPP) are shown in the top left corner
+		<br />
+		As BPP increases, you can see how the encoder assigns information to coefficients
+		at higher frequencies.
+	</MediaBox>
+
+	<a href="https://github.com/theAdamColton/spiht-py">source code available</a>
+</ProjectBox>
+
+<ProjectBox>
 	<a href="/your-vae-sucks">Your VAE Sucks</a>
 	A short foray into the Forier transform, JPG, Image Autoencoders, and a new image-autoencoder
 	architecture inspired by jpg, that produces latent codes with a left-to-right positional
