@@ -11,6 +11,16 @@ export default {
 			fallback: undefined,
 			precompress: false,
 			strict: true
-		})
+		}),
+	prerender: {
+			handleHttpError: ({ path, referrer, message }) => {
+				if (referrer === '/a-picture-is-worth-8x8x8-words') {
+					return;
+				}
+
+				// otherwise fail the build
+				throw new Error(message);
+			}
+		}
 	}
 };
