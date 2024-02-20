@@ -52,7 +52,7 @@ div.proj-box-inner {
 
 div.video-container,
 div.video-box {
-	padding: 8px;
+	padding: 10px;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;

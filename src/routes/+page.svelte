@@ -31,6 +31,21 @@
 <div class="section-title">Projects:</div>
 
 <ProjectBox>
+	<a href="/generative-modelling-of-bits-from-compressed-image-files"
+		>Generative modelling of compressed bits from image files</a
+	>: Do you have issues with achieving GPU saturation because of your
+	dataloading load? Don't you wish you could train directly on compressed image
+	files? Say no more! I trained llama to directly generate the bits of a lossy image compression file format called spiht. Check out my report! There will be more coming soon.
+	<MediaBox>
+		<video object-fit="fill" autoplay controls muted loop>
+			<source src="spihtter/llama-training-mnist.mp4" type="video/mp4" />
+		</video>
+	</MediaBox>
+
+	<a href="https://github.com/theAdamColton/spihtter">source code available</a>
+</ProjectBox>
+
+<ProjectBox>
 	<a href="https://github.com/theAdamColton/spiht-py">spiht-py</a>: An
 	implementation of the <a href="https://spiht.com/">SPIHT</a> algorithm in
 	Rust, with Python bindings SPIHT is an lossy image compression algorithm. Like
