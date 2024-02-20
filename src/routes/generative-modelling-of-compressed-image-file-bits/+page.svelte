@@ -5,10 +5,10 @@
 </script>
 
 <svelte:head>
-	<title>generative modelling of bits from compressed image files</title>
+	<title>generative modelling of compressed image file bits</title>
 </svelte:head>
 
-<h1>Generative modelling of bits from compressed image files</h1>
+<h1>Generative modelling of compressed image file bits</h1>
 
 Februrary 20th 2024
 
