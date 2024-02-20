@@ -31,8 +31,8 @@
 <div class="section-title">Projects:</div>
 
 <ProjectBox>
-	<a href="/generative-modelling-of-bits-from-compressed-image-files"
-		>Generative modelling of compressed bits from image files</a
+	<a href="/generative-modelling-of-compressed-image-bits"
+		>Generative modelling of compressed image file bits</a
 	>: Do you have issues with achieving GPU saturation because of your
 	dataloading load? Don't you wish you could train directly on compressed image
 	files? Say no more! I trained llama to directly generate the bits of a lossy image compression file format called spiht. Check out my report! There will be more coming soon.
