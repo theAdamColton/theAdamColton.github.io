@@ -31,7 +31,7 @@
 <div class="section-title">Projects:</div>
 
 <ProjectBox>
-	<a href="/generative-modelling-of-compressed-image-bits"
+	<a href="/generative-modelling-of-compressed-image-file-bits"
 		>Generative modelling of compressed image file bits</a
 	>: Do you have issues with achieving GPU saturation because of your
 	dataloading load? Don't you wish you could train directly on compressed image
