@@ -69,7 +69,7 @@ Februrary 20th 2024
 	complicated information about the real world. Sampling down to 2D doesn't rid
 	all of the intracacies of the real world. Images still have to portray scenes
 	that maintain coherent portrayal objects moving through time and 3D space.
-	Moreover, images aren't restricted to portraying physical 3D objects, they
+	Moreover, images aren't restricted to physical 3D objects, they
 	also can show written text and numbers. Imagine an entity that lives in 2D
 	pixel world and can only ever see and interact in a 2D plane of existance.
 	Would this entity have enough information to figure out all of the underlying
@@ -95,7 +95,7 @@ Februrary 20th 2024
 
 <p>
 	It used to be the case that LMs couldn't generate text with proper grammar and
-	a whole bunch of research was done on decoding within the bounds of sytax.
+	a whole bunch of research was done on decoding within the bounds of correct grammatical sytax.
 	Well, nowdays our image models can't generate within the bounds of physics. I
 	think physics is more complicated than grammar. Why not force our image models
 	to generate within some sort of constrained system?
@@ -425,7 +425,7 @@ Februrary 20th 2024
 	mamba: purple, vs llama: grey, NLL loss. To be fair, LLaMa had almost 10x the number
 	of parameters, but also trained 6x faster.
 	<img src="spihtter/llama-metadata-vs-no-metadata-mnist.jpg" style="width: 25vw;"/>
-	No spiht metadata using as conditioning tokens: blue. Feeding the conditioning information from the spiht algorithm vastly improves the ability to model the sequence. model used: llama-small.json
+	The blue loss curve is without any conditioning information from the spiht decoder. The grey loss curve is from giving the LLM embeddings based on the internal programmatic state of the spiht decoder. The conditioning information from the spiht algorithm vastly improves the ability to model the sequence. model used: llama-small.json
 </MediaBox>
 
 <p>
