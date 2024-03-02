@@ -1,3 +1,7 @@
+<script>
+	import MediaBox from "../MediaBox.svelte";
+
+</script>
 <svelte:head>
 	<title>Your VAE Sucks</title>
 </svelte:head>
@@ -100,8 +104,7 @@
 		stored as their raw pixels? Usually we use our ye olde compression formats
 		like jpg. How much compression does jpg get compared to raw pixels?
 
-		<div class="video-container">
-			<div class="video-box">
+		<MediaBox>
 				<img src="lenna.png" />
 				Lossless original Lenna image
 				<img src="lenna.jpg" />
@@ -109,8 +112,7 @@
 				<br />
 				lenna.jpg is 31 KB. The raw pixels of a 512x512x3 image take 786 KB. This
 				is a compression ratio of 25.
-			</div>
-		</div>
+		</MediaBox>
 
 		<br />
 
@@ -120,21 +122,17 @@
 
 		<br />
 
-		<div class="video-container">
-			<div class="video-box">
+		<MediaBox>
 				<img src="lenna_rec.png" />
 				The Lenna image reconstructed from the stable diffusion VAE.
-			</div>
-		</div>
+		</MediaBox>
 
-		<div class="video-container">
-			<div class="video-box">
-				<img src="lenna_jpg_cropped.png" width="450" />
+		<MediaBox>
+				<img src="lenna_jpg_cropped.png" />
 				JPG reconstruction (compression ratio of 25)
-				<img src="lenna_rec_cropped.png" width="450" />
+				<img src="lenna_rec_cropped.png" />
 				VAE reconstruction (compression ratio of 24)
-			</div>
-		</div>
+		</MediaBox>
 
 		<br />
 		However, the compressed format that a VAE gives us is more useful than the compressed
@@ -171,8 +169,7 @@
 		We can mask out some of the DCT features of a transformed DCT-space image and
 		see what effect it has on the iDCT reconstructed image.
 
-		<div class="video-container">
-			<div class="video-box">
+		<MediaBox>
 				<img src="dct-basis.png" width="450" />
 				16x16 DCT basis. The top left corner holds the most low frequency features.
 				The bottom right corner holds the most high frequency features.
@@ -180,8 +177,7 @@
 				Masking out the high frequency DCT features; we keep the low frequency signals.
 				<img src="dct-lowfreq-mask.png" width="450" />
 				Masking out the low frequency DCT features; we keep the high frequency signals.
-			</div>
-		</div>
+		</MediaBox>
 
 		<br />
 
@@ -191,14 +187,12 @@
 		the highest/lowest frequencies in an image. Then I'll use the iDCT to
 		convert the masked DCT features back in into image pixels.
 
-		<div class="video-container">
-			<div class="video-box">
+		<MediaBox>
 				<img src="lenna-dct-filtered.png" />
 				Dropping different percentages of the lowest, and highest frequencies. The
 				first column shows the effect of dropping the all but the p highest frequencies.
 				The second column shows the effect of dropping all but the p lowest frequencies.
-			</div>
-		</div>
+		</MediaBox>
 
 		When we drop 99.5% of the highest frequencies, we get the image in column 2,
 		row 1. Even though it only has 0.5% of the original frequency information,
@@ -257,8 +251,7 @@
 		from 2000. They have a nice figure that shows a histogram which visualizes the
 		distribution of DCT features taken from 8x8 patches of an image.
 
-		<div class="video-container">
-			<div class="video-box">
+		<MediaBox>
 				<img src="laplacian-distribution.svg.png" width="450" />
 				Figure from Wikipedia, showing the Laplacian distribution with different
 				location and scale parameters
@@ -275,8 +268,7 @@
 				<br />
 				Each DCT feature of the 8x8 image patches seems to have different scale and
 				location parameters.
-			</div>
-		</div>
+		</MediaBox>
 
 		The usual loss function to use for Laplacian distributed data is the L1
 		loss.
@@ -410,7 +402,13 @@
 # x is an image: channels, height, width
 
 # patches x into a list of channels and their patches
-x = rearrange(x, "c (h p1) (w p2) -> (h w) c (p1 p2)", p1=patch_size, p2=patch_size, c = channels)
+x = rearrange(
+	x,
+	"c (h p1) (w p2) -> (h w) c (p1 p2)",
+	p1=patch_size,
+	p2=patch_size,
+	c = channels,
+)
 		</pre>
 		I use a patch size of 16 by 16. Note that unlike in ViT patching, I don't include
 		the channels in the patch; patches are taken independently across different channels.
@@ -447,8 +445,7 @@ x = rearrange(x, "c (h p1) (w p2) -> (h w) c (p1 p2)", p1=patch_size, p2=patch_s
 		of the patches from different channels. I'll keep the total number of patches
 		the same, at 89.
 
-		<div class="video-container">
-			<div class="video-box">
+		<MediaBox>
 				<img
 					src="./figures-dct-autoencoder/channel-importances-1-1-1.png"
 					width="450"
@@ -496,8 +493,7 @@ x = rearrange(x, "c (h p1) (w p2) -> (h w) c (p1 p2)", p1=patch_size, p2=patch_s
 					of an image, patching it, and then taking some number of patches from
 					each channel, and then doing the iDCT.</i
 				>
-			</div>
-		</div>
+		</MediaBox>
 
 		<h4>Patch normalization</h4>
 		As mentioned before, it is important to normalize DCT features. I run about 10
@@ -553,8 +549,7 @@ x = rearrange(x, "c (h p1) (w p2) -> (h w) c (p1 p2)", p1=patch_size, p2=patch_s
 			<div class="rainbow-text-animated main-title">Results:</div>
 		</div>
 
-		<div class="video-container">
-			<div class="video-box">
+		<MediaBox>
 				<img
 					src="./figures-dct-autoencoder/holygrail-decoding.gif"
 					width="1000"
@@ -576,8 +571,7 @@ x = rearrange(x, "c (h p1) (w p2) -> (h w) c (p1 p2)", p1=patch_size, p2=patch_s
 				<img src="./figures-dct-autoencoder/girl.gif" width="1000" />
 				<img src="./figures-dct-autoencoder/zebra.gif" width="1000" />
 				<img src="./figures-dct-autoencoder/skijump.gif" width="800" />
-			</div>
-		</div>
+		</MediaBox>
 
 		<h4>Comparison with your VAE (which sucks)</h4>
 
@@ -590,8 +584,7 @@ x = rearrange(x, "c (h p1) (w p2) -> (h w) c (p1 p2)", p1=patch_size, p2=patch_s
 		image autoencoders. Looking at some of the reconstructed images, it's clear what
 		the strengths and weaknesses of DCT-autoencoder are.
 
-		<div class="video-container">
-			<div class="video-box">
+		<MediaBox>
 				<img src="./figures-dct-autoencoder/squirrel.png" width="800" />
 				Compression ratios from left to right: 1x, 118x, 118x, 438x, 614x
 				<img src="./figures-dct-autoencoder/squirrel.gif" width="800" />
@@ -599,17 +592,14 @@ x = rearrange(x, "c (h p1) (w p2) -> (h w) c (p1 p2)", p1=patch_size, p2=patch_s
 				you want to represent an image. This image was reconstructed from 30 DCT-patches,
 				each patch having 32 codes. So the compression rate over a 348x348x3 image
 				is 252.
-			</div>
-		</div>
+		</MediaBox>
 
-		<div class="video-container">
-			<div class="video-box">
+		<MediaBox>
 				<img src="./figures-dct-autoencoder/girl.png" width="800" />
 				Compression ratios from left to right: 1x, 118x, 118x, 438x, 614x
 				<img src="./figures-dct-autoencoder/girl-static.gif" width="800" />
 				216x
-			</div>
-		</div>
+		</MediaBox>
 
 		<h4>Wait, maybe your VAE doesn't suck?</h4>
 
