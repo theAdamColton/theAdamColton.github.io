@@ -7,13 +7,33 @@
 	let checkbox_id = `checkbox-${id}`;
 
 	export let title = "note";
+
+	let parent;
+	let parentOffsetWidth;
+	let popupRect;
+	let parentRect;
+	let windowWidth;
+
+	let popupLeftAdjustment=0;
+	$: {
+		if (!parent || !windowWidth || !popupRect) {
+			popupLeftAdjustment = 0;
+		} else {
+			let popupLeft = parent.offsetLeft + parent.offsetWidth;
+			let distanceFromLeft = windowWidth - popupLeft;
+			let popupWidth = popupRect.width;
+			let adjustmentLeft = distanceFromLeft > popupWidth ? 0 : distanceFromLeft - popupWidth;
+			popupLeftAdjustment = adjustmentLeft;
+		}
+	}
 </script>
 
-<span class="ref">
+<svelte:window bind:innerWidth={windowWidth} />
+<span class="ref"  bind:offsetWidth={parentOffsetWidth} bind:contentRect={parentRect} bind:this={parent}>
 	<input type="checkbox" id={checkbox_id} /><label for={checkbox_id}
-		><span class="reftitle">[{title}]</span></label
+		><span class="reftitle" >[{title}]</span></label
 	>
-	<span class="refbody">
+	<span class="refbody" style:left={`${popupLeftAdjustment}px`} bind:contentRect={popupRect} >
 		<slot />
 	</span>
 </span>
@@ -35,11 +55,11 @@
 		vertical-align: baseline;
 	}
 	.refbody {
-		display: block;
-		min-width: 15em;
-		max-width: 20em;
+		display: inline-block;
+		min-width: 10em;
+		max-width: 40em;
 		position: absolute;
-		left: max(-15em, -8vw);
+		left: -10px;
 		bottom: 20px;
 		border: 2px double orange;
 		padding: 2px;

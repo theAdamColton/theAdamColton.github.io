@@ -15,8 +15,14 @@ div.sidebar {
 	flex-direction: column;
 }
 
+@media screen and (max-width: 800px) {
+	div.sidebar {
+		display: none;
+	}
+}
+
 div.pagecontent {
-	padding: 0px 20px;
+	padding: 0px 10px;
 	background-color: #366c7c87;
 }
 
@@ -66,8 +72,9 @@ div.video-box {
 	width: min-content;
 }
 
-div.video-box video {
-	width: clamp(300px, 40vw, 600px);
+.resizing-media img, .resizing-media, .resizing-media video {
+	width: auto;
+	max-width: clamp(20px, 80vw, 400px);
 }
 
 div.video-description {
@@ -80,6 +87,7 @@ div.video-description {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
+	flex-wrap: wrap;
 }
 
 .code-verbatim {
@@ -133,51 +141,6 @@ div.rainbow {
 		1;
 
 	animation: 10s rotate linear infinite;
-}
-
-@keyframes rotate {
-	to {
-		--angle: 360deg;
-	}
-}
-
-@property --angle {
-	syntax: "<angle>";
-	initial-value: 0deg;
-	inherits: false;
-}
-
-#spinningcube {
-	position: relative;
-	transform-style: preserve-3d;
-	animation: spin 20s linear infinite;
-}
-
-#spinningcube > div {
-	position: absolute;
-	transform-style: preserve-3d;
-}
-
-@keyframes spin {
-	from {
-		transform: rotateX(-0.1turn) rotateY(0turn);
-	}
-	to {
-		transform: rotateX(-0.1turn) rotateY(3turn);
-	}
-}
-
-#spinningcube > div > div {
-	animation: un-spin 20s linear infinite;
-}
-
-@keyframes un-spin {
-	from {
-		transform: rotateY(0turn);
-	}
-	to {
-		transform: rotateY(-1turn);
-	}
 }
 
 .bouncingText span {

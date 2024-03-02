@@ -21,6 +21,7 @@
 	.aside-box {
 		display: flex;
 		align-items: center;
+		flex-wrap:wrap;
 	}
 	.aside-box-bk {
 		padding: 15px 15px;

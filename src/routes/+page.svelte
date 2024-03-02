@@ -9,22 +9,7 @@
 </svelte:head>
 
 <div class="column">
-	<div class="row">
-		<img src="me.jpg" alt="me" height="400" />
-	</div>
-	<div class="row">
-		<img src="facepic.gif" alt="My mug" height="400" />
-	</div>
-
-	<div id="spinningcube">
-		<div style="transform: translate3d(0em, 0em, -1em)">Studious,</div>
-		<div style="transform: translate3d(0em, 1em, 0em)">Diligent,</div>
-		<div style="transform: translate3d(0em, 2em, 1em)">Brave,</div>
-		<div style="transform: translate3d(0em, 3em, 2em)">Peaceful,</div>
-		<div style="transform: translate3d(0em, 4em, 3em)">That's me:</div>
-		<div style="transform: translate3d(0em, 6em, 4em)">Adam</div>
-		<div style="transform: translate3d(0em, 7em, 5em)">Colton</div>
-	</div>
+<img src="me.jpg" alt="me" class="resizing-media" />
 </div>
 
 <hr />
@@ -37,7 +22,7 @@
 	dataloading load? Don't you wish you could train directly on compressed image
 	files? Say no more! I trained llama to directly generate the bits of a lossy image compression file format called spiht. Check out my report! There will be more coming soon.
 	<MediaBox>
-		<video object-fit="fill" autoplay controls muted loop>
+		<video object-fit="fill" autoplay controls muted loop style="width: 40vw;">
 			<source src="spihtter/llama-training-mnist.mp4" type="video/mp4" />
 		</video>
 	</MediaBox>
@@ -56,7 +41,6 @@
 	<MediaBox>
 		<img
 			src="spiht/motorcycle.gif"
-			height="300"
 			alt="animation of the spiht algorithm"
 		/>
 		Left: Intermediate decoded image
@@ -80,7 +64,6 @@
 	<MediaBox>
 		<img
 			src="figures-dct-autoencoder/skijump.gif"
-			height="400"
 			alt="decoded ski jump animation"
 		/>
 	</MediaBox>
@@ -136,7 +119,7 @@
 
 	<div class="column">
 		<MediaBox>
-			<img src="2d_kgrams.png" alt="2d kgrams diagram" height="300" />
+			<img src="2d_kgrams.png" alt="2d kgrams diagram" />
 			<div class="video-description">
 				<br />
 				Given an arbitrarily sized 3D input tensor of token IDs, we can obtain a
@@ -149,7 +132,6 @@
 			<img
 				src="image-ret-poster.png"
 				alt="Our group's poster. Thanks for voting for us!"
-				height="300"
 			/>
 		</MediaBox>
 	</div>

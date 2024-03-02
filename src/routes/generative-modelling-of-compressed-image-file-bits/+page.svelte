@@ -13,7 +13,7 @@
 Februrary 20th 2024
 
 <MediaBox>
-	<video autoplay controls muted loop>
+	<video autoplay controls muted loop style="width: 40vw;">
 		<source src="spihtter/llama-training-mnist.mp4" type="video/mp4" />
 	</video>
 	mnist digit generation as training progresses, 2M parameter llama model
@@ -26,8 +26,7 @@ Februrary 20th 2024
 
 <AsideBox>
 	<u slot="title"> The holy grail </u>
-
-	<img src="spihtter/holy grail.jpg" style="height: 4em;" slot="image" />
+	<img src="spihtter/holy grail.jpg" style="height: 3em;" slot="image" />
 	<p>
 		Tales have long told of a great and mythical image-text architecture.
 		Stories passed down through the generations called it the holy grail.
@@ -148,7 +147,6 @@ Februrary 20th 2024
 	<img
 		src="spihtter/yann-tweet.jpg"
 		alt="https://x.com/ylecun/status/1625127902890151943?s=20"
-		style="height: 220px;"
 	/>
 </MediaBox>
 
@@ -213,7 +211,7 @@ Februrary 20th 2024
 </p>
 
 <MediaBox>
-	<img src="spihtter/bob ross.gif" style="height: 300px;" />
+	<img src="spihtter/bob ross.gif" />
 	Bob Ross and other artists do not make paintings by placing brush strokes in a
 	raster scan ordering.
 </MediaBox>
@@ -230,7 +228,7 @@ Februrary 20th 2024
 </p>
 
 <MediaBox>
-	<img src="spihtter/owl.jpg" style="height: 400px;" />
+	<img src="spihtter/owl.jpg" />
 	Tokenizing an image can be interpreted as translating an image into a sequence
 	of expert instructions. The instructions have to be 'intuitive', and when followed,
 	actually result in the creation of something close to the original image. When
@@ -254,21 +252,17 @@ Februrary 20th 2024
 </p>
 
 <MediaBox>
-	<div style="display: flex; flex-direction: row;">
-		<img src="spihtter/ideal image compression.jpg" style="width: 300px;" />
-		<div style="padding: 20px; width: 25vw;">
-			We want to obtain a stream of tokens that describes a sequence of actions
-			to construct the image. We also want to get conditioning tokens.
-			Conditioning tokens aren't used directly by the encoder/decoder, but are
-			given as additional information for the downstream autoregressive
-			generative models. After the autoregressive model generates each token, it
-			feeds the new sequence to the decoder and gets an additional conditioning
-			vector. It is difficult to train both the image compression model and the
-			autoregressive model at the same time and pass gradients between them. How
-			do we know what information will be useful for the generative model? In
-			this project I use handmade features.
-		</div>
-	</div>
+		<img src="spihtter/ideal image compression.jpg" />
+		We want to obtain a stream of tokens that describes a sequence of actions
+		to construct the image. We also want to get conditioning tokens.
+		Conditioning tokens aren't used directly by the encoder/decoder, but are
+		given as additional information for the downstream autoregressive
+		generative models. After the autoregressive model generates each token, it
+		feeds the new sequence to the decoder and gets an additional conditioning
+		vector. It is difficult to train both the image compression model and the
+		autoregressive model at the same time and pass gradients between them. How
+		do we know what information will be useful for the generative model? In
+		this project I use handmade features.
 </MediaBox>
 
 <p>
@@ -403,28 +397,28 @@ Februrary 20th 2024
 <MediaBox>
 	<div class="column" style="padding: 10px;">
 		<div class="rowentry">
-			<img src="spihtter/mnist dataset samples.png" style="width: 200px;" />
-			Random dataset samples, compressed to 256 bits. These are the images decoded
-			from the ground truth bits.
+			<img src="spihtter/mnist dataset samples.png" style="width: 10vw;" />
 		</div>
+		Random dataset samples, compressed to 256 bits. These are the images decoded
+		from the ground truth bits.
 		<div class="rowentry">
-			<img src="spihtter/mnist mamba samples.png" style="width: 200px;" />
+			<img src="spihtter/mnist mamba samples.png" style="width:10vw;"/>
+		</div>
 			digits 0-9 after 1 hour of training, decoded from .3M parameter mamba model,
 			batch size 16, 1000 steps
-		</div>
 		<div class="rowentry">
-			<img src="spihtter/mnist llama 1000.png" style="width: 200px;" />
+			<img src="spihtter/mnist llama 1000.png" style="width:10vw;"/>
+		</div>
 			digits 0-9 after 10 minutes of training, decoded from 2M parameter llama model,
 			batch size 16, 1000 steps
-		</div>
 	</div>
 </MediaBox>
 
 <MediaBox>
-	<img src="spihtter/mamba-vs-llama-mnist.jpg" style="width: 25vw;" />
+	<img src="spihtter/mamba-vs-llama-mnist.jpg" />
 	mamba: purple, vs llama: grey, NLL loss. To be fair, LLaMa had almost 10x the number
 	of parameters, but also trained 6x faster.
-	<img src="spihtter/llama-metadata-vs-no-metadata-mnist.jpg" style="width: 25vw;"/>
+	<img src="spihtter/llama-metadata-vs-no-metadata-mnist.jpg" />
 	The blue loss curve is without any conditioning information from the spiht decoder. The grey loss curve is from giving the LLM embeddings based on the internal programmatic state of the spiht decoder. The conditioning information from the spiht algorithm vastly improves the ability to model the sequence. model used: llama-small.json
 </MediaBox>
 
