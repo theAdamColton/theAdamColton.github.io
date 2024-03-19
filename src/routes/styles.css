@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
 	margin: 0px;
 	height: 100%;
 }
@@ -72,7 +73,9 @@ div.video-box {
 	width: min-content;
 }
 
-.resizing-media img, .resizing-media, .resizing-media video {
+.resizing-media img,
+.resizing-media,
+.resizing-media video {
 	width: auto;
 	max-width: clamp(20px, 80vw, 400px);
 }

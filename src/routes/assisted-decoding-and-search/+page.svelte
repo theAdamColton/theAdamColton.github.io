@@ -36,8 +36,7 @@
 		href="https://cfg.mit.edu/assets/images/cg2real-improving-the-realism-of-computer-generated-images-using-a-collection-of-photographs.pdf"
 		>CG2Real</a
 	>
-	Really fun older paper about image retrieval to make computer graphics highly
-	realistic
+	Really fun older paper about image retrieval to make computer graphics highly realistic
 	<br />
 	* Requiring less memorization of model parameters:
 	<a href="https://arxiv.org/abs/2112.04426"

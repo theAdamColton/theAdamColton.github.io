@@ -9,18 +9,31 @@
 </svelte:head>
 
 <div class="column">
-<img src="me.jpg" alt="me" class="resizing-media" />
+	<img src="me.avif" alt="me" class="resizing-media" />
+</div>
+<div>
+	<ul>
+		<li>
+			<a href="#projects">projects</a>
+		</li>
+		<li>
+			<a href="#adventures">adventures</a>
+		</li>
+		<ul></ul>
+	</ul>
 </div>
 
 <hr />
-<div class="section-title">Projects:</div>
+<div class="section-title" id="projects">Projects:</div>
 
 <ProjectBox>
 	<a href="/generative-modelling-of-compressed-image-file-bits"
 		>Generative modelling of compressed image file bits</a
 	>: Do you have issues with achieving GPU saturation because of your
 	dataloading load? Don't you wish you could train directly on compressed image
-	files? Say no more! I trained llama to directly generate the bits of a lossy image compression file format called spiht. Check out my report! There will be more coming soon.
+	files? Say no more! I trained llama to directly generate the bits of a lossy
+	image compression file format called spiht. Check out my report! There will be
+	more coming soon.
 	<MediaBox>
 		<video object-fit="fill" autoplay controls muted loop style="width: 40vw;">
 			<source src="spihtter/llama-training-mnist.mp4" type="video/mp4" />
@@ -39,10 +52,7 @@
 	decoded. There are no 'blocks' in the SPIHT algorithm.
 
 	<MediaBox>
-		<img
-			src="spiht/motorcycle.gif"
-			alt="animation of the spiht algorithm"
-		/>
+		<img src="spiht/motorcycle.gif" alt="animation of the spiht algorithm" />
 		Left: Intermediate decoded image
 		<br />
 		Right: Intermediate coefficients from the discrete wavelet transform.
@@ -121,16 +131,13 @@
 		<MediaBox>
 			<img src="2d_kgrams.png" alt="2d kgrams diagram" />
 			<div class="video-description">
-				<br />
-				Given an arbitrarily sized 3D input tensor of token IDs, we can obtain a
-				vector of gram frequencies, also called a bag-of-words (BoW). For tokens
-				obtained from CNNs with vector quantization, this BoW can contain rich information
-				about the activation at this layer.
+				2D kgrams can be used to produce global representations which capture
+				spatial relationships
 			</div>
 		</MediaBox>
 		<MediaBox>
 			<img
-				src="image-ret-poster.png"
+				src="image-ret-poster.avif"
 				alt="Our group's poster. Thanks for voting for us!"
 			/>
 		</MediaBox>
@@ -189,31 +196,9 @@
 		</video>
 
 		<div class="video-description">
-			<p>
-				This video shows the interpolation of the latent space of the VQ VAE. In
-				the top left corner you can see a visualization of the discrete tokens
-				which compose the latent space. The left ascii art is the decoded
-				representation of the current embedding. On the right is the unaltered
-				ascii art that is being interpolated to.
-			</p>
-
-			<p>
-				First, a new datapoint is randomly pulled from the set of training
-				items. This is shown as the ascii art on the right side. Interpolation
-				is done over spacial dimensions, truncating or padding with zeros the
-				interpolated-from and interpolated-to embedding tensors and linearly
-				combining them based on the current step in the interpolation. You can
-				observe the dimensions of the embedding space shift with this
-				interpolation.
-			</p>
-
-			<p>
-				Next, the masking step can be observed. Randomly, tokens in the top
-				right are masked and turn red. The bidirectional transformer then in one
-				pass reconstructs the set of tokens. The reconstructed tokens and
-				decoded ascii art are then shown for about a second before again
-				starting interpolation to the next data point.
-			</p>
+			interpolation of the latent space, the top left corner shows the discrete
+			tokens, The left ascii art is the decoded representation of the current
+			embedding. On the right is the original
 		</div>
 	</MediaBox>
 </ProjectBox>
@@ -224,4 +209,14 @@
 	A simple cross platform GUI app written in Rust for the ethminer CLI program. It
 	includes capturing of console output from the program, and asyncronous channel
 	communication using Tokio.
+</ProjectBox>
+
+<hr />
+<div class="section-title" id="adventures">Adventure:</div>
+<ProjectBox>
+	<a href="/how-to-go-from-romania-to-serbia"
+		>How to go from Romania to Serbia, a Backpacker's guide</a
+	>
+	Discusses a bio-ecological super low emmision community-driven form of transport
+	colloquially known as hitchhiking
 </ProjectBox>

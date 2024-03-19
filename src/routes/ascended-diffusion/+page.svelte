@@ -13,15 +13,12 @@
 </div>
 
 <div class="rainbow-text-animated">
-	<h1>Ascended Diffusion or: How I Learned to Drop the Scheduler and Love the Backprop</h1>
+	<h1>
+		Ascended Diffusion or: How I Learned to Drop the Scheduler and Love the
+		Backprop
+	</h1>
 </div>
 
+<h2>Diffusion</h2>
 
-<h2>
-Diffusion
-</h2>
-
-
-<h2>
-Cross Attention is Crippled
-</h2>
+<h2>Cross Attention is Crippled</h2>

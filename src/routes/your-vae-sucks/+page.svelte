@@ -1,7 +1,7 @@
 <script>
 	import MediaBox from "../MediaBox.svelte";
-
 </script>
+
 <svelte:head>
 	<title>Your VAE Sucks</title>
 </svelte:head>
@@ -105,13 +105,13 @@
 		like jpg. How much compression does jpg get compared to raw pixels?
 
 		<MediaBox>
-				<img src="lenna.png" />
-				Lossless original Lenna image
-				<img src="lenna.jpg" />
-				JPG reconstruction
-				<br />
-				lenna.jpg is 31 KB. The raw pixels of a 512x512x3 image take 786 KB. This
-				is a compression ratio of 25.
+			<img src="lenna.png" />
+			Lossless original Lenna image
+			<img src="lenna.jpg" />
+			JPG reconstruction
+			<br />
+			lenna.jpg is 31 KB. The raw pixels of a 512x512x3 image take 786 KB. This is
+			a compression ratio of 25.
 		</MediaBox>
 
 		<br />
@@ -123,15 +123,15 @@
 		<br />
 
 		<MediaBox>
-				<img src="lenna_rec.png" />
-				The Lenna image reconstructed from the stable diffusion VAE.
+			<img src="lenna_rec.png" />
+			The Lenna image reconstructed from the stable diffusion VAE.
 		</MediaBox>
 
 		<MediaBox>
-				<img src="lenna_jpg_cropped.png" />
-				JPG reconstruction (compression ratio of 25)
-				<img src="lenna_rec_cropped.png" />
-				VAE reconstruction (compression ratio of 24)
+			<img src="lenna_jpg_cropped.png" />
+			JPG reconstruction (compression ratio of 25)
+			<img src="lenna_rec_cropped.png" />
+			VAE reconstruction (compression ratio of 24)
 		</MediaBox>
 
 		<br />
@@ -170,13 +170,13 @@
 		see what effect it has on the iDCT reconstructed image.
 
 		<MediaBox>
-				<img src="dct-basis.png" width="450" />
-				16x16 DCT basis. The top left corner holds the most low frequency features.
-				The bottom right corner holds the most high frequency features.
-				<img src="dct-highfreq-mask.png" width="450" />
-				Masking out the high frequency DCT features; we keep the low frequency signals.
-				<img src="dct-lowfreq-mask.png" width="450" />
-				Masking out the low frequency DCT features; we keep the high frequency signals.
+			<img src="dct-basis.png" width="450" />
+			16x16 DCT basis. The top left corner holds the most low frequency features.
+			The bottom right corner holds the most high frequency features.
+			<img src="dct-highfreq-mask.png" width="450" />
+			Masking out the high frequency DCT features; we keep the low frequency signals.
+			<img src="dct-lowfreq-mask.png" width="450" />
+			Masking out the low frequency DCT features; we keep the high frequency signals.
 		</MediaBox>
 
 		<br />
@@ -188,10 +188,10 @@
 		convert the masked DCT features back in into image pixels.
 
 		<MediaBox>
-				<img src="lenna-dct-filtered.png" />
-				Dropping different percentages of the lowest, and highest frequencies. The
-				first column shows the effect of dropping the all but the p highest frequencies.
-				The second column shows the effect of dropping all but the p lowest frequencies.
+			<img src="lenna-dct-filtered.png" />
+			Dropping different percentages of the lowest, and highest frequencies. The
+			first column shows the effect of dropping the all but the p highest frequencies.
+			The second column shows the effect of dropping all but the p lowest frequencies.
 		</MediaBox>
 
 		When we drop 99.5% of the highest frequencies, we get the image in column 2,
@@ -252,22 +252,22 @@
 		distribution of DCT features taken from 8x8 patches of an image.
 
 		<MediaBox>
-				<img src="laplacian-distribution.svg.png" width="450" />
-				Figure from Wikipedia, showing the Laplacian distribution with different
-				location and scale parameters
-				<img src="dct-feature-distribution.png" width="450" />
-				Figure from E. Y. Lam and J. W. Goodman, "A mathematical analysis of the
-				DCT coefficient distributions for images"
-				<br />
-				This is a histogram of DCT features of 8x8 patches of images
+			<img src="laplacian-distribution.svg.png" width="450" />
+			Figure from Wikipedia, showing the Laplacian distribution with different location
+			and scale parameters
+			<img src="dct-feature-distribution.png" width="450" />
+			Figure from E. Y. Lam and J. W. Goodman, "A mathematical analysis of the DCT
+			coefficient distributions for images"
+			<br />
+			This is a histogram of DCT features of 8x8 patches of images
 
-				<br />
-				Notice the sharp peaks and long tails; looks an awful lot like a Laplacian
-				to me
+			<br />
+			Notice the sharp peaks and long tails; looks an awful lot like a Laplacian
+			to me
 
-				<br />
-				Each DCT feature of the 8x8 image patches seems to have different scale and
-				location parameters.
+			<br />
+			Each DCT feature of the 8x8 image patches seems to have different scale and
+			location parameters.
 		</MediaBox>
 
 		The usual loss function to use for Laplacian distributed data is the L1
@@ -446,53 +446,53 @@ x = rearrange(
 		the same, at 89.
 
 		<MediaBox>
-				<img
-					src="./figures-dct-autoencoder/channel-importances-1-1-1.png"
-					width="450"
-				/>
-				<br />
-				channel I: 30
-				<br />
-				channel Ct: 30
-				<br />
-				channel Cp: 29
-				<img
-					src="./figures-dct-autoencoder/channel-importances-2-1-1.png"
-					width="450"
-				/>
-				channel I: 56
-				<br />
-				channel Ct: 17
-				<br />
-				channel Cp: 16
-				<img
-					src="./figures-dct-autoencoder/channel-importances-8-1-1.png"
-					width="450"
-				/>
-				channel I: 83
-				<br />
-				channel Ct: 3
-				<br />
-				channel Cp: 3
-				<img
-					src="./figures-dct-autoencoder/channel-importances-100-1-1.png"
-					width="450"
-				/>
-				channel I: 87
-				<br />
-				channel Ct: 1
-				<br />
-				channel Cp: 1
+			<img
+				src="./figures-dct-autoencoder/channel-importances-1-1-1.png"
+				width="450"
+			/>
+			<br />
+			channel I: 30
+			<br />
+			channel Ct: 30
+			<br />
+			channel Cp: 29
+			<img
+				src="./figures-dct-autoencoder/channel-importances-2-1-1.png"
+				width="450"
+			/>
+			channel I: 56
+			<br />
+			channel Ct: 17
+			<br />
+			channel Cp: 16
+			<img
+				src="./figures-dct-autoencoder/channel-importances-8-1-1.png"
+				width="450"
+			/>
+			channel I: 83
+			<br />
+			channel Ct: 3
+			<br />
+			channel Cp: 3
+			<img
+				src="./figures-dct-autoencoder/channel-importances-100-1-1.png"
+				width="450"
+			/>
+			channel I: 87
+			<br />
+			channel Ct: 1
+			<br />
+			channel Cp: 1
 
-				<br />
-				<br />
-				Number of patches per channel, and their reconstructed images. At only one
-				patch for Ct and Cp, the colors become washed out.
-				<i
-					>Note, this is not using any machine learning, simply taking the DCT
-					of an image, patching it, and then taking some number of patches from
-					each channel, and then doing the iDCT.</i
-				>
+			<br />
+			<br />
+			Number of patches per channel, and their reconstructed images. At only one
+			patch for Ct and Cp, the colors become washed out.
+			<i
+				>Note, this is not using any machine learning, simply taking the DCT of
+				an image, patching it, and then taking some number of patches from each
+				channel, and then doing the iDCT.</i
+			>
 		</MediaBox>
 
 		<h4>Patch normalization</h4>
@@ -550,27 +550,27 @@ x = rearrange(
 		</div>
 
 		<MediaBox>
-				<img
-					src="./figures-dct-autoencoder/holygrail-decoding.gif"
-					width="1000"
-				/>
-				On the left is the iDCT of the input (ground truth) DCT patches. In the center
-				is the iDCT of the reconstructed DCT patches. In the top left corner you
-				can see the current number of codes being used to represent the image. On
-				the right you can see the actual reconstructed DCT patches, notice how they
-				start from the left corner, and then percolate outwards. As the number of
-				codes/patches increases, more and more details in the ground truth image
-				start to appear. DCT-autoencoder is able to achieve extreme image compression,
-				while keeping most of the details of the image intact.
-				<img src="./figures-dct-autoencoder/crimea.gif" width="1000" />
-				Notice how in this greyscale image, no DCT patches are wasted on the Ct and
-				Cp color channels; most of the DCT patches are the DCT intensity channel.
-				<img src="./figures-dct-autoencoder/bold.gif" width="800" />
-				Images with more color have more DCT patches being used for the Ct and Cp
-				color channels. The DCT-autoencoder architecture works for arbitrary resolutions.
-				<img src="./figures-dct-autoencoder/girl.gif" width="1000" />
-				<img src="./figures-dct-autoencoder/zebra.gif" width="1000" />
-				<img src="./figures-dct-autoencoder/skijump.gif" width="800" />
+			<img
+				src="./figures-dct-autoencoder/holygrail-decoding.gif"
+				width="1000"
+			/>
+			On the left is the iDCT of the input (ground truth) DCT patches. In the center
+			is the iDCT of the reconstructed DCT patches. In the top left corner you can
+			see the current number of codes being used to represent the image. On the right
+			you can see the actual reconstructed DCT patches, notice how they start from
+			the left corner, and then percolate outwards. As the number of codes/patches
+			increases, more and more details in the ground truth image start to appear.
+			DCT-autoencoder is able to achieve extreme image compression, while keeping
+			most of the details of the image intact.
+			<img src="./figures-dct-autoencoder/crimea.gif" width="1000" />
+			Notice how in this greyscale image, no DCT patches are wasted on the Ct and
+			Cp color channels; most of the DCT patches are the DCT intensity channel.
+			<img src="./figures-dct-autoencoder/bold.gif" width="800" />
+			Images with more color have more DCT patches being used for the Ct and Cp color
+			channels. The DCT-autoencoder architecture works for arbitrary resolutions.
+			<img src="./figures-dct-autoencoder/girl.gif" width="1000" />
+			<img src="./figures-dct-autoencoder/zebra.gif" width="1000" />
+			<img src="./figures-dct-autoencoder/skijump.gif" width="800" />
 		</MediaBox>
 
 		<h4>Comparison with your VAE (which sucks)</h4>
@@ -585,20 +585,20 @@ x = rearrange(
 		the strengths and weaknesses of DCT-autoencoder are.
 
 		<MediaBox>
-				<img src="./figures-dct-autoencoder/squirrel.png" width="800" />
-				Compression ratios from left to right: 1x, 118x, 118x, 438x, 614x
-				<img src="./figures-dct-autoencoder/squirrel.gif" width="800" />
-				With DCT-autoencoder, the compression rate can vary based on how many DCT-patches
-				you want to represent an image. This image was reconstructed from 30 DCT-patches,
-				each patch having 32 codes. So the compression rate over a 348x348x3 image
-				is 252.
+			<img src="./figures-dct-autoencoder/squirrel.png" width="800" />
+			Compression ratios from left to right: 1x, 118x, 118x, 438x, 614x
+			<img src="./figures-dct-autoencoder/squirrel.gif" width="800" />
+			With DCT-autoencoder, the compression rate can vary based on how many DCT-patches
+			you want to represent an image. This image was reconstructed from 30 DCT-patches,
+			each patch having 32 codes. So the compression rate over a 348x348x3 image
+			is 252.
 		</MediaBox>
 
 		<MediaBox>
-				<img src="./figures-dct-autoencoder/girl.png" width="800" />
-				Compression ratios from left to right: 1x, 118x, 118x, 438x, 614x
-				<img src="./figures-dct-autoencoder/girl-static.gif" width="800" />
-				216x
+			<img src="./figures-dct-autoencoder/girl.png" width="800" />
+			Compression ratios from left to right: 1x, 118x, 118x, 438x, 614x
+			<img src="./figures-dct-autoencoder/girl-static.gif" width="800" />
+			216x
 		</MediaBox>
 
 		<h4>Wait, maybe your VAE doesn't suck?</h4>

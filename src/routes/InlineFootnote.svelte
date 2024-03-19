@@ -14,7 +14,7 @@
 	let parentRect;
 	let windowWidth;
 
-	let popupLeftAdjustment=0;
+	let popupLeftAdjustment = 0;
 	$: {
 		if (!parent || !windowWidth || !popupRect) {
 			popupLeftAdjustment = 0;
@@ -22,18 +22,28 @@
 			let popupLeft = parent.offsetLeft + parent.offsetWidth;
 			let distanceFromLeft = windowWidth - popupLeft;
 			let popupWidth = popupRect.width;
-			let adjustmentLeft = distanceFromLeft > popupWidth ? 0 : distanceFromLeft - popupWidth;
+			let adjustmentLeft =
+				distanceFromLeft > popupWidth ? 0 : distanceFromLeft - popupWidth;
 			popupLeftAdjustment = adjustmentLeft;
 		}
 	}
 </script>
 
 <svelte:window bind:innerWidth={windowWidth} />
-<span class="ref"  bind:offsetWidth={parentOffsetWidth} bind:contentRect={parentRect} bind:this={parent}>
+<span
+	class="ref"
+	bind:offsetWidth={parentOffsetWidth}
+	bind:contentRect={parentRect}
+	bind:this={parent}
+>
 	<input type="checkbox" id={checkbox_id} /><label for={checkbox_id}
-		><span class="reftitle" >[{title}]</span></label
+		><span class="reftitle">[{title}]</span></label
 	>
-	<span class="refbody" style:left={`${popupLeftAdjustment}px`} bind:contentRect={popupRect} >
+	<span
+		class="refbody"
+		style:left={`${popupLeftAdjustment}px`}
+		bind:contentRect={popupRect}
+	>
 		<slot />
 	</span>
 </span>
