@@ -93,3 +93,9 @@ March 18th, 2024
 	confusing . I'd recommend walking and there are abundant country walking paths
 	to convey you to Belgrade.
 </p>
+
+<MediaBox>
+	<img src="romania-to-serbia/panchevo.avif" />
+	There is a pleasant 20km trail from Panchevo to Belgrade.
+</MediaBox>
+
