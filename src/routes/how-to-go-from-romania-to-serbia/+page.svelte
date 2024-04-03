@@ -3,18 +3,15 @@
 </script>
 
 <svelte:head>
-	<title>How to go from Romania to Serbia</title>
+	<title>How to go from Užice to Bajina Bašta: A backpacker's guide</title>
 </svelte:head>
 
 <div class="rainbow-text-animated">
-	<h1>How to go from Romania to Serbia: A backpacker's guide</h1>
+	<h1>How to go from Užice to Bajina Bašta: A backpacker's guide</h1>
 </div>
 
-<MediaBox>
-	<img src="romania-to-serbia/marker.avif" />
-</MediaBox>
 
-March 18th, 2024
+April 1st, 2024
 
 <p>
 	Serbia is located to the west of Romania. The large Romanian city Timisoara is
