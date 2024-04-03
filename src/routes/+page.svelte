@@ -212,7 +212,13 @@
 </ProjectBox>
 
 <hr />
-<div class="section-title" id="adventures">Adventure:</div>
+<div class="section-title" id="adventures">Adventures:</div>
+<ProjectBox>
+	<a href="/how-to-go-from-uzice-to-bajina-bashta"
+		>How to go from Užice to Bajina Bašta, a Backpacker's guide</a
+	>
+	Explore the Serbian countryside the simple way by walking
+</ProjectBox>
 <ProjectBox>
 	<a href="/how-to-go-from-romania-to-serbia"
 		>How to go from Romania to Serbia, a Backpacker's guide</a
