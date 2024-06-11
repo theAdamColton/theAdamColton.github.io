@@ -9,9 +9,7 @@
 	export let title = "note";
 
 	let parent;
-	let parentOffsetWidth;
 	let popupRect;
-	let parentRect;
 	let windowWidth;
 
 	let popupLeftAdjustment = 0;
@@ -32,8 +30,6 @@
 <svelte:window bind:innerWidth={windowWidth} />
 <span
 	class="ref"
-	bind:offsetWidth={parentOffsetWidth}
-	bind:contentRect={parentRect}
 	bind:this={parent}
 >
 	<input type="checkbox" id={checkbox_id} /><label for={checkbox_id}
@@ -65,18 +61,14 @@
 		vertical-align: baseline;
 	}
 	.refbody {
-		display: inline-block;
-		min-width: 10em;
-		max-width: 40em;
+		min-width: 20em;
 		position: absolute;
 		left: -10px;
 		bottom: 20px;
 		border: 2px double orange;
 		padding: 2px;
 		background-color: #d4fbff;
-		word-wrap: break-word;
 		z-index: 9999;
-		overflow: auto;
 	}
 	input[type="checkbox"] ~ span {
 		display: none;
