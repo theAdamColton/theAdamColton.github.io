@@ -27,6 +27,27 @@
 <div class="section-title" id="projects">Projects:</div>
 
 <ProjectBox>
+	<a href="/image-ssl-on-a-shoestring"
+		>Image Self Supervised Learning on a Shoestring : IJEPA-Enhanced</a
+	>: I create a technique for quickly training self supervised image encoders on
+	a single GPU. I optimize for training throughput. The code allows you to train
+	a ViT-S at a rate of 1300 medium sized images per second. I release the
+	training code here:
+	<a href="https://github.com/theAdamColton/ijepa-enhanced">IJEPA-enhanced</a>
+	<MediaBox>
+		<img
+			src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch000-seq015-id47-Groenendael.jpg"
+		/>
+		<img
+			src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch001-seq001-id141-CRT screen.jpg"
+		/>
+		IJEPA-Enhanced uses masked latent prediction to train a machine learning model
+		how to 'see'.
+	</MediaBox>
+
+	<a href="https://github.com/theAdamColton/spihtter">source code available</a>
+</ProjectBox>
+<ProjectBox>
 	<a href="/generative-modelling-of-compressed-image-file-bits"
 		>Generative modelling of compressed image file bits</a
 	>: Do you have issues with achieving GPU saturation because of your

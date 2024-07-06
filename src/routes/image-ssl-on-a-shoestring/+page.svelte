@@ -1,14 +1,6 @@
 <script>
 	import MediaBox from "../MediaBox.svelte";
 	import InlineFootnote from "../InlineFootnote.svelte";
-
-	import fs from "fs";
-	const sample_images_prefix =
-		"static/image-ssl-on-a-shoestring/samples-patch14-70-224/";
-	const sample_images = Array.from(fs.readdirSync(sample_images_prefix)).map(
-		(x) => `${sample_images_prefix.replace(/^static\//, "")}/${x}`,
-	);
-	console.log(sample_images);
 </script>
 
 <div class="rainbow-text-animated">
@@ -130,17 +122,17 @@ First draft: July 3rd, 2024
 			>Self-Supervised Learning from Images with a Joint-Embedding Predictive
 			Architecture</a
 		>
-		This is a method that uses masked latent prediction. They report 62.5%
-		accuracy on imagenet 1k using a linear probe. This is after training with
-		about 700 A100-hours <InlineFootnote>Figure 5, ViT-B/16</InlineFootnote>.
+		This is a method that uses masked latent prediction. They report 62.5% accuracy
+		on imagenet 1k using a linear probe. This is after training with about 700 A100-hours
+		<InlineFootnote>Figure 5, ViT-B/16</InlineFootnote>.
 	</li>
 	<li>
 		<a href="https://arxiv.org/abs/2310.08584"
 			>Is ImageNet worth 1 video? Learning strong image encoders from 1 long
 			unlabelled video</a
 		>
-		This is a method trained on a small number of long videos. They get 72% on
-		imagenet 1k after training with 3,200 A100-hours<InlineFootnote
+		This is a method trained on a small number of long videos. They get 72% on imagenet
+		1k after training with 3,200 A100-hours<InlineFootnote
 			>The authors state in their <a
 				href="https://openreview.net/forum?id=Yen1lGns2o&noteId=7om3d7wfTx"
 				>openreview comment</a
@@ -210,6 +202,14 @@ First draft: July 3rd, 2024
 		>CLIP is notorious for producing image embeddings that don't know how to
 		count or how to tell apart left from right.</InlineFootnote
 	>
+</p>
+
+<p>
+	How does IJEPA work? Basically, the goal is to train a machine learning model
+	that can understand images. You initialize with a random model. You give it an
+	image with some missing rectangles. Seperately and secretly, you also give it
+	the whole image. It's scored on how well it can predict it's own internal
+	thoughts had it been able to see the entire image.
 </p>
 
 <h2>Implementation</h2>
@@ -372,9 +372,102 @@ official IJEPA code:
 	tokens into the maximum sequence length.
 </p>
 <div>
-	{#each sample_images as sample_image}
-		<img src={sample_image} />
-	{/each}
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch000-seq000-id80-junco.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch000-seq000-id81-bobsleigh.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch000-seq001-id82-scoreboard.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch000-seq002-id83-jaguar.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch000-seq002-id84-Border Collie.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch000-seq003-id85-baboon.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch000-seq004-id86-chain mail.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch000-seq004-id88-sarong.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch000-seq005-id87-jellyfish.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch000-seq006-id89-greenhouse.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch000-seq007-id90-beaver.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch000-seq008-id37-Chihuahua.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch000-seq008-id40-triceratops.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch000-seq009-id38-dishcloth.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch000-seq009-id42-waffle iron.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch000-seq009-id46-chambered nautilus.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch000-seq010-id39-ram.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch000-seq011-id41-computer mouse.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch000-seq012-id43-common redshank.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch000-seq012-id48-typewriter keyboard.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch000-seq013-id44-Lakeland Terrier.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch000-seq014-id45-Weimaraner.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch000-seq015-id47-Groenendael.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch001-seq000-id140-pillow.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch001-seq001-id141-CRT screen.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch001-seq002-id142-scooter.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch001-seq003-id143-giant panda.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch001-seq004-id144-Bouvier des Flandres.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch001-seq005-id145-torch.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch001-seq006-id146-abaya.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch001-seq007-id147-chime.jpg"
+	/>
+	<img
+		src="image-ssl-on-a-shoestring/samples-patch14-70-224/batch001-seq008-id255-worm snake.jpg"
+	/>
 </div>
 
 <h3>Token Merging</h3>
