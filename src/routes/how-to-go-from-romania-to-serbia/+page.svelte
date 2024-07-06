@@ -10,7 +10,6 @@
 	<h1>How to go from Užice to Bajina Bašta: A backpacker's guide</h1>
 </div>
 
-
 April 1st, 2024
 
 <p>
@@ -95,4 +94,3 @@ April 1st, 2024
 	<img src="romania-to-serbia/panchevo.avif" />
 	There is a pleasant 20km trail from Panchevo to Belgrade.
 </MediaBox>
-

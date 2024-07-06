@@ -28,10 +28,7 @@
 </script>
 
 <svelte:window bind:innerWidth={windowWidth} />
-<span
-	class="ref"
-	bind:this={parent}
->
+<span class="ref" bind:this={parent}>
 	<input type="checkbox" id={checkbox_id} /><label for={checkbox_id}
 		><span class="reftitle">[{title}]</span></label
 	>
