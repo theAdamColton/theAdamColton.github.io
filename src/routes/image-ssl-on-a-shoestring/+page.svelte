@@ -3,6 +3,13 @@
 	import InlineFootnote from "../InlineFootnote.svelte";
 </script>
 
+<svelte:head>
+<title>
+	Image SSL on a Shoestring : IJEPA-Enhanced
+</title>
+</svelte:head>
+
+
 <div class="rainbow-text-animated">
 	<h1>Image Self Supervised Learning (SSL) on a Shoestring</h1>
 </div>
