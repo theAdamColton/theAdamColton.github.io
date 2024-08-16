@@ -8,20 +8,28 @@
 
 	export let title = "note";
 
+	let checked;
 	let parent;
 	let popupRect;
-	let windowWidth;
+	let windowWidth
+
+	let popupWidthPx = 500;
+	$: {
+	  if (windowWidth) {
+			popupWidthPx = Math.min(popupWidthPx, windowWidth - 50);
+	  }
+	}
 
 	let popupLeftAdjustment = 0;
 	$: {
-		if (!parent || !windowWidth || !popupRect) {
+		if (!checked || !parent || !windowWidth || !popupRect) {
 			popupLeftAdjustment = 0;
 		} else {
 			let popupLeft = parent.offsetLeft + parent.offsetWidth;
-			let distanceFromLeft = windowWidth - popupLeft;
 			let popupWidth = popupRect.width;
+			let distanceFromButtonToLeft = windowWidth - popupLeft;
 			let adjustmentLeft =
-				distanceFromLeft > popupWidth ? 0 : distanceFromLeft - popupWidth;
+				distanceFromButtonToLeft > popupWidth ? 0 : distanceFromButtonToLeft - popupWidth;
 			popupLeftAdjustment = adjustmentLeft;
 		}
 	}
@@ -29,12 +37,12 @@
 
 <svelte:window bind:innerWidth={windowWidth} />
 <span class="ref" bind:this={parent}>
-	<input type="checkbox" id={checkbox_id} /><label for={checkbox_id}
+	<input type="checkbox" id={checkbox_id} bind:checked={checked} /><label for={checkbox_id}
 		><span class="reftitle">[{title}]</span></label
 	>
 	<span
 		class="refbody"
-		style:left={`${popupLeftAdjustment}px`}
+		style={`left:${popupLeftAdjustment}px; width:${popupWidthPx}px`}
 		bind:contentRect={popupRect}
 	>
 		<slot />
@@ -58,7 +66,6 @@
 		vertical-align: baseline;
 	}
 	.refbody {
-		min-width: 20em;
 		position: absolute;
 		left: -10px;
 		bottom: 20px;
