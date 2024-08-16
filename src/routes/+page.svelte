@@ -10,6 +10,7 @@
 
 <div class="column">
 	<img src="me.avif" alt="me" class="resizing-media" />
+	<img src="me2.webp" alt="me2" class="resizing-media" />
 </div>
 <div>
 	<ul>
