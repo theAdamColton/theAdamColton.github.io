@@ -102,6 +102,10 @@
 </ProjectBox>
 
 <ProjectBox>
+	<a href="Music_and_Video_Alignment_in_the_Ukrainian_and_Russian_Social_Media_Space.pdf">Music and Video Alignment in the Ukrainian and Russian Social Media Space</a>
+</ProjectBox>
+
+<ProjectBox>
 	<a href="/llms-and-faithfulness-to-reasoning"
 		>LLMs and faithfulness to reasoning (blog post)</a
 	>: Humans have written a trove of step-by-step explanations and proofs. These
