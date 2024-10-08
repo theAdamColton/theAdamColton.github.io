@@ -28,6 +28,12 @@
 <div class="section-title" id="projects">Projects:</div>
 
 <ProjectBox>
+	<a href="/a-theory-for-coupling-generation-and-compression"
+		>A Theory for Coupling Generation and Compression</a
+	>: I formalize two-stage generation as a bilevel optimization problem and offer a theory to improve the alignment between stage 1 models (VAEs VQGANS, tokenizers) and stage 2 models (Diffusion, autoregressive, or other generative models)
+</ProjectBox>
+
+<ProjectBox>
 	<a href="/image-ssl-on-a-shoestring"
 		>Image Self Supervised Learning on a Shoestring : IJEPA-Enhanced</a
 	>: I create a technique for quickly training self supervised image encoders on
