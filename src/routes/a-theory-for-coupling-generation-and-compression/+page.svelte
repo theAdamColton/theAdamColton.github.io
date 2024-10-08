@@ -43,7 +43,7 @@ The design of almost every generative model follows the same pattern. First a de
   Let <Katex math="x \in \mathbb{'{R}'}^d"/> be a random variable distributed according to a target distribution <Katex math="p^*"/>. Let's say that <Katex math="p^*"/> is images of dogs. I'll call the training set <Katex math="D=\set{'{x_1, ..., x_n}'}"/>, which consists of i.i.d. images of dogs.
 </p>
 
-<p>The decomposer is a parameterized function <Katex math="d_\pi(\cdot;\theta):\mathbb R ^d -> \mathbb R ^k"/>. It maps high dimensional data into lower dimensional data. I differ from a typical formulation by allowing the decomposer to be conditioned on the generators parameters, <Katex math="\pi"/>. The decomposer is used to make a latent dataset <Katex math="Z=\set{'{d_\\pi (x_1;\\theta ), ..., d_\\pi (x_n;\\theta )}'}"/>. The decomposer can be thought as a function that maps the high-dimensional data space to a lower-dimensional latent space.
+<p>The decomposer is a parameterized function <Katex math="d_\pi(\cdot;\theta):\mathbb R ^d -> \mathbb R ^k"/>. It maps high dimensional data into lower dimensional data. I differ from a typical formulation by allowing the decomposer to be conditioned on the generators parameters, <Katex math="\pi"/>. The decomposer is used to make a latent dataset <Katex math="Z=\set{'{d_\\pi (x_1;\\theta ), ..., d_\\pi (x_n;\\theta )}'}"/>. 
 </p>
   
 <p>
