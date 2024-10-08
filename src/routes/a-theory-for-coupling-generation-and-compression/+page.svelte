@@ -47,7 +47,7 @@ The design of almost every generative model follows the same pattern. First a de
 </p>
   
 <p>
-  The generator is another parameterized function. From a bayesian perspective the generator models conditional distribution <Katex math="p_\theta(x|z)"/>. The generator uses the latent space to model the probability distribution of the original input space <Katex math="p_\theta(x)=\int p_\theta (x|z)p(z)dz"/>
+  The generator is another parameterized function. From a bayesian perspective the generator models the conditional distribution <Katex math="p_\theta(x|z)"/>. The generator uses the latent space to model the probability distribution of the original input space <Katex math="p_\theta(x)=\int p_\theta (x|z)p(z)dz"/>
 </p>
 
 
@@ -56,7 +56,7 @@ The design of almost every generative model follows the same pattern. First a de
 </p>
 
 <p>
-  If you squint your eyes a little bit, this setup is a bilevel optimization problem. The decomposer (leader) optimizes π while anticipating the generator's response. The ideal decomposer takes into account how effectively the generator uses <Katex math="Z"/> to model the input data. The generator (follower) optimizes θ given the latent representations.
+  If you squint your eyes a little bit, this setup is a <a href="https://en.wikipedia.org/wiki/Bilevel_optimization">bilevel optimization problem</a>. The decomposer (leader) optimizes π while anticipating the generator's response. The ideal decomposer takes into account how effectively the generator uses <Katex math="Z"/> to model the input data. The generator (follower) optimizes θ given the latent representations.
 </p>
 
 <h2>
