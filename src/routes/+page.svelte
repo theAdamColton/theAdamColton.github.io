@@ -30,7 +30,7 @@
 <ProjectBox>
 	<b>Elucidating the Role of Feature Normalization in IJEPA</b>
 	<a href="https://github.com/theAdamColton/elucidating-featurenorm-ijepa">[code]</a>
-	<a href="https://github.com/theAdamColton/elucidating-featurenorm-ijepa/blob/703521ce79d6e666caa6c10b2ed962923d122f09/Elucidating_the_Role_of_Feature_Normalization_in_IJEPA.pdf">[paper]</a> 
+	<a href="https://arxiv.org/abs/2508.02829">[paper]</a> 
 
 	<br/>
 
