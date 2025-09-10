@@ -17,19 +17,28 @@
 <i>
 	Originally written on November 2023
 
-	<br/>
-	<br/>
+	<br />
+	<br />
 
-	Update (June 2025): This blog post has garnered some attention. I want to clarify the usage of Fourier Feature Transform
-	used by EMU. I realize now that they probably applied a non-learnable gaussian feature transform independently on each R,G,B value of
-	each pixel to increase the channel dimensions, similar to how timestep embeddings or position embeddings are obtained in diffusion models, à la <a href="https://arxiv.org/abs/2006.10739">Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains</a>.
+	Update (June 2025): This blog post has garnered some attention. I want to
+	clarify the usage of Fourier Feature Transform used by EMU. I realize now that
+	they probably applied a non-learnable gaussian feature transform independently
+	on each R,G,B value of each pixel to increase the channel dimensions, similar
+	to how timestep embeddings or position embeddings are obtained in diffusion
+	models, à la
+	<a href="https://arxiv.org/abs/2006.10739"
+		>Fourier Features Let Networks Learn High Frequency Functions in Low
+		Dimensional Domains</a
+	>.
 
-	<br/>
-	EMU does not use the 2D FFT as I implicate in the introduction.
-	However, the 2D frequency transform is still an incredible tool. My takeaway from this blog post is that image frequency space can
-	be used to mitigate the blurriness of vanilla VAEs. Training a VAE in frequency space is difficult because of the
-	long tail distribution of image frequencies. But with proper frequency weighting and normalization, VAEs trained in 
-	frequency space produce sharp edges and sharp borders - perhaps completly sidestepping the need for LPIPS and PatchGAN. 
+	<br />
+	EMU does not use the 2D FFT as I implicate in the introduction. However, the 2D
+	frequency transform is still an incredible tool. My takeaway from this blog post
+	is that image frequency space can be used to mitigate the blurriness of vanilla
+	VAEs. Training a VAE in frequency space is difficult because of the long tail distribution
+	of image frequencies. But with proper frequency weighting and normalization, VAEs
+	trained in frequency space produce sharp edges and sharp borders - perhaps completly
+	sidestepping the need for LPIPS and PatchGAN.
 </i>
 
 <hr />

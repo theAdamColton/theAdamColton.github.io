@@ -11,13 +11,13 @@
 	let checked;
 	let parent;
 	let popupRect;
-	let windowWidth
+	let windowWidth;
 
 	let popupWidthPx = 500;
 	$: {
-	  if (windowWidth) {
+		if (windowWidth) {
 			popupWidthPx = Math.min(popupWidthPx, windowWidth - 50);
-	  }
+		}
 	}
 
 	let popupLeftAdjustment = 0;
@@ -29,7 +29,9 @@
 			let popupWidth = popupRect.width;
 			let distanceFromButtonToLeft = windowWidth - popupLeft;
 			let adjustmentLeft =
-				distanceFromButtonToLeft > popupWidth ? 0 : distanceFromButtonToLeft - popupWidth;
+				distanceFromButtonToLeft > popupWidth
+					? 0
+					: distanceFromButtonToLeft - popupWidth;
 			popupLeftAdjustment = adjustmentLeft;
 		}
 	}
@@ -37,8 +39,8 @@
 
 <svelte:window bind:innerWidth={windowWidth} />
 <span class="ref" bind:this={parent}>
-	<input type="checkbox" id={checkbox_id} bind:checked={checked} /><label for={checkbox_id}
-		><span class="reftitle">[{title}]</span></label
+	<input type="checkbox" id={checkbox_id} bind:checked /><label
+		for={checkbox_id}><span class="reftitle">[{title}]</span></label
 	>
 	<span
 		class="refbody"
