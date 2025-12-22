@@ -18,18 +18,6 @@
 	</div>
 </div>
 
-<style>
-	#spinningcube {
-		transform-style: preserve-3d;
-		animation: spin 6s linear infinite;
-	}
-
-	@keyframes spin {
-		from { transform: rotateY(0deg); }
-		to { transform: rotateY(360deg); }
-	}
-</style>
-
 <div class="rainbow-text-animated main-title">
 	<h1>LLMs and faithfulness to reasoning</h1>
 </div>

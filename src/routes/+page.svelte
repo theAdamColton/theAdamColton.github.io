@@ -28,6 +28,11 @@
 <div class="section-title" id="projects">Projects:</div>
 
 <ProjectBox>
+	<b>Spokester 1: Neural Game Graphics</b>
+	<a href="spokester1-neural-game-graphics"> [blog] </a>
+</ProjectBox>
+
+<ProjectBox>
 	<b>Elucidating the Role of Feature Normalization in IJEPA</b>
 	<a href="https://github.com/theAdamColton/elucidating-featurenorm-ijepa"
 		>[code]</a
