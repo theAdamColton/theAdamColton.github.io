@@ -8,15 +8,27 @@
 	</div>
 
 	<div id="spinningcube">
-		<div style="transform: translate3d(0em, 0em, -1em)">Studious,</div>
-		<div style="transform: translate3d(0em, 1em, 0em)">Diligent,</div>
-		<div style="transform: translate3d(0em, 2em, 1em)">Brave,</div>
-		<div style="transform: translate3d(0em, 3em, 2em)">Peaceful,</div>
-		<div style="transform: translate3d(0em, 4em, 3em)">That's me:</div>
+		<div style="transform: translate3d(0em, 0em, -1em)">Welcome,</div>
+		<div style="transform: translate3d(0em, 1em, 0em)">to the one</div>
+		<div style="transform: translate3d(0em, 2em, 1em)">and the only</div>
+		<div style="transform: translate3d(0em, 3em, 2em)">blog</div>
+		<div style="transform: translate3d(0em, 4em, 3em)">of</div>
 		<div style="transform: translate3d(0em, 6em, 4em)">Adam</div>
 		<div style="transform: translate3d(0em, 7em, 5em)">Colton</div>
 	</div>
 </div>
+
+<style>
+	#spinningcube {
+		transform-style: preserve-3d;
+		animation: spin 6s linear infinite;
+	}
+
+	@keyframes spin {
+		from { transform: rotateY(0deg); }
+		to { transform: rotateY(360deg); }
+	}
+</style>
 
 <div class="rainbow-text-animated main-title">
 	<h1>LLMs and faithfulness to reasoning</h1>

@@ -67,7 +67,7 @@ Februrary 20th 2024
 	being just a sample of the real world, can nonetheless still communicate
 	complicated information about the real world. Sampling down to 2D doesn't rid
 	all of the intracacies of the real world. Images still have to portray scenes
-	that maintain coherent portrayal objects moving through time and 3D space.
+	that portray objects moving through time and 3D space.
 	Moreover, images aren't restricted to physical 3D objects, they also can show
 	written text and numbers. Imagine an entity that lives in 2D pixel world and
 	can only ever see and interact in a 2D plane of existance. Would this entity
@@ -88,7 +88,7 @@ Februrary 20th 2024
 	out snapshots of the natural world, but also understand all bodies of written
 	text and mathematical proofs and also physics and geometry and psychology and
 	biology. That is why I think people are so eager for an all-in-one holy grail
-	model that does everything. Because in the skillsets demanded of LLMs and
+	model that does everything. Because the skillsets demanded of LLMs and
 	image gen is the same.
 </p>
 

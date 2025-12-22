@@ -608,6 +608,7 @@ J(A,B) = |A&#x222A;-B-|
 				<colgroup id="TBL-2-9g">
 					<col id="TBL-2-9" />
 				</colgroup>
+				<tbody>
 				<tr class="hline" style="border-top: 1px solid #000">
 					<td><hr /></td>
 					<td><hr /></td>
@@ -822,6 +823,7 @@ J(A,B) = |A&#x222A;-B-|
 						class="td11"
 					></td>
 				</tr>
+				</tbody>
 			</table>
 		</div>
 	</div>
@@ -857,6 +859,7 @@ J(A,B) = |A&#x222A;-B-|
 					<col id="TBL-3-13" />
 					<col id="TBL-3-14" />
 				</colgroup>
+				<tbody>
 				<tr style="vertical-align: baseline" id="TBL-3-1-">
 					<td
 						style="white-space: nowrap; text-align: left"
@@ -4686,6 +4689,7 @@ J(A,B) = |A&#x222A;-B-|
 						class="td11"
 					></td>
 				</tr>
+				</tbody>
 			</table>
 		</div>
 	</div>

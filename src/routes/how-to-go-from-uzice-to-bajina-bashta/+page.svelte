@@ -22,21 +22,23 @@ April 1st, 2024
 <h3>Pronouciation guide:</h3>
 
 <table>
-	<tr>
-		<th> Latin </th>
-		<th> Cyrillic </th>
-		<th> Spelt out </th>
-	</tr>
-	<tr>
-		<td>Užice</td>
-		<td>Ужице</td>
-		<td>Uuu-zhi-tsa</td>
-	</tr>
-	<tr>
-		<td>Bajina Bašta</td>
-		<td>Бајина Башта</td>
-		<td>Baa-ee-na Bash-ta (Bajina is pronounced like hyena) </td>
-	</tr>
+	<tbody>
+		<tr>
+			<th> Latin </th>
+			<th> Cyrillic </th>
+			<th> Spelt out </th>
+		</tr>
+		<tr>
+			<td>Užice</td>
+			<td>Ужице</td>
+			<td>Uuu-zhi-tsa</td>
+		</tr>
+		<tr>
+			<td>Bajina Bašta</td>
+			<td>Бајина Башта</td>
+			<td>Baa-ee-na Bash-ta (Bajina is pronounced like hyena) </td>
+		</tr>
+	</tbody>
 </table>
 
 <p>

@@ -13,6 +13,16 @@
 
 First draft: July 3rd, 2024
 
+<p>
+	<i>
+		Note from the future: December 2025 - Researchers have discovered better
+		methods for self supervised vision transformers. IJEPA models are unstable
+		and sensitive to all sorts of small tweaks! Instead I recommend training a
+		pixel MAE, freezing it, and using it as a teacher encoder using the masked
+		feature prediction paradigm.
+	</i>
+</p>
+
 <hr />
 
 <h2>Introduction</h2>
@@ -239,59 +249,63 @@ There are several fundemental differences between IJEPA-enhanced and the
 official IJEPA code:
 
 <table>
-	<tr>
-		<th></th>
-		<th>IJEPA</th>
-		<th>IJEPA-enhanced</th>
-	</tr>
-	<tr>
-		<th>Resolution</th>
-		<th
-			>random resized crops, all input images resized to the same height and
-			width</th
-		>
-		<th
-			>crops images at different random resolutions, maintains native aspect
-			ratio</th
-		>
-	</tr>
-	<tr>
-		<th
-			>Position embeddings <InlineFootnote
-				>See appendix B.1 of the patch n' pack paper</InlineFootnote
-			></th
-		>
-		<th>non-learnable sinusoidal and non-factorized</th>
-		<th>learnable and factorized</th>
-	</tr>
-	<tr>
-		<th>Masking</th>
-		<th
-			>uses a single mask to mask ALL images in the batch, masking the same
-			spatial locations</th
-		>
-		<th
-			>uses a unique mask for each image in the batch, masking different spatial
-			locations</th
-		>
-	</tr>
-	<tr>
-		<th>Input shape</th>
-		<th
-			>inconsistent sequence lengths given to the context encoder and predictor
-			from training batch to training batch</th
-		>
-		<th
-			>every training batch is the same shape allowing for torch.compile. The
-			three sequence lengths, (target encoder, context encoder, predictor), are
-			tunable parameters</th
-		>
-	</tr>
-	<tr>
-		<th>Token merging</th>
-		<th>No token merging</th>
-		<th>Uses TOME token merging</th>
-	</tr>
+	<thead>
+		<tr>
+			<th></th>
+			<th>IJEPA</th>
+			<th>IJEPA-enhanced</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>Resolution</th>
+			<th
+				>random resized crops, all input images resized to the same height and
+				width</th
+			>
+			<th
+				>crops images at different random resolutions, maintains native aspect
+				ratio</th
+			>
+		</tr>
+		<tr>
+			<th
+				>Position embeddings <InlineFootnote
+					>See appendix B.1 of the patch n' pack paper</InlineFootnote
+				></th
+			>
+			<th>non-learnable sinusoidal and non-factorized</th>
+			<th>learnable and factorized</th>
+		</tr>
+		<tr>
+			<th>Masking</th>
+			<th
+				>uses a single mask to mask ALL images in the batch, masking the same
+				spatial locations</th
+			>
+			<th
+				>uses a unique mask for each image in the batch, masking different
+				spatial locations</th
+			>
+		</tr>
+		<tr>
+			<th>Input shape</th>
+			<th
+				>inconsistent sequence lengths given to the context encoder and
+				predictor from training batch to training batch</th
+			>
+			<th
+				>every training batch is the same shape allowing for torch.compile. The
+				three sequence lengths, (target encoder, context encoder, predictor),
+				are tunable parameters</th
+			>
+		</tr>
+		<tr>
+			<th>Token merging</th>
+			<th>No token merging</th>
+			<th>Uses TOME token merging</th>
+		</tr>
+	</tbody>
 </table>
 
 <h3>Resolution sampling</h3>
@@ -599,41 +613,45 @@ official IJEPA code:
 </p>
 
 <table>
-	<tr>
-		<th>IJEPA version</th>
-		<th>token merging strategy</th>
-		<th>avg training throughput (images/second)</th>
-		<th>GPU memory usage (MiB)</th>
-		<th>imagenet1k validation probe accuracy@1</th>
-	</tr>
-	<tr>
-		<th>ijepa-enhanced</th>
-		<th>none</th>
-		<th>920</th>
-		<th>22580</th>
-		<th>0.263</th>
-	</tr>
-	<tr>
-		<th>ijepa-enhanced</th>
-		<th>w unmerge</th>
-		<th>1083</th>
-		<th>20421</th>
-		<th>0.254</th>
-	</tr>
-	<tr>
-		<th>ijepa-enhanced</th>
-		<th>wo unmerge</th>
-		<th>1200</th>
-		<th>15705</th>
-		<th>0.177</th>
-	</tr>
-	<tr>
-		<th>ijepa</th>
-		<th>none</th>
-		<th>660</th>
-		<th>22000</th>
-		<th>0.1602</th>
-	</tr>
+	<thead>
+		<tr>
+			<th>IJEPA version</th>
+			<th>token merging strategy</th>
+			<th>avg training throughput (images/second)</th>
+			<th>GPU memory usage (MiB)</th>
+			<th>imagenet1k validation probe accuracy@1</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>ijepa-enhanced</th>
+			<th>none</th>
+			<th>920</th>
+			<th>22580</th>
+			<th>0.263</th>
+		</tr>
+		<tr>
+			<th>ijepa-enhanced</th>
+			<th>w unmerge</th>
+			<th>1083</th>
+			<th>20421</th>
+			<th>0.254</th>
+		</tr>
+		<tr>
+			<th>ijepa-enhanced</th>
+			<th>wo unmerge</th>
+			<th>1200</th>
+			<th>15705</th>
+			<th>0.177</th>
+		</tr>
+		<tr>
+			<th>ijepa</th>
+			<th>none</th>
+			<th>660</th>
+			<th>22000</th>
+			<th>0.1602</th>
+		</tr>
+	</tbody>
 </table>
 
 <h2>Discussion</h2>
