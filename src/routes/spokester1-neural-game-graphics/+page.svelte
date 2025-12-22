@@ -1,3 +1,9 @@
+<script>
+	import AsideBox from "../AsideBox.svelte";
+	import InlineFootnote from "../InlineFootnote.svelte";
+	import MediaBox from "../MediaBox.svelte";
+</script>
+
 <svelte:head>
 	<title>Spokester 1: Neural Game Graphics</title>
 </svelte:head>
@@ -20,7 +26,17 @@
 
 <p>First draft: December 22, 2025</p>
 
-<p>Welcome to the future. In the future we</p>
+<p>
+	Welcome to the world of Spokester. In this world you play as Toni. You ride
+	through the conjested streets of New York City pedalling your fixie bike. Feel
+	the wind rush by and your hair stand on end as you ride the wrong way down a
+	three lane boulevard.
+</p>
+
+<p>
+	There is only one objective: survive. How far can you make it before hitting a
+	car head on?
+</p>
 
 <style>
 	#spinningcube {
