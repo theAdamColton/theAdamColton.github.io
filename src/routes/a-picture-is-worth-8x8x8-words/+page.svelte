@@ -332,15 +332,7 @@
 	their union:
 </p>
 
-<div class="math-display">
-	<img
-		src="main0x.png"
-		alt="         |A&#x2229; B |
-J(A,B) = |A&#x222A;-B-|
-"
-		class="math-display"
-	/>
-</div>
+<div class="math-display">|A&#x2229; B | J(A,B) = |A&#x222A;-B-|</div>
 <!--l. 114-->
 <p class="nopar">
 	where <span class="cmmi-10">A </span>and
@@ -371,21 +363,14 @@ J(A,B) = |A&#x222A;-B-|
 	<span class="cmmi-10">d </span>is calculated as:
 </p>
 
-<div class="math-display">
-	<img
-		src="main1x.png"
-		alt="TF - IDF (t,d) = TF (t,d)&#x00D7; IDF (t)
-"
-		class="math-display"
-	/>
-</div>
+<div class="math-display">TF - IDF (t,d) = TF (t,d)&#x00D7; IDF (t)</div>
 <!--l. 123-->
 <p class="nopar">
 	where TF(<span class="cmmi-10">t,d</span>) is the term frequency of token
 	<span class="cmmi-10">t </span>in document
 	<span class="cmmi-10">d</span>, and IDF(<span class="cmmi-10">t</span>) = log
-	<img src="main2x.png" alt="DFN(t)" class="frac" align="middle" /> is the
-	inverse document frequency of token <span class="cmmi-10">t</span>, with
+	DFN(t) is the inverse document frequency of token
+	<span class="cmmi-10">t</span>, with
 	<span class="cmmi-10">N </span>being the total number of documents and DF(<span
 		class="cmmi-10">t</span
 	>) representing the number of documents containing the token
@@ -609,220 +594,220 @@ J(A,B) = |A&#x222A;-B-|
 					<col id="TBL-2-9" />
 				</colgroup>
 				<tbody>
-				<tr class="hline" style="border-top: 1px solid #000">
-					<td><hr /></td>
-					<td><hr /></td>
-					<td><hr /></td>
-					<td><hr /></td>
-					<td><hr /></td>
-					<td><hr /></td>
-					<td><hr /></td>
-					<td><hr /></td>
-					<td><hr /></td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-2-1-">
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-2-1-1"
-						class="td11"
-					>
-						Model Name
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-2-1-2"
-						class="td11"
-					>
-						Heads
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-2-1-3"
-						class="td11"
-					>
-						Codebook Dim
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-2-1-4"
-						class="td11"
-					>
-						Codebook Size
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-2-1-5"
-						class="td11"
-					>
-						Commitment Weight
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-2-1-6"
-						class="td11"
-					>
-						Threshold EMA Dead Code
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-2-1-7"
-						class="td11"
-					>
-						Dim
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-2-1-8"
-						class="td11"
-					>
-						ResNet Type
-					</td>
-				</tr>
-				<tr class="hline" style="border-top: 1px solid #000">
-					<td><hr /></td>
-					<td><hr /></td>
-					<td><hr /></td>
-					<td><hr /></td>
-					<td><hr /></td>
-					<td><hr /></td>
-					<td><hr /></td>
-					<td><hr /></td>
-					<td><hr /></td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-2-2-">
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-2-2-1"
-						class="td11"
-					>
-						VQ-ResNet50
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-2-2-2"
-						class="td11"
-					>
-						8
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-2-2-3"
-						class="td11"
-					>
-						256
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-2-2-4"
-						class="td11"
-					>
-						128
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-2-2-5"
-						class="td11"
-					>
-						0.0
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-2-2-6"
-						class="td11"
-					>
-						2
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-2-2-7"
-						class="td11"
-					>
-						2048
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-2-2-8"
-						class="td11"
-					>
-						50
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-2-3-">
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-2-3-1"
-						class="td11"
-					>
-						VQ-FrozenResNet34
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-2-3-2"
-						class="td11"
-					>
-						8
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-2-3-3"
-						class="td11"
-					>
-						128
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-2-3-4"
-						class="td11"
-					>
-						256
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-2-3-5"
-						class="td11"
-					>
-						5.0
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-2-3-6"
-						class="td11"
-					>
-						1
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-2-3-7"
-						class="td11"
-					>
-						512
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-2-3-8"
-						class="td11"
-					>
-						34
-					</td>
-				</tr>
-				<tr class="hline" style="border-top: 1px solid #000">
-					<td><hr /></td>
-					<td><hr /></td>
-					<td><hr /></td>
-					<td><hr /></td>
-					<td><hr /></td>
-					<td><hr /></td>
-					<td><hr /></td>
-					<td><hr /></td>
-					<td><hr /></td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-2-4-">
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-2-4-1"
-						class="td11"
-					></td>
-				</tr>
+					<tr class="hline" style="border-top: 1px solid #000">
+						<td><hr /></td>
+						<td><hr /></td>
+						<td><hr /></td>
+						<td><hr /></td>
+						<td><hr /></td>
+						<td><hr /></td>
+						<td><hr /></td>
+						<td><hr /></td>
+						<td><hr /></td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-2-1-">
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-2-1-1"
+							class="td11"
+						>
+							Model Name
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-2-1-2"
+							class="td11"
+						>
+							Heads
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-2-1-3"
+							class="td11"
+						>
+							Codebook Dim
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-2-1-4"
+							class="td11"
+						>
+							Codebook Size
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-2-1-5"
+							class="td11"
+						>
+							Commitment Weight
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-2-1-6"
+							class="td11"
+						>
+							Threshold EMA Dead Code
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-2-1-7"
+							class="td11"
+						>
+							Dim
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-2-1-8"
+							class="td11"
+						>
+							ResNet Type
+						</td>
+					</tr>
+					<tr class="hline" style="border-top: 1px solid #000">
+						<td><hr /></td>
+						<td><hr /></td>
+						<td><hr /></td>
+						<td><hr /></td>
+						<td><hr /></td>
+						<td><hr /></td>
+						<td><hr /></td>
+						<td><hr /></td>
+						<td><hr /></td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-2-2-">
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-2-2-1"
+							class="td11"
+						>
+							VQ-ResNet50
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-2-2-2"
+							class="td11"
+						>
+							8
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-2-2-3"
+							class="td11"
+						>
+							256
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-2-2-4"
+							class="td11"
+						>
+							128
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-2-2-5"
+							class="td11"
+						>
+							0.0
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-2-2-6"
+							class="td11"
+						>
+							2
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-2-2-7"
+							class="td11"
+						>
+							2048
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-2-2-8"
+							class="td11"
+						>
+							50
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-2-3-">
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-2-3-1"
+							class="td11"
+						>
+							VQ-FrozenResNet34
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-2-3-2"
+							class="td11"
+						>
+							8
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-2-3-3"
+							class="td11"
+						>
+							128
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-2-3-4"
+							class="td11"
+						>
+							256
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-2-3-5"
+							class="td11"
+						>
+							5.0
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-2-3-6"
+							class="td11"
+						>
+							1
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-2-3-7"
+							class="td11"
+						>
+							512
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-2-3-8"
+							class="td11"
+						>
+							34
+						</td>
+					</tr>
+					<tr class="hline" style="border-top: 1px solid #000">
+						<td><hr /></td>
+						<td><hr /></td>
+						<td><hr /></td>
+						<td><hr /></td>
+						<td><hr /></td>
+						<td><hr /></td>
+						<td><hr /></td>
+						<td><hr /></td>
+						<td><hr /></td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-2-4-">
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-2-4-1"
+							class="td11"
+						></td>
+					</tr>
 				</tbody>
 			</table>
 		</div>
@@ -860,3835 +845,3835 @@ J(A,B) = |A&#x222A;-B-|
 					<col id="TBL-3-14" />
 				</colgroup>
 				<tbody>
-				<tr style="vertical-align: baseline" id="TBL-3-1-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-1-1"
-						class="td11"
-					>
-						SimilarityMeasurement
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-1-2"
-						class="td11"
-					>
-						Model
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-1-3"
-						class="td11"
-					>
-						Resolution
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-1-4"
-						class="td11"
-					>
-						Kernel
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-1-5"
-						class="td11"
-					>
-						Padding
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-1-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-1-7"
-						class="td01"
-					>
-						should_channel_kgrams
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-1-8"
-						class="td11"
-					>
-						mAP
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-1-9"
-						class="td11"
-					>
-						Landmarks
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-1-10"
-						class="td11"
-					>
-						IMSketch
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-1-11"
-						class="td11"
-					>
-						iNat
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-1-12"
-						class="td11"
-					>
-						Instre
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-1-13"
-						class="td11"
-					>
-						SOP
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-1-14"
-						class="td11"
-					>
-						Faces
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-2-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-2-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-2-2"
-						class="td11"
-					>
-						VQ-ResNet50
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-2-3"
-						class="td11"
-					>
-						512
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-2-4"
-						class="td11"
-					>
-						4
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-2-5"
-						class="td11"
-					>
-						0
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-2-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-2-7"
-						class="td01"
-					>
-						False
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-2-8"
-						class="td11"
-					>
-						0.358996
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-2-9"
-						class="td11"
-					>
-						0.58213
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-2-10"
-						class="td11"
-					>
-						0.27893
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-2-11"
-						class="td11"
-					>
-						0.24168
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-2-12"
-						class="td11"
-					>
-						0.28393
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-2-13"
-						class="td11"
-					>
-						0.60545
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-2-14"
-						class="td11"
-					>
-						0.16185
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-3-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-3-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-3-2"
-						class="td11"
-					>
-						VQ-ResNet50
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-3-3"
-						class="td11"
-					>
-						512
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-3-4"
-						class="td11"
-					>
-						5
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-3-5"
-						class="td11"
-					>
-						1
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-3-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-3-7"
-						class="td01"
-					>
-						False
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-3-8"
-						class="td11"
-					>
-						0.358116
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-3-9"
-						class="td11"
-					>
-						0.58626
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-3-10"
-						class="td11"
-					>
-						0.27578
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-3-11"
-						class="td11"
-					>
-						0.23728
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-3-12"
-						class="td11"
-					>
-						0.27722
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-3-13"
-						class="td11"
-					>
-						0.61037
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-3-14"
-						class="td11"
-					>
-						0.16180
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-4-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-4-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-4-2"
-						class="td11"
-					>
-						VQ-ResNet50
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-4-3"
-						class="td11"
-					>
-						512
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-4-4"
-						class="td11"
-					>
-						3
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-4-5"
-						class="td11"
-					>
-						0
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-4-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-4-7"
-						class="td01"
-					>
-						False
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-4-8"
-						class="td11"
-					>
-						0.356071
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-4-9"
-						class="td11"
-					>
-						0.58348
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-4-10"
-						class="td11"
-					>
-						0.27313
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-4-11"
-						class="td11"
-					>
-						0.23403
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-4-12"
-						class="td11"
-					>
-						0.27203
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-4-13"
-						class="td11"
-					>
-						0.61197
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-4-14"
-						class="td11"
-					>
-						0.16178
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-5-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-5-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-5-2"
-						class="td11"
-					>
-						VQ-FrozenResNet34
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-5-3"
-						class="td11"
-					>
-						512
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-5-4"
-						class="td11"
-					>
-						4
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-5-5"
-						class="td11"
-					>
-						0
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-5-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-5-7"
-						class="td01"
-					>
-						False
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-5-8"
-						class="td11"
-					>
-						0.347656
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-5-9"
-						class="td11"
-					>
-						0.54185
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-5-10"
-						class="td11"
-					>
-						0.26551
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-5-11"
-						class="td11"
-					>
-						0.21882
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-5-12"
-						class="td11"
-					>
-						0.27872
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-5-13"
-						class="td11"
-					>
-						0.62476
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-5-14"
-						class="td11"
-					>
-						0.15628
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-6-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-6-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-6-2"
-						class="td11"
-					>
-						VQ-FrozenResNet34
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-6-3"
-						class="td11"
-					>
-						512
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-6-4"
-						class="td11"
-					>
-						5
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-6-5"
-						class="td11"
-					>
-						1
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-6-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-6-7"
-						class="td01"
-					>
-						False
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-6-8"
-						class="td11"
-					>
-						0.347565
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-6-9"
-						class="td11"
-					>
-						0.54985
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-6-10"
-						class="td11"
-					>
-						0.26217
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-6-11"
-						class="td11"
-					>
-						0.21274
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-6-12"
-						class="td11"
-					>
-						0.27008
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-6-13"
-						class="td11"
-					>
-						0.63362
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-6-14"
-						class="td11"
-					>
-						0.15695
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-7-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-7-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-7-2"
-						class="td11"
-					>
-						VQ-ResNet50
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-7-3"
-						class="td11"
-					>
-						614
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-7-4"
-						class="td11"
-					>
-						4
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-7-5"
-						class="td11"
-					>
-						0
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-7-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-7-7"
-						class="td01"
-					>
-						False
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-7-8"
-						class="td11"
-					>
-						0.347015
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-7-9"
-						class="td11"
-					>
-						0.58669
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-7-10"
-						class="td11"
-					>
-						0.25582
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-7-11"
-						class="td11"
-					>
-						0.21834
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-7-12"
-						class="td11"
-					>
-						0.26909
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-7-13"
-						class="td11"
-					>
-						0.59012
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-7-14"
-						class="td11"
-					>
-						0.16203
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-8-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-8-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-8-2"
-						class="td11"
-					>
-						VQ-ResNet50
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-8-3"
-						class="td11"
-					>
-						614
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-8-4"
-						class="td11"
-					>
-						5
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-8-5"
-						class="td11"
-					>
-						1
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-8-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-8-7"
-						class="td01"
-					>
-						False
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-8-8"
-						class="td11"
-					>
-						0.345833
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-8-9"
-						class="td11"
-					>
-						0.58998
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-8-10"
-						class="td11"
-					>
-						0.25283
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-8-11"
-						class="td11"
-					>
-						0.21417
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-8-12"
-						class="td11"
-					>
-						0.26241
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-8-13"
-						class="td11"
-					>
-						0.59373
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-8-14"
-						class="td11"
-					>
-						0.16187
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-9-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-9-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-9-2"
-						class="td11"
-					>
-						VQ-FrozenResNet34
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-9-3"
-						class="td11"
-					>
-						512
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-9-4"
-						class="td11"
-					>
-						3
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-9-5"
-						class="td11"
-					>
-						0
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-9-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-9-7"
-						class="td01"
-					>
-						False
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-9-8"
-						class="td11"
-					>
-						0.344792
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-9-9"
-						class="td11"
-					>
-						0.54615
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-9-10"
-						class="td11"
-					>
-						0.25851
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-9-11"
-						class="td11"
-					>
-						0.21024
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-9-12"
-						class="td11"
-					>
-						0.26400
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-9-13"
-						class="td11"
-					>
-						0.63323
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-9-14"
-						class="td11"
-					>
-						0.15663
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-10-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-10-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-10-2"
-						class="td11"
-					>
-						VQ-ResNet50
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-10-3"
-						class="td11"
-					>
-						614
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-10-4"
-						class="td11"
-					>
-						3
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-10-5"
-						class="td11"
-					>
-						0
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-10-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-10-7"
-						class="td01"
-					>
-						False
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-10-8"
-						class="td11"
-					>
-						0.343568
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-10-9"
-						class="td11"
-					>
-						0.58732
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-10-10"
-						class="td11"
-					>
-						0.24950
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-10-11"
-						class="td11"
-					>
-						0.21074
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-10-12"
-						class="td11"
-					>
-						0.25619
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-10-13"
-						class="td11"
-					>
-						0.59582
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-10-14"
-						class="td11"
-					>
-						0.16184
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-11-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-11-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-11-2"
-						class="td11"
-					>
-						VQ-ResNet50
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-11-3"
-						class="td11"
-					>
-						256
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-11-4"
-						class="td11"
-					>
-						4
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-11-5"
-						class="td11"
-					>
-						2
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-11-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-11-7"
-						class="td01"
-					>
-						False
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-11-8"
-						class="td11"
-					>
-						0.339198
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-11-9"
-						class="td11"
-					>
-						0.47780
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-11-10"
-						class="td11"
-					>
-						0.35360
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-11-11"
-						class="td11"
-					>
-						0.24893
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-11-12"
-						class="td11"
-					>
-						0.24240
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-11-13"
-						class="td11"
-					>
-						0.56072
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-11-14"
-						class="td11"
-					>
-						0.15174
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-12-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-12-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-12-2"
-						class="td11"
-					>
-						VQ-ResNet50
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-12-3"
-						class="td11"
-					>
-						256
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-12-4"
-						class="td11"
-					>
-						3
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-12-5"
-						class="td11"
-					>
-						1
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-12-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-12-7"
-						class="td01"
-					>
-						False
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-12-8"
-						class="td11"
-					>
-						0.339197
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-12-9"
-						class="td11"
-					>
-						0.47687
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-12-10"
-						class="td11"
-					>
-						0.35379
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-12-11"
-						class="td11"
-					>
-						0.24947
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-12-12"
-						class="td11"
-					>
-						0.24325
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-12-13"
-						class="td11"
-					>
-						0.55978
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-12-14"
-						class="td11"
-					>
-						0.15204
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-13-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-13-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-13-2"
-						class="td11"
-					>
-						VQ-FrozenResNet34
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-13-3"
-						class="td11"
-					>
-						614
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-13-4"
-						class="td11"
-					>
-						4
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-13-5"
-						class="td11"
-					>
-						0
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-13-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-13-7"
-						class="td01"
-					>
-						False
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-13-8"
-						class="td11"
-					>
-						0.338142
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-13-9"
-						class="td11"
-					>
-						0.55188
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-13-10"
-						class="td11"
-					>
-						0.24478
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-13-11"
-						class="td11"
-					>
-						0.19829
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-13-12"
-						class="td11"
-					>
-						0.26012
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-13-13"
-						class="td11"
-					>
-						0.61759
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-13-14"
-						class="td11"
-					>
-						0.15620
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-14-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-14-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-14-2"
-						class="td11"
-					>
-						VQ-FrozenResNet34
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-14-3"
-						class="td11"
-					>
-						614
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-14-4"
-						class="td11"
-					>
-						5
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-14-5"
-						class="td11"
-					>
-						1
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-14-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-14-7"
-						class="td01"
-					>
-						False
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-14-8"
-						class="td11"
-					>
-						0.337825
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-14-9"
-						class="td11"
-					>
-						0.55749
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-14-10"
-						class="td11"
-					>
-						0.24103
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-14-11"
-						class="td11"
-					>
-						0.19377
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-14-12"
-						class="td11"
-					>
-						0.25305
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-14-13"
-						class="td11"
-					>
-						0.62484
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-14-14"
-						class="td11"
-					>
-						0.15677
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-15-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-15-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-15-2"
-						class="td11"
-					>
-						VQ-FrozenResNet34
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-15-3"
-						class="td11"
-					>
-						614
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-15-4"
-						class="td11"
-					>
-						3
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-15-5"
-						class="td11"
-					>
-						0
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-15-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-15-7"
-						class="td01"
-					>
-						False
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-15-8"
-						class="td11"
-					>
-						0.335068
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-15-9"
-						class="td11"
-					>
-						0.55416
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-15-10"
-						class="td11"
-					>
-						0.23722
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-15-11"
-						class="td11"
-					>
-						0.19122
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-15-12"
-						class="td11"
-					>
-						0.24681
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-15-13"
-						class="td11"
-					>
-						0.62444
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-15-14"
-						class="td11"
-					>
-						0.15656
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-16-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-16-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-16-2"
-						class="td11"
-					>
-						VQ-FrozenResNet34
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-16-3"
-						class="td11"
-					>
-						512
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-16-4"
-						class="td11"
-					>
-						5
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-16-5"
-						class="td11"
-					>
-						1
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-16-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-16-7"
-						class="td01"
-					>
-						True
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-16-8"
-						class="td11"
-					>
-						0.330183
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-16-9"
-						class="td11"
-					>
-						0.52225
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-16-10"
-						class="td11"
-					>
-						0.24846
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-16-11"
-						class="td11"
-					>
-						0.21264
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-16-12"
-						class="td11"
-					>
-						0.25831
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-16-13"
-						class="td11"
-					>
-						0.59082
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-16-14"
-						class="td11"
-					>
-						0.14862
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-17-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-17-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-17-2"
-						class="td11"
-					>
-						VQ-FrozenResNet34
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-17-3"
-						class="td11"
-					>
-						512
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-17-4"
-						class="td11"
-					>
-						4
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-17-5"
-						class="td11"
-					>
-						0
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-17-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-17-7"
-						class="td01"
-					>
-						True
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-17-8"
-						class="td11"
-					>
-						0.326344
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-17-9"
-						class="td11"
-					>
-						0.50732
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-17-10"
-						class="td11"
-					>
-						0.24662
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-17-11"
-						class="td11"
-					>
-						0.21861
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-17-12"
-						class="td11"
-					>
-						0.26113
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-17-13"
-						class="td11"
-					>
-						0.57731
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-17-14"
-						class="td11"
-					>
-						0.14708
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-18-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-18-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-18-2"
-						class="td11"
-					>
-						VQ-FrozenResNet34
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-18-3"
-						class="td11"
-					>
-						512
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-18-4"
-						class="td11"
-					>
-						3
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-18-5"
-						class="td11"
-					>
-						0
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-18-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-18-7"
-						class="td01"
-					>
-						True
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-18-8"
-						class="td11"
-					>
-						0.323291
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-18-9"
-						class="td11"
-					>
-						0.51431
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-18-10"
-						class="td11"
-					>
-						0.24105
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-18-11"
-						class="td11"
-					>
-						0.20902
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-18-12"
-						class="td11"
-					>
-						0.24815
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-18-13"
-						class="td11"
-					>
-						0.58027
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-18-14"
-						class="td11"
-					>
-						0.14695
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-19-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-19-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-19-2"
-						class="td11"
-					>
-						VQ-FrozenResNet34
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-19-3"
-						class="td11"
-					>
-						614
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-19-4"
-						class="td11"
-					>
-						5
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-19-5"
-						class="td11"
-					>
-						1
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-19-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-19-7"
-						class="td01"
-					>
-						True
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-19-8"
-						class="td11"
-					>
-						0.317817
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-19-9"
-						class="td11"
-					>
-						0.53150
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-19-10"
-						class="td11"
-					>
-						0.22737
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-19-11"
-						class="td11"
-					>
-						0.19314
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-19-12"
-						class="td11"
-					>
-						0.23635
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-19-13"
-						class="td11"
-					>
-						0.57025
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-19-14"
-						class="td11"
-					>
-						0.14828
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-20-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-20-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-20-2"
-						class="td11"
-					>
-						VQ-FrozenResNet34
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-20-3"
-						class="td11"
-					>
-						256
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-20-4"
-						class="td11"
-					>
-						4
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-20-5"
-						class="td11"
-					>
-						2
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-20-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-20-7"
-						class="td01"
-					>
-						False
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-20-8"
-						class="td11"
-					>
-						0.315947
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-20-9"
-						class="td11"
-					>
-						0.42983
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-20-10"
-						class="td11"
-					>
-						0.29231
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-20-11"
-						class="td11"
-					>
-						0.21948
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-20-12"
-						class="td11"
-					>
-						0.24301
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-20-13"
-						class="td11"
-					>
-						0.56028
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-20-14"
-						class="td11"
-					>
-						0.15077
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-21-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-21-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-21-2"
-						class="td11"
-					>
-						VQ-FrozenResNet34
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-21-3"
-						class="td11"
-					>
-						256
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-21-4"
-						class="td11"
-					>
-						3
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-21-5"
-						class="td11"
-					>
-						1
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-21-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-21-7"
-						class="td01"
-					>
-						False
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-21-8"
-						class="td11"
-					>
-						0.315619
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-21-9"
-						class="td11"
-					>
-						0.42757
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-21-10"
-						class="td11"
-					>
-						0.29264
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-21-11"
-						class="td11"
-					>
-						0.22086
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-21-12"
-						class="td11"
-					>
-						0.24486
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-21-13"
-						class="td11"
-					>
-						0.55697
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-21-14"
-						class="td11"
-					>
-						0.15081
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-22-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-22-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-22-2"
-						class="td11"
-					>
-						VQ-FrozenResNet34
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-22-3"
-						class="td11"
-					>
-						614
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-22-4"
-						class="td11"
-					>
-						4
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-22-5"
-						class="td11"
-					>
-						0
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-22-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-22-7"
-						class="td01"
-					>
-						True
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-22-8"
-						class="td11"
-					>
-						0.314760
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-22-9"
-						class="td11"
-					>
-						0.51752
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-22-10"
-						class="td11"
-					>
-						0.22639
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-22-11"
-						class="td11"
-					>
-						0.19760
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-22-12"
-						class="td11"
-					>
-						0.23944
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-22-13"
-						class="td11"
-					>
-						0.56070
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-22-14"
-						class="td11"
-					>
-						0.14691
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-23-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-23-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-23-2"
-						class="td11"
-					>
-						VQ-FrozenResNet34
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-23-3"
-						class="td11"
-					>
-						614
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-23-4"
-						class="td11"
-					>
-						3
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-23-5"
-						class="td11"
-					>
-						0
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-23-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-23-7"
-						class="td01"
-					>
-						True
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-23-8"
-						class="td11"
-					>
-						0.310504
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-23-9"
-						class="td11"
-					>
-						0.52159
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-23-10"
-						class="td11"
-					>
-						0.22073
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-23-11"
-						class="td11"
-					>
-						0.18945
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-23-12"
-						class="td11"
-					>
-						0.22604
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-23-13"
-						class="td11"
-					>
-						0.55865
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-23-14"
-						class="td11"
-					>
-						0.14656
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-24-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-24-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-24-2"
-						class="td11"
-					>
-						VQ-FrozenResNet34
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-24-3"
-						class="td11"
-					>
-						256
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-24-4"
-						class="td11"
-					>
-						4
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-24-5"
-						class="td11"
-					>
-						2
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-24-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-24-7"
-						class="td01"
-					>
-						True
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-24-8"
-						class="td11"
-					>
-						0.304981
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-24-9"
-						class="td11"
-					>
-						0.41032
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-24-10"
-						class="td11"
-					>
-						0.28407
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-24-11"
-						class="td11"
-					>
-						0.21846
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-24-12"
-						class="td11"
-					>
-						0.23638
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-24-13"
-						class="td11"
-					>
-						0.53534
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-24-14"
-						class="td11"
-					>
-						0.14531
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-25-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-25-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-25-2"
-						class="td11"
-					>
-						VQ-FrozenResNet34
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-25-3"
-						class="td11"
-					>
-						256
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-25-4"
-						class="td11"
-					>
-						3
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-25-5"
-						class="td11"
-					>
-						1
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-25-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-25-7"
-						class="td01"
-					>
-						True
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-25-8"
-						class="td11"
-					>
-						0.304241
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-25-9"
-						class="td11"
-					>
-						0.40883
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-25-10"
-						class="td11"
-					>
-						0.28296
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-25-11"
-						class="td11"
-					>
-						0.21938
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-25-12"
-						class="td11"
-					>
-						0.23723
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-25-13"
-						class="td11"
-					>
-						0.53142
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-25-14"
-						class="td11"
-					>
-						0.14563
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-26-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-26-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-26-2"
-						class="td11"
-					>
-						VQ-ResNet50
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-26-3"
-						class="td11"
-					>
-						512
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-26-4"
-						class="td11"
-					>
-						4
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-26-5"
-						class="td11"
-					>
-						0
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-26-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-26-7"
-						class="td01"
-					>
-						True
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-26-8"
-						class="td11"
-					>
-						0.296027
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-26-9"
-						class="td11"
-					>
-						0.49294
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-26-10"
-						class="td11"
-					>
-						0.21070
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-26-11"
-						class="td11"
-					>
-						0.22187
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-26-12"
-						class="td11"
-					>
-						0.21419
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-26-13"
-						class="td11"
-					>
-						0.48399
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-26-14"
-						class="td11"
-					>
-						0.15247
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-27-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-27-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-27-2"
-						class="td11"
-					>
-						VQ-ResNet50
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-27-3"
-						class="td11"
-					>
-						512
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-27-4"
-						class="td11"
-					>
-						5
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-27-5"
-						class="td11"
-					>
-						1
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-27-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-27-7"
-						class="td01"
-					>
-						True
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-27-8"
-						class="td11"
-					>
-						0.295039
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-27-9"
-						class="td11"
-					>
-						0.49761
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-27-10"
-						class="td11"
-					>
-						0.20775
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-27-11"
-						class="td11"
-					>
-						0.21758
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-27-12"
-						class="td11"
-					>
-						0.20830
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-27-13"
-						class="td11"
-					>
-						0.48800
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-27-14"
-						class="td11"
-					>
-						0.15100
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-28-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-28-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-28-2"
-						class="td11"
-					>
-						VQ-ResNet50
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-28-3"
-						class="td11"
-					>
-						512
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-28-4"
-						class="td11"
-					>
-						3
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-28-5"
-						class="td11"
-					>
-						0
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-28-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-28-7"
-						class="td01"
-					>
-						True
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-28-8"
-						class="td11"
-					>
-						0.286522
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-28-9"
-						class="td11"
-					>
-						0.48304
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-28-10"
-						class="td11"
-					>
-						0.19891
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-28-11"
-						class="td11"
-					>
-						0.21354
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-28-12"
-						class="td11"
-					>
-						0.19940
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-28-13"
-						class="td11"
-					>
-						0.47538
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-28-14"
-						class="td11"
-					>
-						0.14887
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-29-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-29-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-29-2"
-						class="td11"
-					>
-						VQ-ResNet50
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-29-3"
-						class="td11"
-					>
-						614
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-29-4"
-						class="td11"
-					>
-						4
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-29-5"
-						class="td11"
-					>
-						0
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-29-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-29-7"
-						class="td01"
-					>
-						True
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-29-8"
-						class="td11"
-					>
-						0.286102
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-29-9"
-						class="td11"
-					>
-						0.49331
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-29-10"
-						class="td11"
-					>
-						0.19496
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-29-11"
-						class="td11"
-					>
-						0.20189
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-29-12"
-						class="td11"
-					>
-						0.20796
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-29-13"
-						class="td11"
-					>
-						0.46663
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-29-14"
-						class="td11"
-					>
-						0.15187
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-30-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-30-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-30-2"
-						class="td11"
-					>
-						VQ-ResNet50
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-30-3"
-						class="td11"
-					>
-						256
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-30-4"
-						class="td11"
-					>
-						3
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-30-5"
-						class="td11"
-					>
-						1
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-30-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-30-7"
-						class="td01"
-					>
-						True
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-30-8"
-						class="td11"
-					>
-						0.285037
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-30-9"
-						class="td11"
-					>
-						0.41862
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-30-10"
-						class="td11"
-					>
-						0.26744
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-30-11"
-						class="td11"
-					>
-						0.22793
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-30-12"
-						class="td11"
-					>
-						0.18756
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-30-13"
-						class="td11"
-					>
-						0.46522
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-30-14"
-						class="td11"
-					>
-						0.14345
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-31-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-31-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-31-2"
-						class="td11"
-					>
-						VQ-ResNet50
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-31-3"
-						class="td11"
-					>
-						614
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-31-4"
-						class="td11"
-					>
-						5
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-31-5"
-						class="td11"
-					>
-						1
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-31-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-31-7"
-						class="td01"
-					>
-						True
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-31-8"
-						class="td11"
-					>
-						0.285007
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-31-9"
-						class="td11"
-					>
-						0.49790
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-31-10"
-						class="td11"
-					>
-						0.19262
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-31-11"
-						class="td11"
-					>
-						0.19820
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-31-12"
-						class="td11"
-					>
-						0.20234
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-31-13"
-						class="td11"
-					>
-						0.46900
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-31-14"
-						class="td11"
-					>
-						0.14998
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-32-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-32-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-32-2"
-						class="td11"
-					>
-						VQ-ResNet50
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-32-3"
-						class="td11"
-					>
-						256
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-32-4"
-						class="td11"
-					>
-						4
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-32-5"
-						class="td11"
-					>
-						2
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-32-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-32-7"
-						class="td01"
-					>
-						True
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-32-8"
-						class="td11"
-					>
-						0.283205
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-32-9"
-						class="td11"
-					>
-						0.41683
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-32-10"
-						class="td11"
-					>
-						0.26473
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-32-11"
-						class="td11"
-					>
-						0.22735
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-32-12"
-						class="td11"
-					>
-						0.18539
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-32-13"
-						class="td11"
-					>
-						0.46198
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-32-14"
-						class="td11"
-					>
-						0.14294
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-33-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-33-1"
-						class="td11"
-					>
-						KGramTF-IDF
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-33-2"
-						class="td11"
-					>
-						VQ-ResNet50
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-33-3"
-						class="td11"
-					>
-						614
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-33-4"
-						class="td11"
-					>
-						3
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-33-5"
-						class="td11"
-					>
-						0
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-33-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-33-7"
-						class="td01"
-					>
-						True
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-33-8"
-						class="td11"
-					>
-						0.276272
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-33-9"
-						class="td11"
-					>
-						0.48147
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-33-10"
-						class="td11"
-					>
-						0.18505
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-33-11"
-						class="td11"
-					>
-						0.19359
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-33-12"
-						class="td11"
-					>
-						0.19382
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-33-13"
-						class="td11"
-					>
-						0.45562
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-33-14"
-						class="td11"
-					>
-						0.14808
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-34-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-34-1"
-						class="td11"
-					>
-						CropAndJaccard
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-34-2"
-						class="td11"
-					>
-						VQ-FrozenResNet34
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-34-3"
-						class="td11"
-					>
-						614
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-34-4"
-						class="td11"
-					>
-						NAN
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-34-5"
-						class="td11"
-					>
-						NAN
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-34-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-34-7"
-						class="td01"
-					>
-						NAN
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-34-8"
-						class="td11"
-					>
-						0.261098
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-34-9"
-						class="td11"
-					>
-						0.38146
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-34-10"
-						class="td11"
-					>
-						0.18768
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-34-11"
-						class="td11"
-					>
-						0.18802
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-34-12"
-						class="td11"
-					>
-						0.23603
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-34-13"
-						class="td11"
-					>
-						0.42209
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-34-14"
-						class="td11"
-					>
-						0.15130
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-35-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-35-1"
-						class="td11"
-					>
-						CropAndJaccard
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-35-2"
-						class="td11"
-					>
-						VQ-ResNet50
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-35-3"
-						class="td11"
-					>
-						614
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-35-4"
-						class="td11"
-					>
-						NAN
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-35-5"
-						class="td11"
-					>
-						NAN
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-35-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-35-7"
-						class="td01"
-					>
-						NAN
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-35-8"
-						class="td11"
-					>
-						0.216076
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-35-9"
-						class="td11"
-					>
-						0.31513
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-35-10"
-						class="td11"
-					>
-						0.15473
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-35-11"
-						class="td11"
-					>
-						0.18724
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-35-12"
-						class="td11"
-					>
-						0.18264
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-35-13"
-						class="td11"
-					>
-						0.30936
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-35-14"
-						class="td11"
-					>
-						0.14735
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-36-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-36-1"
-						class="td11"
-					>
-						CropAndJaccard
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-36-2"
-						class="td11"
-					>
-						VQ-FrozenResNet34
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-36-3"
-						class="td11"
-					>
-						512
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-36-4"
-						class="td11"
-					>
-						NAN
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-36-5"
-						class="td11"
-					>
-						NAN
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-36-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-36-7"
-						class="td01"
-					>
-						NAN
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-36-8"
-						class="td11"
-					>
-						0.209238
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-36-9"
-						class="td11"
-					>
-						0.32666
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-36-10"
-						class="td11"
-					>
-						0.13962
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-36-11"
-						class="td11"
-					>
-						0.14898
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-36-12"
-						class="td11"
-					>
-						0.15798
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-36-13"
-						class="td11"
-					>
-						0.33274
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-36-14"
-						class="td11"
-					>
-						0.14945
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-37-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-37-1"
-						class="td11"
-					>
-						CropAndJaccard
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-37-2"
-						class="td11"
-					>
-						VQ-FrozenResNet34
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-37-3"
-						class="td11"
-					>
-						256
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-37-4"
-						class="td11"
-					>
-						NAN
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-37-5"
-						class="td11"
-					>
-						NAN
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-37-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-37-7"
-						class="td01"
-					>
-						NAN
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-37-8"
-						class="td11"
-					>
-						0.196921
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-37-9"
-						class="td11"
-					>
-						0.30610
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-37-10"
-						class="td11"
-					>
-						0.13622
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-37-11"
-						class="td11"
-					>
-						0.14287
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-37-12"
-						class="td11"
-					>
-						0.14431
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-37-13"
-						class="td11"
-					>
-						0.30527
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-37-14"
-						class="td11"
-					>
-						0.14675
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-38-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-38-1"
-						class="td11"
-					>
-						CropAndJaccard
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-38-2"
-						class="td11"
-					>
-						VQ-ResNet50
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-38-3"
-						class="td11"
-					>
-						512
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-38-4"
-						class="td11"
-					>
-						NAN
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-38-5"
-						class="td11"
-					>
-						NAN
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-38-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-38-7"
-						class="td01"
-					>
-						NAN
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-38-8"
-						class="td11"
-					>
-						0.165012
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-38-9"
-						class="td11"
-					>
-						0.21407
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-38-10"
-						class="td11"
-					>
-						0.12580
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-38-11"
-						class="td11"
-					>
-						0.14234
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-38-12"
-						class="td11"
-					>
-						0.12543
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-38-13"
-						class="td11"
-					>
-						0.23798
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-38-14"
-						class="td11"
-					>
-						0.14446
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-39-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-39-1"
-						class="td11"
-					>
-						CropAndJaccard
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-39-2"
-						class="td11"
-					>
-						VQ-ResNet50
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-39-3"
-						class="td11"
-					>
-						256
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-39-4"
-						class="td11"
-					>
-						NAN
-					</td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-39-5"
-						class="td11"
-					>
-						NAN
-					</td>
-					<td
-						style="white-space: nowrap; text-align: center"
-						id="TBL-3-39-6"
-						class="td10"
-					></td>
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-39-7"
-						class="td01"
-					>
-						NAN
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-39-8"
-						class="td11"
-					>
-						0.154992
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-39-9"
-						class="td11"
-					>
-						0.19104
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-39-10"
-						class="td11"
-					>
-						0.12308
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-39-11"
-						class="td11"
-					>
-						0.13314
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-39-12"
-						class="td11"
-					>
-						0.11553
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-39-13"
-						class="td11"
-					>
-						0.22524
-					</td>
-					<td
-						style="white-space: nowrap; text-align: right"
-						id="TBL-3-39-14"
-						class="td11"
-					>
-						0.14192
-					</td>
-				</tr>
-				<tr style="vertical-align: baseline" id="TBL-3-40-">
-					<td
-						style="white-space: nowrap; text-align: left"
-						id="TBL-3-40-1"
-						class="td11"
-					></td>
-				</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-1-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-1-1"
+							class="td11"
+						>
+							SimilarityMeasurement
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-1-2"
+							class="td11"
+						>
+							Model
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-1-3"
+							class="td11"
+						>
+							Resolution
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-1-4"
+							class="td11"
+						>
+							Kernel
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-1-5"
+							class="td11"
+						>
+							Padding
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-1-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-1-7"
+							class="td01"
+						>
+							should_channel_kgrams
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-1-8"
+							class="td11"
+						>
+							mAP
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-1-9"
+							class="td11"
+						>
+							Landmarks
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-1-10"
+							class="td11"
+						>
+							IMSketch
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-1-11"
+							class="td11"
+						>
+							iNat
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-1-12"
+							class="td11"
+						>
+							Instre
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-1-13"
+							class="td11"
+						>
+							SOP
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-1-14"
+							class="td11"
+						>
+							Faces
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-2-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-2-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-2-2"
+							class="td11"
+						>
+							VQ-ResNet50
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-2-3"
+							class="td11"
+						>
+							512
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-2-4"
+							class="td11"
+						>
+							4
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-2-5"
+							class="td11"
+						>
+							0
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-2-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-2-7"
+							class="td01"
+						>
+							False
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-2-8"
+							class="td11"
+						>
+							0.358996
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-2-9"
+							class="td11"
+						>
+							0.58213
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-2-10"
+							class="td11"
+						>
+							0.27893
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-2-11"
+							class="td11"
+						>
+							0.24168
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-2-12"
+							class="td11"
+						>
+							0.28393
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-2-13"
+							class="td11"
+						>
+							0.60545
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-2-14"
+							class="td11"
+						>
+							0.16185
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-3-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-3-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-3-2"
+							class="td11"
+						>
+							VQ-ResNet50
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-3-3"
+							class="td11"
+						>
+							512
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-3-4"
+							class="td11"
+						>
+							5
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-3-5"
+							class="td11"
+						>
+							1
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-3-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-3-7"
+							class="td01"
+						>
+							False
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-3-8"
+							class="td11"
+						>
+							0.358116
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-3-9"
+							class="td11"
+						>
+							0.58626
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-3-10"
+							class="td11"
+						>
+							0.27578
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-3-11"
+							class="td11"
+						>
+							0.23728
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-3-12"
+							class="td11"
+						>
+							0.27722
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-3-13"
+							class="td11"
+						>
+							0.61037
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-3-14"
+							class="td11"
+						>
+							0.16180
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-4-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-4-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-4-2"
+							class="td11"
+						>
+							VQ-ResNet50
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-4-3"
+							class="td11"
+						>
+							512
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-4-4"
+							class="td11"
+						>
+							3
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-4-5"
+							class="td11"
+						>
+							0
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-4-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-4-7"
+							class="td01"
+						>
+							False
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-4-8"
+							class="td11"
+						>
+							0.356071
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-4-9"
+							class="td11"
+						>
+							0.58348
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-4-10"
+							class="td11"
+						>
+							0.27313
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-4-11"
+							class="td11"
+						>
+							0.23403
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-4-12"
+							class="td11"
+						>
+							0.27203
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-4-13"
+							class="td11"
+						>
+							0.61197
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-4-14"
+							class="td11"
+						>
+							0.16178
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-5-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-5-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-5-2"
+							class="td11"
+						>
+							VQ-FrozenResNet34
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-5-3"
+							class="td11"
+						>
+							512
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-5-4"
+							class="td11"
+						>
+							4
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-5-5"
+							class="td11"
+						>
+							0
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-5-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-5-7"
+							class="td01"
+						>
+							False
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-5-8"
+							class="td11"
+						>
+							0.347656
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-5-9"
+							class="td11"
+						>
+							0.54185
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-5-10"
+							class="td11"
+						>
+							0.26551
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-5-11"
+							class="td11"
+						>
+							0.21882
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-5-12"
+							class="td11"
+						>
+							0.27872
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-5-13"
+							class="td11"
+						>
+							0.62476
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-5-14"
+							class="td11"
+						>
+							0.15628
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-6-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-6-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-6-2"
+							class="td11"
+						>
+							VQ-FrozenResNet34
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-6-3"
+							class="td11"
+						>
+							512
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-6-4"
+							class="td11"
+						>
+							5
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-6-5"
+							class="td11"
+						>
+							1
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-6-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-6-7"
+							class="td01"
+						>
+							False
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-6-8"
+							class="td11"
+						>
+							0.347565
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-6-9"
+							class="td11"
+						>
+							0.54985
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-6-10"
+							class="td11"
+						>
+							0.26217
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-6-11"
+							class="td11"
+						>
+							0.21274
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-6-12"
+							class="td11"
+						>
+							0.27008
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-6-13"
+							class="td11"
+						>
+							0.63362
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-6-14"
+							class="td11"
+						>
+							0.15695
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-7-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-7-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-7-2"
+							class="td11"
+						>
+							VQ-ResNet50
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-7-3"
+							class="td11"
+						>
+							614
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-7-4"
+							class="td11"
+						>
+							4
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-7-5"
+							class="td11"
+						>
+							0
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-7-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-7-7"
+							class="td01"
+						>
+							False
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-7-8"
+							class="td11"
+						>
+							0.347015
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-7-9"
+							class="td11"
+						>
+							0.58669
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-7-10"
+							class="td11"
+						>
+							0.25582
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-7-11"
+							class="td11"
+						>
+							0.21834
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-7-12"
+							class="td11"
+						>
+							0.26909
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-7-13"
+							class="td11"
+						>
+							0.59012
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-7-14"
+							class="td11"
+						>
+							0.16203
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-8-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-8-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-8-2"
+							class="td11"
+						>
+							VQ-ResNet50
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-8-3"
+							class="td11"
+						>
+							614
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-8-4"
+							class="td11"
+						>
+							5
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-8-5"
+							class="td11"
+						>
+							1
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-8-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-8-7"
+							class="td01"
+						>
+							False
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-8-8"
+							class="td11"
+						>
+							0.345833
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-8-9"
+							class="td11"
+						>
+							0.58998
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-8-10"
+							class="td11"
+						>
+							0.25283
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-8-11"
+							class="td11"
+						>
+							0.21417
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-8-12"
+							class="td11"
+						>
+							0.26241
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-8-13"
+							class="td11"
+						>
+							0.59373
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-8-14"
+							class="td11"
+						>
+							0.16187
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-9-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-9-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-9-2"
+							class="td11"
+						>
+							VQ-FrozenResNet34
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-9-3"
+							class="td11"
+						>
+							512
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-9-4"
+							class="td11"
+						>
+							3
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-9-5"
+							class="td11"
+						>
+							0
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-9-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-9-7"
+							class="td01"
+						>
+							False
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-9-8"
+							class="td11"
+						>
+							0.344792
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-9-9"
+							class="td11"
+						>
+							0.54615
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-9-10"
+							class="td11"
+						>
+							0.25851
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-9-11"
+							class="td11"
+						>
+							0.21024
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-9-12"
+							class="td11"
+						>
+							0.26400
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-9-13"
+							class="td11"
+						>
+							0.63323
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-9-14"
+							class="td11"
+						>
+							0.15663
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-10-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-10-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-10-2"
+							class="td11"
+						>
+							VQ-ResNet50
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-10-3"
+							class="td11"
+						>
+							614
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-10-4"
+							class="td11"
+						>
+							3
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-10-5"
+							class="td11"
+						>
+							0
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-10-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-10-7"
+							class="td01"
+						>
+							False
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-10-8"
+							class="td11"
+						>
+							0.343568
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-10-9"
+							class="td11"
+						>
+							0.58732
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-10-10"
+							class="td11"
+						>
+							0.24950
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-10-11"
+							class="td11"
+						>
+							0.21074
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-10-12"
+							class="td11"
+						>
+							0.25619
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-10-13"
+							class="td11"
+						>
+							0.59582
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-10-14"
+							class="td11"
+						>
+							0.16184
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-11-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-11-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-11-2"
+							class="td11"
+						>
+							VQ-ResNet50
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-11-3"
+							class="td11"
+						>
+							256
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-11-4"
+							class="td11"
+						>
+							4
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-11-5"
+							class="td11"
+						>
+							2
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-11-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-11-7"
+							class="td01"
+						>
+							False
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-11-8"
+							class="td11"
+						>
+							0.339198
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-11-9"
+							class="td11"
+						>
+							0.47780
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-11-10"
+							class="td11"
+						>
+							0.35360
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-11-11"
+							class="td11"
+						>
+							0.24893
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-11-12"
+							class="td11"
+						>
+							0.24240
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-11-13"
+							class="td11"
+						>
+							0.56072
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-11-14"
+							class="td11"
+						>
+							0.15174
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-12-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-12-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-12-2"
+							class="td11"
+						>
+							VQ-ResNet50
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-12-3"
+							class="td11"
+						>
+							256
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-12-4"
+							class="td11"
+						>
+							3
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-12-5"
+							class="td11"
+						>
+							1
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-12-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-12-7"
+							class="td01"
+						>
+							False
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-12-8"
+							class="td11"
+						>
+							0.339197
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-12-9"
+							class="td11"
+						>
+							0.47687
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-12-10"
+							class="td11"
+						>
+							0.35379
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-12-11"
+							class="td11"
+						>
+							0.24947
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-12-12"
+							class="td11"
+						>
+							0.24325
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-12-13"
+							class="td11"
+						>
+							0.55978
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-12-14"
+							class="td11"
+						>
+							0.15204
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-13-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-13-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-13-2"
+							class="td11"
+						>
+							VQ-FrozenResNet34
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-13-3"
+							class="td11"
+						>
+							614
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-13-4"
+							class="td11"
+						>
+							4
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-13-5"
+							class="td11"
+						>
+							0
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-13-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-13-7"
+							class="td01"
+						>
+							False
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-13-8"
+							class="td11"
+						>
+							0.338142
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-13-9"
+							class="td11"
+						>
+							0.55188
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-13-10"
+							class="td11"
+						>
+							0.24478
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-13-11"
+							class="td11"
+						>
+							0.19829
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-13-12"
+							class="td11"
+						>
+							0.26012
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-13-13"
+							class="td11"
+						>
+							0.61759
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-13-14"
+							class="td11"
+						>
+							0.15620
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-14-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-14-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-14-2"
+							class="td11"
+						>
+							VQ-FrozenResNet34
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-14-3"
+							class="td11"
+						>
+							614
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-14-4"
+							class="td11"
+						>
+							5
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-14-5"
+							class="td11"
+						>
+							1
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-14-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-14-7"
+							class="td01"
+						>
+							False
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-14-8"
+							class="td11"
+						>
+							0.337825
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-14-9"
+							class="td11"
+						>
+							0.55749
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-14-10"
+							class="td11"
+						>
+							0.24103
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-14-11"
+							class="td11"
+						>
+							0.19377
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-14-12"
+							class="td11"
+						>
+							0.25305
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-14-13"
+							class="td11"
+						>
+							0.62484
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-14-14"
+							class="td11"
+						>
+							0.15677
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-15-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-15-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-15-2"
+							class="td11"
+						>
+							VQ-FrozenResNet34
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-15-3"
+							class="td11"
+						>
+							614
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-15-4"
+							class="td11"
+						>
+							3
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-15-5"
+							class="td11"
+						>
+							0
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-15-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-15-7"
+							class="td01"
+						>
+							False
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-15-8"
+							class="td11"
+						>
+							0.335068
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-15-9"
+							class="td11"
+						>
+							0.55416
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-15-10"
+							class="td11"
+						>
+							0.23722
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-15-11"
+							class="td11"
+						>
+							0.19122
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-15-12"
+							class="td11"
+						>
+							0.24681
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-15-13"
+							class="td11"
+						>
+							0.62444
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-15-14"
+							class="td11"
+						>
+							0.15656
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-16-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-16-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-16-2"
+							class="td11"
+						>
+							VQ-FrozenResNet34
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-16-3"
+							class="td11"
+						>
+							512
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-16-4"
+							class="td11"
+						>
+							5
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-16-5"
+							class="td11"
+						>
+							1
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-16-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-16-7"
+							class="td01"
+						>
+							True
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-16-8"
+							class="td11"
+						>
+							0.330183
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-16-9"
+							class="td11"
+						>
+							0.52225
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-16-10"
+							class="td11"
+						>
+							0.24846
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-16-11"
+							class="td11"
+						>
+							0.21264
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-16-12"
+							class="td11"
+						>
+							0.25831
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-16-13"
+							class="td11"
+						>
+							0.59082
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-16-14"
+							class="td11"
+						>
+							0.14862
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-17-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-17-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-17-2"
+							class="td11"
+						>
+							VQ-FrozenResNet34
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-17-3"
+							class="td11"
+						>
+							512
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-17-4"
+							class="td11"
+						>
+							4
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-17-5"
+							class="td11"
+						>
+							0
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-17-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-17-7"
+							class="td01"
+						>
+							True
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-17-8"
+							class="td11"
+						>
+							0.326344
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-17-9"
+							class="td11"
+						>
+							0.50732
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-17-10"
+							class="td11"
+						>
+							0.24662
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-17-11"
+							class="td11"
+						>
+							0.21861
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-17-12"
+							class="td11"
+						>
+							0.26113
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-17-13"
+							class="td11"
+						>
+							0.57731
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-17-14"
+							class="td11"
+						>
+							0.14708
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-18-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-18-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-18-2"
+							class="td11"
+						>
+							VQ-FrozenResNet34
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-18-3"
+							class="td11"
+						>
+							512
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-18-4"
+							class="td11"
+						>
+							3
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-18-5"
+							class="td11"
+						>
+							0
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-18-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-18-7"
+							class="td01"
+						>
+							True
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-18-8"
+							class="td11"
+						>
+							0.323291
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-18-9"
+							class="td11"
+						>
+							0.51431
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-18-10"
+							class="td11"
+						>
+							0.24105
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-18-11"
+							class="td11"
+						>
+							0.20902
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-18-12"
+							class="td11"
+						>
+							0.24815
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-18-13"
+							class="td11"
+						>
+							0.58027
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-18-14"
+							class="td11"
+						>
+							0.14695
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-19-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-19-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-19-2"
+							class="td11"
+						>
+							VQ-FrozenResNet34
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-19-3"
+							class="td11"
+						>
+							614
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-19-4"
+							class="td11"
+						>
+							5
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-19-5"
+							class="td11"
+						>
+							1
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-19-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-19-7"
+							class="td01"
+						>
+							True
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-19-8"
+							class="td11"
+						>
+							0.317817
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-19-9"
+							class="td11"
+						>
+							0.53150
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-19-10"
+							class="td11"
+						>
+							0.22737
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-19-11"
+							class="td11"
+						>
+							0.19314
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-19-12"
+							class="td11"
+						>
+							0.23635
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-19-13"
+							class="td11"
+						>
+							0.57025
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-19-14"
+							class="td11"
+						>
+							0.14828
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-20-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-20-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-20-2"
+							class="td11"
+						>
+							VQ-FrozenResNet34
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-20-3"
+							class="td11"
+						>
+							256
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-20-4"
+							class="td11"
+						>
+							4
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-20-5"
+							class="td11"
+						>
+							2
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-20-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-20-7"
+							class="td01"
+						>
+							False
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-20-8"
+							class="td11"
+						>
+							0.315947
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-20-9"
+							class="td11"
+						>
+							0.42983
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-20-10"
+							class="td11"
+						>
+							0.29231
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-20-11"
+							class="td11"
+						>
+							0.21948
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-20-12"
+							class="td11"
+						>
+							0.24301
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-20-13"
+							class="td11"
+						>
+							0.56028
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-20-14"
+							class="td11"
+						>
+							0.15077
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-21-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-21-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-21-2"
+							class="td11"
+						>
+							VQ-FrozenResNet34
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-21-3"
+							class="td11"
+						>
+							256
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-21-4"
+							class="td11"
+						>
+							3
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-21-5"
+							class="td11"
+						>
+							1
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-21-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-21-7"
+							class="td01"
+						>
+							False
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-21-8"
+							class="td11"
+						>
+							0.315619
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-21-9"
+							class="td11"
+						>
+							0.42757
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-21-10"
+							class="td11"
+						>
+							0.29264
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-21-11"
+							class="td11"
+						>
+							0.22086
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-21-12"
+							class="td11"
+						>
+							0.24486
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-21-13"
+							class="td11"
+						>
+							0.55697
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-21-14"
+							class="td11"
+						>
+							0.15081
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-22-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-22-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-22-2"
+							class="td11"
+						>
+							VQ-FrozenResNet34
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-22-3"
+							class="td11"
+						>
+							614
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-22-4"
+							class="td11"
+						>
+							4
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-22-5"
+							class="td11"
+						>
+							0
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-22-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-22-7"
+							class="td01"
+						>
+							True
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-22-8"
+							class="td11"
+						>
+							0.314760
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-22-9"
+							class="td11"
+						>
+							0.51752
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-22-10"
+							class="td11"
+						>
+							0.22639
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-22-11"
+							class="td11"
+						>
+							0.19760
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-22-12"
+							class="td11"
+						>
+							0.23944
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-22-13"
+							class="td11"
+						>
+							0.56070
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-22-14"
+							class="td11"
+						>
+							0.14691
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-23-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-23-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-23-2"
+							class="td11"
+						>
+							VQ-FrozenResNet34
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-23-3"
+							class="td11"
+						>
+							614
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-23-4"
+							class="td11"
+						>
+							3
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-23-5"
+							class="td11"
+						>
+							0
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-23-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-23-7"
+							class="td01"
+						>
+							True
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-23-8"
+							class="td11"
+						>
+							0.310504
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-23-9"
+							class="td11"
+						>
+							0.52159
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-23-10"
+							class="td11"
+						>
+							0.22073
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-23-11"
+							class="td11"
+						>
+							0.18945
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-23-12"
+							class="td11"
+						>
+							0.22604
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-23-13"
+							class="td11"
+						>
+							0.55865
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-23-14"
+							class="td11"
+						>
+							0.14656
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-24-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-24-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-24-2"
+							class="td11"
+						>
+							VQ-FrozenResNet34
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-24-3"
+							class="td11"
+						>
+							256
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-24-4"
+							class="td11"
+						>
+							4
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-24-5"
+							class="td11"
+						>
+							2
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-24-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-24-7"
+							class="td01"
+						>
+							True
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-24-8"
+							class="td11"
+						>
+							0.304981
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-24-9"
+							class="td11"
+						>
+							0.41032
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-24-10"
+							class="td11"
+						>
+							0.28407
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-24-11"
+							class="td11"
+						>
+							0.21846
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-24-12"
+							class="td11"
+						>
+							0.23638
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-24-13"
+							class="td11"
+						>
+							0.53534
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-24-14"
+							class="td11"
+						>
+							0.14531
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-25-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-25-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-25-2"
+							class="td11"
+						>
+							VQ-FrozenResNet34
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-25-3"
+							class="td11"
+						>
+							256
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-25-4"
+							class="td11"
+						>
+							3
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-25-5"
+							class="td11"
+						>
+							1
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-25-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-25-7"
+							class="td01"
+						>
+							True
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-25-8"
+							class="td11"
+						>
+							0.304241
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-25-9"
+							class="td11"
+						>
+							0.40883
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-25-10"
+							class="td11"
+						>
+							0.28296
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-25-11"
+							class="td11"
+						>
+							0.21938
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-25-12"
+							class="td11"
+						>
+							0.23723
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-25-13"
+							class="td11"
+						>
+							0.53142
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-25-14"
+							class="td11"
+						>
+							0.14563
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-26-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-26-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-26-2"
+							class="td11"
+						>
+							VQ-ResNet50
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-26-3"
+							class="td11"
+						>
+							512
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-26-4"
+							class="td11"
+						>
+							4
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-26-5"
+							class="td11"
+						>
+							0
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-26-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-26-7"
+							class="td01"
+						>
+							True
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-26-8"
+							class="td11"
+						>
+							0.296027
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-26-9"
+							class="td11"
+						>
+							0.49294
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-26-10"
+							class="td11"
+						>
+							0.21070
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-26-11"
+							class="td11"
+						>
+							0.22187
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-26-12"
+							class="td11"
+						>
+							0.21419
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-26-13"
+							class="td11"
+						>
+							0.48399
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-26-14"
+							class="td11"
+						>
+							0.15247
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-27-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-27-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-27-2"
+							class="td11"
+						>
+							VQ-ResNet50
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-27-3"
+							class="td11"
+						>
+							512
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-27-4"
+							class="td11"
+						>
+							5
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-27-5"
+							class="td11"
+						>
+							1
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-27-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-27-7"
+							class="td01"
+						>
+							True
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-27-8"
+							class="td11"
+						>
+							0.295039
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-27-9"
+							class="td11"
+						>
+							0.49761
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-27-10"
+							class="td11"
+						>
+							0.20775
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-27-11"
+							class="td11"
+						>
+							0.21758
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-27-12"
+							class="td11"
+						>
+							0.20830
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-27-13"
+							class="td11"
+						>
+							0.48800
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-27-14"
+							class="td11"
+						>
+							0.15100
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-28-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-28-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-28-2"
+							class="td11"
+						>
+							VQ-ResNet50
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-28-3"
+							class="td11"
+						>
+							512
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-28-4"
+							class="td11"
+						>
+							3
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-28-5"
+							class="td11"
+						>
+							0
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-28-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-28-7"
+							class="td01"
+						>
+							True
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-28-8"
+							class="td11"
+						>
+							0.286522
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-28-9"
+							class="td11"
+						>
+							0.48304
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-28-10"
+							class="td11"
+						>
+							0.19891
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-28-11"
+							class="td11"
+						>
+							0.21354
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-28-12"
+							class="td11"
+						>
+							0.19940
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-28-13"
+							class="td11"
+						>
+							0.47538
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-28-14"
+							class="td11"
+						>
+							0.14887
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-29-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-29-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-29-2"
+							class="td11"
+						>
+							VQ-ResNet50
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-29-3"
+							class="td11"
+						>
+							614
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-29-4"
+							class="td11"
+						>
+							4
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-29-5"
+							class="td11"
+						>
+							0
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-29-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-29-7"
+							class="td01"
+						>
+							True
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-29-8"
+							class="td11"
+						>
+							0.286102
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-29-9"
+							class="td11"
+						>
+							0.49331
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-29-10"
+							class="td11"
+						>
+							0.19496
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-29-11"
+							class="td11"
+						>
+							0.20189
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-29-12"
+							class="td11"
+						>
+							0.20796
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-29-13"
+							class="td11"
+						>
+							0.46663
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-29-14"
+							class="td11"
+						>
+							0.15187
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-30-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-30-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-30-2"
+							class="td11"
+						>
+							VQ-ResNet50
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-30-3"
+							class="td11"
+						>
+							256
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-30-4"
+							class="td11"
+						>
+							3
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-30-5"
+							class="td11"
+						>
+							1
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-30-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-30-7"
+							class="td01"
+						>
+							True
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-30-8"
+							class="td11"
+						>
+							0.285037
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-30-9"
+							class="td11"
+						>
+							0.41862
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-30-10"
+							class="td11"
+						>
+							0.26744
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-30-11"
+							class="td11"
+						>
+							0.22793
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-30-12"
+							class="td11"
+						>
+							0.18756
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-30-13"
+							class="td11"
+						>
+							0.46522
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-30-14"
+							class="td11"
+						>
+							0.14345
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-31-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-31-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-31-2"
+							class="td11"
+						>
+							VQ-ResNet50
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-31-3"
+							class="td11"
+						>
+							614
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-31-4"
+							class="td11"
+						>
+							5
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-31-5"
+							class="td11"
+						>
+							1
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-31-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-31-7"
+							class="td01"
+						>
+							True
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-31-8"
+							class="td11"
+						>
+							0.285007
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-31-9"
+							class="td11"
+						>
+							0.49790
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-31-10"
+							class="td11"
+						>
+							0.19262
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-31-11"
+							class="td11"
+						>
+							0.19820
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-31-12"
+							class="td11"
+						>
+							0.20234
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-31-13"
+							class="td11"
+						>
+							0.46900
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-31-14"
+							class="td11"
+						>
+							0.14998
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-32-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-32-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-32-2"
+							class="td11"
+						>
+							VQ-ResNet50
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-32-3"
+							class="td11"
+						>
+							256
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-32-4"
+							class="td11"
+						>
+							4
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-32-5"
+							class="td11"
+						>
+							2
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-32-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-32-7"
+							class="td01"
+						>
+							True
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-32-8"
+							class="td11"
+						>
+							0.283205
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-32-9"
+							class="td11"
+						>
+							0.41683
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-32-10"
+							class="td11"
+						>
+							0.26473
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-32-11"
+							class="td11"
+						>
+							0.22735
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-32-12"
+							class="td11"
+						>
+							0.18539
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-32-13"
+							class="td11"
+						>
+							0.46198
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-32-14"
+							class="td11"
+						>
+							0.14294
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-33-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-33-1"
+							class="td11"
+						>
+							KGramTF-IDF
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-33-2"
+							class="td11"
+						>
+							VQ-ResNet50
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-33-3"
+							class="td11"
+						>
+							614
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-33-4"
+							class="td11"
+						>
+							3
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-33-5"
+							class="td11"
+						>
+							0
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-33-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-33-7"
+							class="td01"
+						>
+							True
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-33-8"
+							class="td11"
+						>
+							0.276272
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-33-9"
+							class="td11"
+						>
+							0.48147
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-33-10"
+							class="td11"
+						>
+							0.18505
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-33-11"
+							class="td11"
+						>
+							0.19359
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-33-12"
+							class="td11"
+						>
+							0.19382
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-33-13"
+							class="td11"
+						>
+							0.45562
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-33-14"
+							class="td11"
+						>
+							0.14808
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-34-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-34-1"
+							class="td11"
+						>
+							CropAndJaccard
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-34-2"
+							class="td11"
+						>
+							VQ-FrozenResNet34
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-34-3"
+							class="td11"
+						>
+							614
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-34-4"
+							class="td11"
+						>
+							NAN
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-34-5"
+							class="td11"
+						>
+							NAN
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-34-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-34-7"
+							class="td01"
+						>
+							NAN
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-34-8"
+							class="td11"
+						>
+							0.261098
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-34-9"
+							class="td11"
+						>
+							0.38146
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-34-10"
+							class="td11"
+						>
+							0.18768
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-34-11"
+							class="td11"
+						>
+							0.18802
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-34-12"
+							class="td11"
+						>
+							0.23603
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-34-13"
+							class="td11"
+						>
+							0.42209
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-34-14"
+							class="td11"
+						>
+							0.15130
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-35-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-35-1"
+							class="td11"
+						>
+							CropAndJaccard
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-35-2"
+							class="td11"
+						>
+							VQ-ResNet50
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-35-3"
+							class="td11"
+						>
+							614
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-35-4"
+							class="td11"
+						>
+							NAN
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-35-5"
+							class="td11"
+						>
+							NAN
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-35-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-35-7"
+							class="td01"
+						>
+							NAN
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-35-8"
+							class="td11"
+						>
+							0.216076
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-35-9"
+							class="td11"
+						>
+							0.31513
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-35-10"
+							class="td11"
+						>
+							0.15473
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-35-11"
+							class="td11"
+						>
+							0.18724
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-35-12"
+							class="td11"
+						>
+							0.18264
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-35-13"
+							class="td11"
+						>
+							0.30936
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-35-14"
+							class="td11"
+						>
+							0.14735
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-36-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-36-1"
+							class="td11"
+						>
+							CropAndJaccard
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-36-2"
+							class="td11"
+						>
+							VQ-FrozenResNet34
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-36-3"
+							class="td11"
+						>
+							512
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-36-4"
+							class="td11"
+						>
+							NAN
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-36-5"
+							class="td11"
+						>
+							NAN
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-36-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-36-7"
+							class="td01"
+						>
+							NAN
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-36-8"
+							class="td11"
+						>
+							0.209238
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-36-9"
+							class="td11"
+						>
+							0.32666
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-36-10"
+							class="td11"
+						>
+							0.13962
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-36-11"
+							class="td11"
+						>
+							0.14898
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-36-12"
+							class="td11"
+						>
+							0.15798
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-36-13"
+							class="td11"
+						>
+							0.33274
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-36-14"
+							class="td11"
+						>
+							0.14945
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-37-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-37-1"
+							class="td11"
+						>
+							CropAndJaccard
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-37-2"
+							class="td11"
+						>
+							VQ-FrozenResNet34
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-37-3"
+							class="td11"
+						>
+							256
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-37-4"
+							class="td11"
+						>
+							NAN
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-37-5"
+							class="td11"
+						>
+							NAN
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-37-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-37-7"
+							class="td01"
+						>
+							NAN
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-37-8"
+							class="td11"
+						>
+							0.196921
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-37-9"
+							class="td11"
+						>
+							0.30610
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-37-10"
+							class="td11"
+						>
+							0.13622
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-37-11"
+							class="td11"
+						>
+							0.14287
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-37-12"
+							class="td11"
+						>
+							0.14431
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-37-13"
+							class="td11"
+						>
+							0.30527
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-37-14"
+							class="td11"
+						>
+							0.14675
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-38-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-38-1"
+							class="td11"
+						>
+							CropAndJaccard
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-38-2"
+							class="td11"
+						>
+							VQ-ResNet50
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-38-3"
+							class="td11"
+						>
+							512
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-38-4"
+							class="td11"
+						>
+							NAN
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-38-5"
+							class="td11"
+						>
+							NAN
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-38-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-38-7"
+							class="td01"
+						>
+							NAN
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-38-8"
+							class="td11"
+						>
+							0.165012
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-38-9"
+							class="td11"
+						>
+							0.21407
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-38-10"
+							class="td11"
+						>
+							0.12580
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-38-11"
+							class="td11"
+						>
+							0.14234
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-38-12"
+							class="td11"
+						>
+							0.12543
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-38-13"
+							class="td11"
+						>
+							0.23798
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-38-14"
+							class="td11"
+						>
+							0.14446
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-39-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-39-1"
+							class="td11"
+						>
+							CropAndJaccard
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-39-2"
+							class="td11"
+						>
+							VQ-ResNet50
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-39-3"
+							class="td11"
+						>
+							256
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-39-4"
+							class="td11"
+						>
+							NAN
+						</td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-39-5"
+							class="td11"
+						>
+							NAN
+						</td>
+						<td
+							style="white-space: nowrap; text-align: center"
+							id="TBL-3-39-6"
+							class="td10"
+						></td>
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-39-7"
+							class="td01"
+						>
+							NAN
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-39-8"
+							class="td11"
+						>
+							0.154992
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-39-9"
+							class="td11"
+						>
+							0.19104
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-39-10"
+							class="td11"
+						>
+							0.12308
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-39-11"
+							class="td11"
+						>
+							0.13314
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-39-12"
+							class="td11"
+						>
+							0.11553
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-39-13"
+							class="td11"
+						>
+							0.22524
+						</td>
+						<td
+							style="white-space: nowrap; text-align: right"
+							id="TBL-3-39-14"
+							class="td11"
+						>
+							0.14192
+						</td>
+					</tr>
+					<tr style="vertical-align: baseline" id="TBL-3-40-">
+						<td
+							style="white-space: nowrap; text-align: left"
+							id="TBL-3-40-1"
+							class="td11"
+						></td>
+					</tr>
 				</tbody>
 			</table>
 		</div>
