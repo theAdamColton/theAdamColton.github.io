@@ -29,7 +29,17 @@
 
 <ProjectBox>
 	<b>Spokester 1: Neural Game Graphics</b>
-	<a href="spokester1-neural-game-graphics"> [blog] </a>
+	<a href="spokester1-neural-game-graphics">[blog]</a>
+	<a href="https://github.com/theAdamColton/spokester1">[github]</a>
+	<a href="https://www.youtube.com/watch?v=tNvcGdBQDj8">[youtube]</a>
+	<br />
+	A video game with real time neural graphics! Is this the real life? Is this just
+	fantasy?
+	<MediaBox>
+		<video width="320" height="320" autoplay loop muted>
+			<source src="spokester-sample.mp4" type="video/mp4" />
+		</video>
+	</MediaBox>
 </ProjectBox>
 
 <ProjectBox>
@@ -269,7 +279,7 @@
 
 	<MediaBox>
 		<video object-fit="fill" autoplay controls muted loop>
-			<source src="ascii-unmasked-demo.mp4" type="video/mp4" />
+			<source src="ascii-unmasked-demo2.mp4" type="video/mp4" />
 		</video>
 
 		<div class="video-description">

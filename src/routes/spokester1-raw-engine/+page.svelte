@@ -10,6 +10,7 @@
 
 	const Config = {
 		physics: {
+			RENDER_DISTANCE: 300.0,
 			LANE_WIDTH: 2.5,
 			PLAYER_LANE_SWITCH_SPEED: 10.0,
 			INITIAL_WORLD_SPEED: 30.0,
@@ -19,14 +20,14 @@
 			COLLISION_THRESH: 1.2,
 		},
 		player: {
-			WIDTH: 0.8,
+			WIDTH: 0.5,
 			HEIGHT: 1.0,
-			LENGTH: 0.8,
+			LENGTH: 0.5,
 		},
 		car: {
-			WIDTH: 1.8,
-			HEIGHT: 1.2,
-			LENGTH: 3.5,
+			WIDTH: 1.9,
+			HEIGHT: 1.7,
+			LENGTH: 4.5,
 		},
 		building: {
 			WIDTH: 10.0,
@@ -59,7 +60,7 @@
 		scene.background = new THREE.Color(Config.colors.BG);
 
 		const camera = new THREE.PerspectiveCamera(
-			45,
+			30,
 			container.clientWidth / container.clientHeight,
 			0.1,
 			1000,
@@ -145,7 +146,7 @@
 			cabin.position.z = -Config.car.LENGTH * 0.1;
 
 			car.add(body, cabin);
-			car.position.set(x, 0, 300); // Spawn further out for smoothness
+			car.position.set(x, 0, Config.physics.RENDER_DISTANCE); // Spawn further out for smoothness
 			game.obstacles.push(car);
 			scene.add(car);
 		};
@@ -164,7 +165,11 @@
 				Config.building.HEIGHT,
 				Config.building.LENGTH,
 			);
-			b.position.set(x, Config.building.HEIGHT / 2, 300);
+			b.position.set(
+				x,
+				Config.building.HEIGHT / 2,
+				Config.physics.RENDER_DISTANCE,
+			);
 			game.scenery.push(b);
 			scene.add(b);
 		};
@@ -183,7 +188,10 @@
 		};
 
 		const handleKey = (e) => {
-			if (game.over) return;
+			if (!["ArrowLeft", "ArrowRight"].includes(e.key)) return;
+			if (game.over) {
+				reset();
+			}
 			if (e.key === "ArrowLeft" && game.laneIdx > 0) game.laneIdx--;
 			if (e.key === "ArrowRight" && game.laneIdx < 2) game.laneIdx++;
 		};
@@ -194,21 +202,26 @@
 			frameId = requestAnimationFrame(animate);
 			const dt = 1 / 60;
 
-			game.worldSpeed += Config.physics.WORLD_SPEEDUP_FACTOR * dt;
-			reward = game.worldSpeed * dt;
-			game.worldDistance += reward;
-			score += reward;
 
 			if (game.over) {
-                player.position.z -= game.worldSpeed * dt;
-            }
-            else{
+				player.position.z -= game.worldSpeed * dt;
+
+				reward = 0;
+			} else {
+			    game.worldSpeed += Config.physics.WORLD_SPEEDUP_FACTOR * dt;
+				reward = game.worldSpeed * dt;
+				score += reward;
+
 				const targetX = game.lanes[game.laneIdx];
 				player.position.x +=
 					(targetX - player.position.x) *
 					Config.physics.PLAYER_LANE_SWITCH_SPEED *
 					dt;
 			}
+
+            const worldTranslationZ = game.worldSpeed * dt;
+            game.worldDistance += worldTranslationZ;
+
 
 			groundMat.uniforms.uOffset.value = game.worldDistance;
 
@@ -222,7 +235,7 @@
 				) {
 					game.over = true;
 					showGameOver = true;
-					setTimeout(reset, 2000);
+					// setTimeout(reset, 2000);
 				}
 				if (obs.position.z < Config.physics.DESPAWN_DISTANCE) {
 					scene.remove(obs);
@@ -245,7 +258,7 @@
 
 			// Camera behavior
 			camera.position.lerp(
-				new THREE.Vector3(player.position.x * 0.6, 3.5, -12),
+				new THREE.Vector3(player.position.x * 0.6, 2, -12),
 				0.1,
 			);
 			camera.lookAt(player.position.x, 1, 20);
@@ -263,6 +276,24 @@
 	});
 </script>
 
+<h1>Spokester1 - Raw Game Engine</h1>
+
+<a href="spokester1-neural-game-graphics#game-engine">[&lt- Back to Spokester1 Article]</a>
+
+<p>
+	This is a JavaScript port of the Spokester1 game engine. The ground is a checkerboard pattern.
+	There are cars to avoid and buildings on the side of the boulevard. There are
+	no trees or textures or animations.
+</p>
+
+<p>
+	This is what the game looks like without any neural graphics.
+</p>
+
+<p>
+	Controls:<br/> Left Arrow: Move left <br/> Right Arrow: Move right
+</p>
+
 <div class="game-wrapper">
 	<div bind:this={container} class="canvas-container">
 		<div class="hud">
@@ -273,7 +304,7 @@
 		{#if showGameOver}
 			<div class="game-over">
 				<h1>CRASHED</h1>
-				<p>Restarting...</p>
+				<p>Press an arrow key to restart...</p>
 			</div>
 		{/if}
 	</div>

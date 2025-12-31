@@ -4,10 +4,10 @@
 
 {#if !ishome}
 	<h1>
-		<a href="/">home</a>
+		<a href="/">🏠home</a>
 	</h1>
 {:else}
 	<div class="rainbow-text-animated main-title">
-		Adam Colton: University of Utah 2023
+		Adam Colton: University of Utah
 	</div>
 {/if}
