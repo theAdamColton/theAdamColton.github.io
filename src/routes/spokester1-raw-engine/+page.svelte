@@ -55,6 +55,9 @@
 		over: false,
 	};
 
+	let moveLeft = () => {};
+	let moveRight = () => {};
+
 	onMount(() => {
 		const scene = new THREE.Scene();
 		scene.background = new THREE.Color(Config.colors.BG);
@@ -187,15 +190,26 @@
 			player.position.set(0, 0, 0);
 		};
 
-		const handleKey = (e) => {
-			if (!["ArrowLeft", "ArrowRight"].includes(e.key)) return;
+		moveLeft = () => {
 			if (game.over) {
 				reset();
+				return;
 			}
-			if (e.key === "ArrowLeft" && game.laneIdx > 0) game.laneIdx--;
-			if (e.key === "ArrowRight" && game.laneIdx < 2) game.laneIdx++;
+			if (game.laneIdx > 0) game.laneIdx--;
 		};
 
+		moveRight = () => {
+			if (game.over) {
+				reset();
+				return;
+			}
+			if (game.laneIdx < 2) game.laneIdx++;
+		};
+
+		const handleKey = (e) => {
+			if (e.key === "ArrowLeft") moveLeft();
+			if (e.key === "ArrowRight") moveRight();
+		};
 		window.addEventListener("keydown", handleKey);
 
 		const animate = () => {
@@ -308,12 +322,26 @@
 			</div>
 		{/if}
 	</div>
+	<div class="controls">
+		<button class="control-button" on:click={moveLeft}>⬅️</button>
+		<button class="control-button" on:click={moveRight}>➡️</button>
+	</div>
 </div>
 
 <style>
+	.controls {
+		display: flex;
+		font-size: 4rem;
+		justify-content: space-around;
+		background: #222;
+	}
+	.control-button {
+		padding: 1rem 3rem;
+	}
 	.game-wrapper {
 		width: 100%;
-		height: 500px;
+		display: flex;
+		flex-direction: column;
 		background: #000;
 		position: relative;
 		border-radius: 4px;
@@ -321,7 +349,8 @@
 	}
 	.canvas-container {
 		width: 100%;
-		height: 100%;
+		height: 500px;
+		position: relative;
 	}
 	.hud {
 		position: absolute;
