@@ -242,6 +242,19 @@ Skip to random parts of the video and see how:
 	>.
 </p>
 
+<p>
+	This simple architecture avoids the complexity of GANs and cross modal
+	alignment. The diffusion transformer is trained to transform the reference's
+	depth and optical flow into the reference's pixel values. It generalizes to
+	transforming ANY depth and optical flow into pixel values that appear like the
+	reference. This succeeds because the depth and optical flow do not inform the
+	diffusion transformer of the exact colors and objects in the frames. For
+	example, for a given depth and optical flow that show a moving car, the car's
+	color could be red or green. It could be a jeep or a taxi cab. Since the flow
+	and depth remove all the pretty details the model needs to come up with the
+	eye-candy on its own.
+</p>
+
 <MediaBox>
 	<img src="spokester1-neural-game-graphics/conditions.avif" />
 	Left: Depth and optical flow maps from the reference video. <br />
@@ -358,8 +371,8 @@ Skip to random parts of the video and see how:
 
 <p>
 	Everything is blurry and grainy. The visual horizon degrades into a huge
-	tunnel-like hole. Steer too fast and you risk conjuring up hallucinated cars that aren't in the
-	game.
+	tunnel-like hole. Steer too fast and you risk conjuring up hallucinated cars
+	that aren't in the game.
 </p>
 <p>
 	If you steer really abruptly side to side the game perceptually speeds up!
