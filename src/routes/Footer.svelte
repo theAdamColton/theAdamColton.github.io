@@ -8,5 +8,6 @@
 	</div>
 	<br />
 	<a href="mailto:atcolton@tutanota.com">atcolton@tutanota.com</a> |
-	<a href="https://github.com/theAdamColton">github</a>
+	<a href="https://github.com/theAdamColton">github</a> |
+	<a href="https://x.com/adamtcolton">X</a>
 </div>
