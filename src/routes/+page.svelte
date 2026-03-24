@@ -28,6 +28,15 @@
 <div class="section-title" id="projects">Projects:</div>
 
 <ProjectBox>
+	<b>Small LLMs have a Big Problem</b>
+	<a href="small-llms-have-a-big-problem">[blog]</a>
+	<br />
+	The LM-head eats up 90% of the memory and compute when training small (~100m) parameter
+	LLMs. Can I replace the LM head with a bit-diffusion head that denoises a bit-representation
+	of the next token?
+</ProjectBox>
+
+<ProjectBox>
 	<b>Spokester 1: Neural Game Graphics</b>
 	<a href="spokester1-neural-game-graphics">[blog]</a>
 	<a href="https://github.com/theAdamColton/spokester1">[github]</a>
