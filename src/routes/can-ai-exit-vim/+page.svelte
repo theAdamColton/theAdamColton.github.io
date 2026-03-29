@@ -59,15 +59,15 @@ March 27th 2026
 	reads a file using Opencode the result is truncated by default to 2000 lines.
 	This is great for allowing the agent to receive the maximal amount of
 	information about the file contents. But sometimes I wonder if the 2,000 lines
-	are overkill. After all, human programers have hacked on code with tiny 40x100
-	sized terminals for decades without issue.
+	are overkill. After all, human programers have hacked on code with tiny
+	terminals for decades without issue.
 </p>
 
 <p>
-	As a sort of a half serious toy project I want to see if AI models can use Vim
+	As a sort of half serious toy project I want to see if AI models can use Vim
 	to edit large files. Vim is possibly more context efficient than tools like
 	opencode. Instead of dumping huge files into the context, vim constrains the
-	agent to only ever see a fixed 32x64 sized terminal window. The agent's
+	agent to only ever see a fixed-sized 32x64 terminal window. The agent's
 	context is thus transformed from a sloppy pile of file contents to a crisp
 	stream of terminal window snapshots.
 </p>
@@ -75,9 +75,9 @@ March 27th 2026
 <p>
 	My end goal is to test if the AI can use CLI text editing tools to do some
 	complex edits. But first there is a rite of passage I feel obliged to perform.
-	Many a young hacker has no doubt smashed their fists against their keyboard in
-	anguish over that one particularly obstinant CLI command that just refuses to
-	close. But can AI exit Vim?
+	Many a young hacker has no doubt smashed their fists against their keyboard
+	anguishing over that one particularly obstinant CLI command that just refuses
+	to close. But can AI exit Vim?
 </p>
 
 <MediaBox>
@@ -88,8 +88,9 @@ March 27th 2026
 <h2>The Harness</h2>
 
 <p>
-	First I want to describe the agentic harness I am using to allow the LLMs to
-	interact with Vim and other commands as if they were typing into a keyboard.
+	First I want to describe the custom agentic harness I am using to allow the
+	LLMs to interact with Vim and other commands as if they were typing into a
+	keyboard.
 </p>
 
 <p>
@@ -100,6 +101,16 @@ March 27th 2026
 	running on my trusty 3090 GPU using llamacpp <InlineFootnote
 		>Default chat parser, temperature = 0.6</InlineFootnote
 	>.
+</p>
+
+<p>
+	It's very simple. When the model calls <code>read_term()</code> I render the
+	text of the 32x64 terminal as a string after adding a special ansi code to the
+	character where the cursor is. Anything the model inputs with
+	<code>input()</code> I write directly to the terminal process after un-escaping
+	the special characters. The model is running in a high strung busy loop like some
+	overcaffeinated gambler. Unlike Opencode it doesn't wait for the output of commands
+	to finish. It simply consumes and generates tokens as fast as it can.
 </p>
 
 <table>
@@ -191,16 +202,6 @@ March 27th 2026
 	</small>
 </AsideBox>
 
-<p>
-	It's very simple. When the model calls <code>read_term()</code> I render the
-	text of the 32x64 terminal as a string after adding a special ansi code to the
-	character where the cursor is. Anything the model inputs with
-	<code>input()</code> I write directly to the terminal process after un-escaping
-	the special characters. The model is running in a high strung busy loop like some
-	overcaffeinated gambler. Unlike Opencode it doesn't wait for the output of commands
-	to finish. It simply consumes and generates tokens as fast as it can.
-</p>
-
 <h2>Can it exit Vim??????</h2>
 
 <div bind:this={aiExitingVimContainer} class="asciinema-responsive"></div>
@@ -211,7 +212,7 @@ March 27th 2026
 	Actually it is so fast at using and writing with Vim that I had to slow down
 	the above video by TEN TIMES just to get it to a speed where it was actually
 	interpretable. Very humbling. It blows my mind that this is running on a six
-	year old GPU which is still the best value GPU that NVIDIA has every released.
+	year old GPU.
 </p>
 
 <p>
