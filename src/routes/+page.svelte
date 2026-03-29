@@ -36,6 +36,13 @@
 	Vim do they know how to leave? I make a simple AI agent harness where the agent
 	operates in the full terminal buffer and directly types keypresses into the terminal.
 	Will this succeed? Read my post to find out!
+	<MediaBox>
+		<img width="280" src="ai_using_vim.webp" />
+		<p>
+			Two tools, <code>read_term()</code> and <code>input(keys: string)</code>,
+			allow AI agents to use full screen terminal programs like Vim.
+		</p>
+	</MediaBox>
 </ProjectBox>
 
 <ProjectBox>
