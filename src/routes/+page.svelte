@@ -28,6 +28,17 @@
 <div class="section-title" id="projects">Projects:</div>
 
 <ProjectBox>
+	<b>Can AI Exit Vim?</b>
+	<a href="can-ai-exit-vim">[blog]</a>
+	<br />
+	Most AI coding agents edit files using a diff editing toolcall, editing exact file
+	positions. But can they enter and use Vim? And most importantly, once they enter
+	Vim do they know how to leave? I make a simple AI agent harness where the agent
+	operates in the full terminal buffer and directly types keypresses into the terminal.
+	Will this succeed? Read my post to find out!
+</ProjectBox>
+
+<ProjectBox>
 	<b>Small LLMs have a Big Problem</b>
 	<a href="small-llms-have-a-big-problem">[blog]</a>
 	<br />
