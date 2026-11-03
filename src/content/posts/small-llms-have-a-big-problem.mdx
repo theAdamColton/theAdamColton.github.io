@@ -1,8 +1,11 @@
 ---
 title: "Small LLMs have a Big Problem"
+date: 2026-03-24
+description: >-
+  The LM-head eats up 90% of the memory and compute when training small (~100m)
+  parameter LLMs. Can I replace the LM head with a bit-diffusion head that
+  denoises a bit-representation of the next token?
 ---
-
-# Small LLMs Have a Big Problem
 
 I discuss and verify a widely know issue with the LLM architecture. The token
 embedding and LM head are memory and gradient bottlenecks. Replacing these two

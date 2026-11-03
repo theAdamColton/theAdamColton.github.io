@@ -15,9 +15,9 @@ const anchor = `--${id}`;
 		[note]
 	</button>
 
-	<div popover id={id} style={`position-anchor: ${anchor}`} class="footnote-content">
+	<span popover id={id} style={`position-anchor: ${anchor}`} class="footnote-content">
 		<slot />
-	</div>
+	</span>
 </span>
 
 <style>
@@ -29,11 +29,16 @@ const anchor = `--${id}`;
 		background: none;
 		border: none;
 		padding: 0;
-		color: #0066cc;
+		color: var(--link);
 		text-decoration: underline;
 		cursor: pointer;
-		font: small;
+		font-size: 0.75em;
+		font-family: inherit;
 		vertical-align: super;
+	}
+
+	.footnote-content:popover-open {
+		display: block;
 	}
 
 	.footnote-content {
@@ -52,8 +57,9 @@ const anchor = `--${id}`;
 		background: white;
 		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 		width: max-content;
-		max-width: 250px;
-		font-size: 0.9em;
+		max-width: min(320px, 90vw);
+		font-size: 0.85em;
+		line-height: 1.45;
 		color: #333;
 	}
 </style>

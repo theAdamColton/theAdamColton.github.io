@@ -1,14 +1,19 @@
 ---
 title: "Can AI Exit Vim?"
+date: 2026-03-27
+description: >-
+  Most AI coding agents edit files using a diff editing toolcall, editing exact
+  file positions. But can they enter and use Vim? And most importantly, once they
+  enter Vim do they know how to leave? I make a simple AI agent harness where the
+  agent operates in the full terminal buffer and directly types keypresses into
+  the terminal. Will this succeed? Read my post to find out!
+cover: ai_using_vim.webp
+coverCaption: >-
+  Two tools, read_term() and input(keys: string), allow AI agents to use full
+  screen terminal programs like Vim.
 ---
 
 import Asciinema from "../../components/Asciinema.astro";
-
-# Can AI Exit Vim?
-
-March 27th 2026
-
----
 
 Most AI coding agents act inside a loop where they collect user input and then
 call MCP tools that allow them to run commands and read and write files. Since
@@ -117,17 +122,17 @@ Make sure to doubly escape special characters with backslashes.
 
 <strong>Examples:</strong>
 
-# Run the pwd command<br />
+\# Run the pwd command<br />
 input('pwd\\n')<br />
-# shows your current working directory.<br />
+\# shows your current working directory.<br />
 read_term()
 
-# Clear the terminal<br />
+\# Clear the terminal<br />
 input('clear\\n')
 
-# Run the whoami command<br />
+\# Run the whoami command<br />
 input('whoami\\n')<br />
-# shows your username<br />
+\# shows your username<br />
 read_term()
 
 <strong>Troubleshooting:</strong><br />

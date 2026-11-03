@@ -3,13 +3,11 @@ const { ishome = true } = Astro.props;
 ---
 
 {
-	!ishome ? (
-		<h1>
-			<a href="/">🏠home</a>
-		</h1>
+	ishome ? (
+		<h1 class="rainbow-text-animated main-title">Adam Colton: University of Utah</h1>
 	) : (
-		<div class="rainbow-text-animated main-title">
-			Adam Colton: University of Utah
-		</div>
+		<nav class="site-nav">
+			<a href="/">🏠 home</a>
+		</nav>
 	)
 }

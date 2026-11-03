@@ -35,11 +35,9 @@ const { title, description, ishome = false, math = false } = Astro.props;
 				<Sidebar animated={ishome} />
 				<div class="pagecontent">
 					<Header ishome={ishome} />
-					<main>
+					<main class:list={{ home: ishome }}>
 						<slot />
 					</main>
-
-					<hr />
 
 					<footer>
 						<Footer />

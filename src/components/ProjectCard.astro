@@ -1,0 +1,38 @@
+---
+// One home page entry. The blurb is the slot.
+const { title, url, date, links = {}, cover = [], coverCaption } = Astro.props;
+const isVideo = (src: string) => /\.(mp4|webm)$/i.test(src);
+---
+
+<article class="card">
+	<div class="card-text">
+		<h3 class="card-title">
+			<a href={url}>{title}</a>
+			<span class="card-year">{date.getUTCFullYear()}</span>
+		</h3>
+		{
+			Object.keys(links).length > 0 && (
+				<div class="card-links">
+					{Object.entries(links).map(([label, href]) => (
+						<a href={href}>{label}</a>
+					))}
+				</div>
+			)
+		}
+		<div class="card-blurb"><slot /></div>
+	</div>
+	{
+		cover.length > 0 && (
+			<figure class="card-media">
+				{cover.map((src) =>
+					isVideo(src) ? (
+						<video src={src} autoplay loop muted playsinline />
+					) : (
+						<img src={src} alt="" loading="lazy" />
+					),
+				)}
+				{coverCaption && <figcaption>{coverCaption}</figcaption>}
+			</figure>
+		)
+	}
+</article>

@@ -1,12 +1,19 @@
 ---
-title: "Image SSL on a Shoestring : IJEPA-Enhanced"
+title: "Image Self Supervised Learning (SSL) on a Shoestring"
+date: 2024-07-03
+description: >-
+  I create a technique for quickly training self supervised image encoders on a
+  single GPU. I optimize for training throughput. The code allows you to train a
+  ViT-S at a rate of 1300 medium sized images per second.
+cover:
+  - image-ssl-on-a-shoestring/samples-patch14-70-224/batch000-seq015-id47-Groenendael.jpg
+  - image-ssl-on-a-shoestring/samples-patch14-70-224/batch001-seq001-id141-CRT screen.jpg
+coverCaption: >-
+  IJEPA-Enhanced uses masked latent prediction to train a machine learning model
+  how to 'see'.
+links:
+  code: https://github.com/theAdamColton/ijepa-enhanced
 ---
-
-<div class="rainbow-text-animated">
-	<h1>Image Self Supervised Learning (SSL) on a Shoestring</h1>
-</div>
-
-First draft: July 3rd, 2024
 
 <i>
 Note from the future: December 2025 - Researchers have discovered better
@@ -515,12 +522,6 @@ prediction. If you want to collaborate with me, send me a message at
 atcolton@tutanota.com
 
 <style>{`
-p {
-	width: 70vw;
-}
-ul {
-	width: 70vw;
-}
 table,
 th,
 td {
