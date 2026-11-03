@@ -1,0 +1,53 @@
+---
+import "../styles.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Sidebar from "../components/Sidebar.astro";
+
+const { title, description, ishome = false, math = false } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta
+			name="google-site-verification"
+			content="ed6l15HLafs3jdAZzU1n11e2c2t0eFBDdh-WzQBW_aU"
+		/>
+		<title>{title}</title>
+		{description && <meta name="description" content={description} />}
+		{
+			math && (
+				<link
+					rel="stylesheet"
+					href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+					crossorigin="anonymous"
+				/>
+			)
+		}
+	</head>
+	<body>
+		<div class="app">
+			<div class="sidebarcontainer">
+				<Sidebar animated={ishome} />
+				<div class="pagecontent">
+					<Header ishome={ishome} />
+					<main>
+						<slot />
+					</main>
+
+					<hr />
+
+					<footer>
+						<Footer />
+					</footer>
+				</div>
+
+				<Sidebar animated={ishome} />
+			</div>
+		</div>
+	</body>
+</html>

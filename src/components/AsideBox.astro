@@ -1,0 +1,40 @@
+---
+// box for asides; optional title and image props
+const { title, image } = Astro.props;
+---
+
+<div class="aside-box-wrapper">
+	<div class="aside-box-bk">
+		{title && <u>{title}</u>}
+		<div class="aside-box">
+			{
+				image && (
+					<div class="aside-box-item">
+						<img src={image} style="height: 3em;" />
+					</div>
+				)
+			}
+			<div class="aside-box-item">
+				<slot />
+			</div>
+		</div>
+	</div>
+</div>
+
+<style>
+	.aside-box {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	.aside-box-bk {
+		padding: 15px 15px;
+		background-color: #acbabf;
+	}
+	.aside-box-wrapper {
+		padding: 10px;
+	}
+	.aside-box-item {
+		padding: 0px 10px;
+	}
+</style>

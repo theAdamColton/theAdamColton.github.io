@@ -1,0 +1,27 @@
+---
+// Terminal recording player. This is the only component that ships JS,
+// and only on pages that use it. Options are asciinema-player's.
+import playerCss from "asciinema-player/dist/bundle/asciinema-player.css?url";
+const { src, ...options } = Astro.props;
+---
+
+<link rel="stylesheet" href={playerCss} />
+<div class="asciinema-responsive" data-src={src} data-options={JSON.stringify(options)}></div>
+
+<script>
+	import { create } from "asciinema-player";
+
+	for (const el of document.querySelectorAll<HTMLElement>(".asciinema-responsive")) {
+		create(el.dataset.src!, el, JSON.parse(el.dataset.options!));
+	}
+</script>
+
+<style>
+	.asciinema-responsive {
+		width: 100%;
+		max-width: 700px;
+		margin: auto;
+		justify-content: center;
+		align-items: center;
+	}
+</style>

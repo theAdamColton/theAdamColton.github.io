@@ -1,0 +1,15 @@
+---
+const { ishome = true } = Astro.props;
+---
+
+{
+	!ishome ? (
+		<h1>
+			<a href="/">🏠home</a>
+		</h1>
+	) : (
+		<div class="rainbow-text-animated main-title">
+			Adam Colton: University of Utah
+		</div>
+	)
+}

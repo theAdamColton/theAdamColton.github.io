@@ -2,27 +2,24 @@
 	"name": "theadamcolton",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview"
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview"
 	},
 	"devDependencies": {
-		"@fontsource/fira-mono": "^4.5.10",
-		"@neoconfetti/svelte": "^1.0.0",
-		"@sveltejs/adapter-auto": "^3.0.0",
-		"@sveltejs/kit": "^2.0.0",
-		"@sveltejs/vite-plugin-svelte": "^3.0.0",
-		"prettier": "^3.2.4",
-		"prettier-plugin-svelte": "^3.1.2",
-		"svelte": "^4.2.7",
-		"vite": "^5.0.3"
+		"prettier": "^3.2.4"
 	},
 	"type": "module",
 	"dependencies": {
-		"@sveltejs/adapter-static": "^3.0.1",
-		"asciinema-player": "^3.15.1",
-		"highlight.js": "^11.11.1",
-		"katex": "^0.16.11",
-		"three": "^0.182.0"
+		"@astrojs/markdown-remark": "^7.3.5",
+		"@astrojs/mdx": "^8.1.0",
+		"asciinema-player": "^3.17.0",
+		"astro": "^7.4.1",
+		"katex": "^0.19.1",
+		"rehype-citation": "^2.3.2",
+		"rehype-katex": "^7.0.1",
+		"remark-math": "^6.0.0",
+		"three": "^0.187.0",
+		"unist-util-visit": "^5.2.0"
 	}
 }

@@ -1,0 +1,8 @@
+---
+const { animated = false } = Astro.props;
+const src = animated ? "/fire.webp" : "/firestatic.jpg";
+---
+
+<div class="sidebar">
+	{[1, 2, 3, 4, 5].map(() => <img src={src} width="100%" height="20%" alt="fire" />)}
+</div>

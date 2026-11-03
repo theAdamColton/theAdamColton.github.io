@@ -1,0 +1,102 @@
+---
+title: "Fun with Representation Autoencoders"
+---
+
+# Fun with Representation Autoencoders
+
+September 6th 2026
+
+---
+
+I experiment with training generative image models. I demonstrate that modern
+techniques are effective at training small image generation models using only
+a small amount of compute.
+
+<MediaBox>
+	<img src="fun-with-representation-autoencoders/cock.png" />
+	a chicken, class 7, superb cockscomb
+</MediaBox>
+
+Image generation feels like mad science. Unlike natural language processing,
+whose generative paradigm slots perfectly into information theory, images
+don't present an intuitive objective. The whole training process is vibes
+based. While you can derive metrics like FiD, inception score, and recall, and
+precision, such metrics are trivially gamified and the whole field is moot
+without some measure of human preference<Footnote>https://arxiv.org/abs/2604.28190 Representation Fréchet Loss for Visual Generation</Footnote>.
+
+Regardless of image generation's nebulous validation regime, some techniques
+are proveably beneficial.
+
+- End to end losses, assuming gradients can behave
+https://arxiv.org/abs/2604.28190 - FD loss - Two stage latent generation with
+regularized latent space - Latent diffusion converges much more rapidly than
+pixel space. https://arxiv.org/abs/2608.29335 - two stage joint training, highly
+regularized latent space amenable for diffusion https://arxiv.org/pdf/2608.16887
+- latent to pixel adaptation https://arxiv.org/pdf/2606.24888 - Massive
+benchmark paper, DiffusionBench - Register tokens
+https://arxiv.org/abs/2605.16147 - Register tokens
+
+I experiment training a mishmash of these recent techniques to show that the
+current research is correct and does improve small scale pretraining.
+
+I use a vision transformer with 16 layers and a hidden size of 768. Following
+(https://arxiv.org/abs/2503.10618 DiT-Air), I share all weights between each
+transformer block, except for the MLP weights. That is, each transformer block
+shares the same normalization layers, qkv projections, attention gating
+projections, and attention output projections. The layers contain only
+different MLP weights. This roughly quarters the number of trainable
+parameters. I use attention gating, and share all AdaLN projections between
+all layers. I use five registers, which are added at layer 6, similar to
+https://arxiv.org/abs/2605.16147
+
+I train a ViT-S to decode the latent space into the pixel space. It takes as
+input noisy pixels, and clean latents, and outputs an x-prediction of the
+clean pixel values. The loss measures the v-prediction loss. This is the RAE
+decoder. Following RAE-v2, I use the last 4 layers of dinov3, normalizing them
+using dinov3's final layer norm, and then take the mean, to obtain the final
+latents.
+
+I train all ViT models using packed samples. I randomly resize images so that
+their side lengths are between 64 pixels and 512 pixels, and are a multiple of
+the patch size. The resize preserves the image's aspect ratios and doesn't
+increase the size of the image. I append the registers, add positional
+information, and then pack images patches into a single batch, each batch
+element contains many different samples. This increases the sample throughput
+by about three times. I use attention masking to prevent different samples
+from attending between each other. Dinov3 naturally supports processing packed
+images and I use the same positional coordinate system as dinov3.
+
+## RAE Decoder
+
+I train a small rae decoder, mostly for visualization purposes. I want to be
+able to preview the latents during training and I don't care if the
+reconstructions are perfectly accurate.
+
+I train the rae decoder for 200k steps and obtain decent results. I use the
+AdamW optimizer and don't tune the learning rate from a simple default of
+10,000 warmup steps and 100,000 constant steps at 3e-4, and 100,000 cooldown
+steps to 5e-5.
+
+<MediaBox>
+	<img src="fun-with-representation-autoencoders/cat.png" />
+	<img src="fun-with-representation-autoencoders/pumpkin.png" />
+	<img src="fun-with-representation-autoencoders/knives.png" />
+	Left image: original, right image: decoded. 17m parameter vit-s denoising decoder,
+	conditioned on dinov3 latents.
+</MediaBox>
+
+TODO: Get plot of final val losses bucketed by megapixels
+
+## RAE Denoiser
+
+I train the ViT-L denoiser to denoise the dinov3 latents. This is a harder
+task than the decoder. I observe decent results after 500k steps. I trained
+for 200k steps on a batch size of 192 and a max image side length of 224. I
+then bump the resolution to 512 and train for 100k steps at a batch size of
+64. I then bump the resolution to 768, reduce the batch size to 8, and train
+for 300k steps.
+
+Additional to the denoising loss, I add a REPA loss. An MLP projects hidden
+states from 4th layer of the ViT-L. I use an MSE loss between the projected
+outputs, and the ground truth clean latents. This REPA projector allows me to
+use autoguidance. I use autoguidance instead of traditional CFG.
