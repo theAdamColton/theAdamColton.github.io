@@ -40,9 +40,6 @@ customHeader: true
 		large language models. Thus, some modicum of step-by-stepedness exists in
 		the weights of LLMs.
 
-		<br />
-		<br />
-
 		Say we want an LLM to give an answer to a multiple choice question.
 
 		<div class="video-container">
@@ -91,7 +88,6 @@ D)
 		The reason why such explanations lead to better performance is addressed by
 		the paper
 		[Measuring Faithfulness in Chain-of-Thought Reasoning](https://arxiv.org/abs/2307.13702).
-		<br />
 
 		The authors demonstrate that the information in the step-by-step thinking is
 		important for the LLM to produce the correct answer. They use another LLM to
@@ -100,9 +96,6 @@ D)
 		make sure that the model's answer depends on the reasoning. If there are
 		mistakes in the reasoning we expect that the final answer to be incorrect
 		because it is based off of incorrect logic.
-
-		<br />
-		<br />
 
 		A model can produce incorrect reasoning but still come up with a correct
 		answer. This is called post-hoc reasoning. Even though the answer is correct
@@ -113,9 +106,6 @@ D)
 		was once quoted: "If you can't explain something in simple terms, you don't
 		understand it"
 
-		<br />
-		<br />
-
 		The authors estimate the amount of post-hoc reasoning by measuring the
 		chance that the LLM changes it's answer given the corrupted prompt. For some
 		benchmark tasks, they measure a significant amount of post-hoc reasoning.
@@ -124,17 +114,11 @@ D)
 		mistakes decrease post-hoc reasoning? Or in other words, why would mistakes
 		increase the model's faithfulness to the step-by-step reasoning?
 
-		<br />
-		<br />
-
 		One explanation is that a mistake presents suprising information which
 		causes the model to pay greater attention to the reasoning. Inversely you
 		could say that the reasoning going as expected can cause the model not to
 		rely on it. But how can we cause models to be more faithful to the reasoning
 		when the reasoning is correct?
-
-		<br />
-		<br />
 
 		The authors discuss some interesting ideas to address this. One way to
 		ensure that the answer 100% depends on the reasoning is to get the model to
@@ -142,14 +126,8 @@ D)
 		this by getting the model to generate python code. But this would be
 		difficult to use for many natural language tasks.
 
-		<br />
-		<br />
-
 		Another method is to decompose a question into sub questions, which are then
 		explained and answered in turn.
-
-		<br />
-		<br />
 
 		Given how difficult it is to measure adherance to reasoning, the authors'
 		derived metric does well at capturing how faithful an explaination is. But
