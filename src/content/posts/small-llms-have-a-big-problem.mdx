@@ -1,6 +1,6 @@
 ---
 title: "Small LLMs have a Big Problem"
-date: 2026-03-24
+date: 2026-03-20
 description: >-
   The LM-head eats up 90% of the memory and compute when training small (~100m)
   parameter LLMs. Can I replace the LM head with a bit-diffusion head that
@@ -12,8 +12,6 @@ embedding and LM head are memory and gradient bottlenecks. Replacing these two
 pieces with a bits-centric denoising head solves the issues when tested on a
 toy problem. I demonstrate that the bits-centric approach cannot however scale
 to testing on textual pretraining.
-
-March 20th 2026
 
 ---
 

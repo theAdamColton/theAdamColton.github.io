@@ -646,3 +646,23 @@ tr#TBL-3-39- {
 	border-bottom: 0.112em solid #000;
 }
 /* end css.sty */
+
+/* the results tables are wider than the text column; scroll them sideways */
+div.tabular {
+	overflow-x: auto;
+	font-size: 0.85em;
+}
+
+/* macOS hides scrollbars until you scroll; keep this one visible so it's
+   clear there are more columns */
+div.tabular::-webkit-scrollbar {
+	height: 10px;
+}
+div.tabular::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, 0.08);
+	border-radius: 5px;
+}
+div.tabular::-webkit-scrollbar-thumb {
+	background: rgba(0, 0, 0, 0.35);
+	border-radius: 5px;
+}
