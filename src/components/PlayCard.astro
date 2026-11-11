@@ -1,0 +1,92 @@
+---
+const { href, image, title = "Play", button = "▶ Play" } = Astro.props;
+---
+
+<a class="play-card" href={href}>
+	<img src={image} alt="" />
+	<div class="content">
+		<span class="title">{title}</span>
+		<div class="blurb"><slot /></div>
+		<span class="button">{button}</span>
+	</div>
+</a>
+
+<style>
+	.play-card {
+		position: relative;
+		display: block;
+		margin: 1.5rem 0;
+		aspect-ratio: 16 / 9;
+		border-radius: 14px;
+		overflow: hidden;
+		color: #fff;
+		text-decoration: none;
+		background: #111;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+		isolation: isolate;
+	}
+	.play-card img {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: -2;
+	}
+	.play-card::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.45) 45%, rgba(0, 0, 0, 0) 75%);
+	}
+	.content {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 1.2rem 1.4rem;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.5rem;
+	}
+	.title {
+		font-size: 1.8rem;
+		font-weight: 700;
+		line-height: 1.1;
+		text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+	}
+	.blurb {
+		max-width: 34rem;
+		font-size: 0.9rem;
+		line-height: 1.45;
+		color: rgba(255, 255, 255, 0.9);
+		text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+	}
+	.blurb :global(p) {
+		margin: 0;
+	}
+	.button {
+		margin-top: 0.3rem;
+		padding: 0.45rem 1.3rem;
+		border-radius: 999px;
+		background: #ffd84d;
+		color: #14232a;
+		font-family: system-ui, sans-serif;
+		font-weight: 700;
+		letter-spacing: 0.02em;
+	}
+	.play-card:hover .button,
+	.play-card:focus-visible .button {
+		background: #ffe57f;
+	}
+	@media screen and (max-width: 600px) {
+		.play-card {
+			aspect-ratio: 4 / 3;
+		}
+		.title {
+			font-size: 1.4rem;
+		}
+	}
+</style>

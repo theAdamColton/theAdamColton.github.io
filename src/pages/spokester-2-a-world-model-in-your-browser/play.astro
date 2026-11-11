@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Spokester-2 - Play</title>
+<link rel="icon" href="data:,">
+<style is:global>
+  html, body { margin: 0; height: 100%; background: #000; color: #ddd; font: 14px/1.4 system-ui, sans-serif; overflow: hidden; }
+  #view { position: fixed; inset: 0; width: 100vw; height: 100vh; display: block; touch-action: none; }
+  #hud { position: fixed; top: 10px; left: 12px; color: #fff; text-shadow: 0 1px 3px #000; pointer-events: none; font-variant-numeric: tabular-nums; }
+  #gear { position: fixed; top: 6px; right: 8px; width: 40px; height: 40px; border: 0; border-radius: 20px; background: rgba(0, 0, 0, 0.45);
+    color: #fff; font-size: 24px; line-height: 40px; cursor: pointer; padding: 0; }
+  #gear:hover { background: rgba(0, 0, 0, 0.7); }
+  #banner { position: fixed; top: 45%; left: 50%; transform: translate(-50%, -50%); padding: 10px 18px; border-radius: 8px;
+    background: rgba(0, 0, 0, 0.6); pointer-events: none; display: none; }
+  #status { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 10px 16px; border-radius: 8px; background: rgba(0, 0, 0, 0.75); }
+  #status.err { color: #f88; white-space: pre-wrap; max-width: 80vw; }
+  #menu { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: min(320px, 86vw); padding: 18px 20px;
+    border-radius: 12px; background: rgba(20, 20, 22, 0.92); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6); display: none; }
+  #menu h2 { margin: 0 0 12px; font-size: 18px; font-weight: 600; }
+  #menu label { display: flex; justify-content: space-between; align-items: center; margin: 10px 0; gap: 12px; }
+  #menu select { background: #2a2a2e; color: #eee; border: 1px solid #444; border-radius: 6px; padding: 4px 6px; font: inherit; }
+  #menu .buttons { display: flex; gap: 10px; margin-top: 16px; }
+  #menu button { flex: 1; padding: 9px 0; border: 0; border-radius: 8px; font: inherit; font-weight: 600; cursor: pointer; background: #3a3a40; color: #eee; }
+  #menu button.primary { background: #2f7cf6; color: #fff; }
+  #menu button:hover { filter: brightness(1.15); }
+  #notice { color: #fc6; margin: 0 0 10px; display: none; }
+  #menu .small { color: #888; font-size: 12px; margin-top: 14px; }
+</style>
+</head>
+<body>
+<canvas id="view"></canvas>
+<div id="hud"></div>
+<button id="gear" title="Settings (Esc)" aria-label="Settings">⚙</button>
+<div id="banner"></div>
+<div id="menu" role="dialog" aria-label="Settings">
+  <h2>Paused</h2>
+  <p id="notice"></p>
+  <label>Resolution <select id="size"></select></label>
+  <label>Aspect <select id="aspect">
+    <option value="native">16:9 (native)</option>
+    <option value="4:3">4:3</option>
+    <option value="1:1">1:1</option>
+    <option value="window">Fit window</option>
+  </select></label>
+  <div class="buttons">
+    <button id="restart">Restart</button>
+    <button id="resume" class="primary">Resume</button>
+  </div>
+  <div class="buttons" id="nativeRow" style="display: none"><button id="native">Resume at 16:9</button></div>
+  <div class="small">←/→ or A/D (or tap left / right) to change lane · R restart · Esc pause</div>
+</div>
+<div id="status">loading…</div>
+<script>
+  import "../../spokester2-play/main.js";
+</script>
+</body>
+</html>

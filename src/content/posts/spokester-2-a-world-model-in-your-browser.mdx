@@ -1,0 +1,157 @@
+---
+title: "spokester-2 - a world model in your browser"
+date: 2026-11-06
+# shown on the home page card and in search results
+description: >-
+  I train a tiny transformer to produce realistic RGB frames conditioned on depth and optical flow. I use an improved training strategy to reduce flops and parameters and realism compared to spokester1. At only 17.7M parameters and 60 GFLOPs per frame, spokester-2 brings world models to your browser. 
+# optional:
+# section: adventures              # default: projects
+cover: spokester2/cover.png
+# coverCaption: What the cover shows
+# links:
+#   github: https://github.com/theAdamColton/...
+---
+
+import PlayCard from "../../components/PlayCard.astro";
+
+I train a small ViT-S to generate realistic RGB frames given optical flow and depth maps. After some fiddling with GANs and objectives, I obtain a model small and fast enough to run in a web browser. 
+
+---
+
+
+
+<PlayCard href="/spokester-2-a-world-model-in-your-browser/play" image="/spokester2/cover.png" title="Play Spokester-2">
+ Ride through the sunny Spring streets of New York City. Careen precariously between cars and pedestrians as pedals spin and spokes whirl. Can you achieve the highest distance?
+</PlayCard>
+
+I created <a href="/spokester1-neural-game-graphics">Spokester-1</a> back in December 2025. Almost a year later, I decided to pick back up and see if I could create a better version. Spokester-1 used pixel space flow matching to generate realistic RGB frames, conditioned on the depth map and optical flow of a simple 3D game. Spokester-1's neural net was a ViT-B with 200M parameters, 12 inference denoising steps, resulting in 590 GFLOPs per frame. Spokester-1 was simple; but it lacked quality and efficiency. 
+
+Spokester 2 pushes the boundary of small scale world modelling: a 17.7 million parameters ViT-S, and two forward passes. Generating RGB frames given optical flow and depth doesn't require large networks. The model doesn't need to represent a scene's physics or movement or overall structure. Given the simple objective, I was curious how small and how fast a spokester network could be. I set out with these objectives:
+
+- A neural network that is less than 20MB
+- Runs at 30fps on a modern laptop in a browser
+- Realistic visuals
+- Extremely simple game code and game engine
+
+As I am working a full day job, I don't have enough time to carefully design the architecture and experiments myself. Many of these experiments used Claude opus 5.5 to do training runs and finetuning runs. I discuss this approach at the end and the shortcomings that vibe coding introduced.
+
+---
+
+Spokester's neural network takes as input depth and optical flow. I use both depth and optical flow because they are readily obtainable from the game's rendering, and provide crucial details about the position and movement of the scene. Spokester's network doesn't invent motion, collisions, or objects. The game's depth and flow provide a stable grounding that allows the game engine to modify the mechanics and rules of the game without needing to care about textures or lighting or visual details. 
+
+My first insight was that I can completely discard flow matching and multi step denoising. While diffusion models can be distilled down to 1-4 NFEs, I believe it is simpler to simply train the model from scratch to generate the video frames in a very small number of forward passes. The spokester network already possesses the low frequency structure of the scene. Diffusion models are simply overkill for the task of simply generating high frequency visual sugar.
+
+I was inspired by the authors of Priming models<Footnote>Are We Overthinking One-Step Generation? <a href="https://arxiv.org/abs/2610.20331">[arxiv]</a></Footnote>, who train a one step image generation model using an elegant and simple paradigm. Priming models are pretrained to denoise noisy samples. Samples are noised at some fixed timestep, the model outputs an x prediction, and the loss is taken using a perceptual loss and L2 loss. After pretraining, the primed model can't generate samples in a single step. The model was given samples with just a bit of surviving pixels and doesn't output in-distribution samples when given pure noise. During inference, priming models receive pure noise. Thus, a small second phase trains the primed model to generate samples using a distribution matching loss. The pretraining phase allows the model to be quickly adapted to the distribution matching used in the second phase. Priming models are simple, fast, and easy to experiment with. Once you obtain the pretrained primed model, you can run lots of short experiments testing the second phase, since the second phase only requires 20,000 training steps.
+
+The technique used in (Park et al.) doesn't cleanly apply to video models. Firstly, there's no accepted perceptual loss for videos. LPIPS wouldn't accurately strengthen the model's temporal consistency. Secondly, there's no accepted feature encoders for videos. (Park et al.) uses very conventional choices for the image encoders used in the second stage distributional training, ResNet-MAE and ConvNext. Researchers haven't converged on a feature encoder for videos.
+
+Perceptual loss networks don't exist for videos. The feature losses used in stage 0 of priming model's aren't critical for decent quality. Without them, the authors report FID worsening from 4.95 to 7.49, which is probably only slightly noticeable. Regardless, I wanted to use a feature space loss for priming my spokester network. I use REPA, at layer 4 out of 12, to align projections from spokester-2's ViT-S with features extracted from VJEPA 2.1, Base. I use the final layer of VJEPA, after the final normalization. I do not ablate this choice and I just assume it works and improves the pretrained model's capabilities. 
+
+## Training data
+
+I use the <a href="https://www.youtube.com/watch?v=RbCzWRnKCaI">toni video</a>, which is a 2k resolution 24fps video of about 30 minutes. I also add in two other videos of similar riding content. <a href="https://www.youtube.com/watch?v=DuVUBsBEYMQ">Jakarta</a>, and <a href="https://www.youtube.com/watch?v=8OCTDJ3uzZg">Traffic is Back</a>, a first person GoPro video. Notably, *Traffic is Back* doesn't have the same 3rd person perspective as the other video. In *Traffic is Back*, Lucas Brunelle's camera captures his first person view. You can see his hands and bars. 
+
+I don't ablate my selection of these videos and the effect of a larger pretraining corpus. I leave that for my more pragmatic approach which I will try after posting this article. 
+
+### Pixel space pretraining
+
+I train my first experiment for 770,000 steps on various resolution videos, training using x prediction loss and REPA loss at weight 0.5. The model receives input patches and patch positions, alongside patchwise depth and optical flow. Input patches are noised at a fixed noise level of 0.9, $(0.1 * x + 0.9 * \epsilon)$. This experiment used pure pixel patches as inputs and outputs. Depth and optical flow are projected using a single AdaLN projection, and used through the resulting transformer blocks. I use DiT-Air style parameter sharing, all weights are shared between transformer blocks except for the MLP weights. I train using the Muon optimizer.
+
+My data pipeline packed these videos into batches containing videos of different resolutions and frame rates. When decoding videos for training, I randomly skip some number of frames, in order to expose the model to variable frame rates. The model is given 3d patch positions and uses 3d rope, the absolute timing of the frames is available to the model via attention.
+
+The results of the primed model were promising. 
+
+<MediaBox>
+	<video controls autoplay muted loop playsinline> <source src="spokester2/pixel-770k-game-square.mp4" /></video>
+	The 770k primed model's outputs, given game depth and flow 
+	<video controls autoplay muted loop playsinline> <source src="spokester2/pixel-770k-real-square.mp4" /> </video>
+	The 770k primed model's outputs, given real video depth and flow 
+</MediaBox>
+
+The primed pixel space model had all of the structure and motion mostly correct. Surprisingly, most of this was learned within about 5k steps. 
+Additional pretraining helped the validation L1 loss. The goal of the pretraining stage in priming isn't to produce realistic visuals, it's to prepare the model for fast adaptation to one-step generation.
+
+<MediaBox>
+	<img src="spokester2/pixel-pretrain-l1-val.png"/>
+	Validation L1 loss during pixel pretraining decreased steadily.
+</MediaBox>
+
+
+### Pixel space finetuning
+
+To adapt the primed model for realistic generation, I train it to perform 2 step denoising. During finetuning, the model receives the depth and flow, and pure noise. It denoises one step, from timestep 1 to timestep 0.0. For a small proportion of the training batch, I detach the first step's gradients and renoise to 0.75, performing an extra step. The loss combines a small discriminator loss, alongside an L1 loss. The discriminator is only applied to the step 2 outputs. The discriminator is a set of small MLPs that use VJEPA features from various layers in VJEPA.
+
+Additionally, I run the model using rollouts on real game depth and flow. Since there is no ground truth pixel data, I use an additional discriminator to shape the model's outputs from fake (discriminator outputs high game log probs) to real (discriminator outputs high log probs indicating real video).
+
+Fine tuning the primed model resulted in reasonably realistic outputs.
+
+<MediaBox>
+<video controls autoplay muted loop playsinline> <source src="spokester2/pixel-779k-finetune-game-square.mp4" /> </video>
+The 779k finetuned model's outputs, given game depth and flow
+<video controls autoplay muted loop playsinline> <source src="spokester2/pixel-779k-finetune-real-square.mp4" /> </video>
+The 779k finetuned model's outputs, given real depth and flow
+</MediaBox>
+
+Believing I could improve on this result, I attempted to autoresearch a better finetuning recipe. I didn't make any progress. Rethinking my approach I went back to the drawing board to see if I could improve the final quality.
+
+
+### Latent space pretraining
+
+Jiang et al.<Footnote>An Empirical Study of Training Pixel-Space Text-to-Image Diffusion Models <a href="https://arxiv.org/abs/2608.16887">[arxiv]</a></Footnote> showed that pixel-space models are slow to pretrain and to finetune. They propose pretraining using VAE latents, then adapting the model to pixel space using a small adaptation training run. Jiang et al. showed that this acellerated convergence and output quality for image generation models. I decided to try this for spokester's training. I trained the same model, this time on VAE latents from WAN 2.2's video autoencoder. All pretraining and model architecture was the same with the pixel pretraining experiment.
+
+After 1M training steps, I obtained a similarly reasonable primed model. The results aren't super different from the pixel-space primed model, and in fact seem slightly worse. 
+
+<MediaBox>
+<video controls autoplay muted loop playsinline> <source src="spokester2/wan-1m-game-square.mp4" /></video>
+The 1m step finetuned model's outputs, given game depth and flow
+<video controls autoplay muted loop playsinline> <source src="spokester2/wan-1m-real-square.mp4" /></video>
+The 1m step finetuned model's outputs, given real depth and flow
+</MediaBox>
+
+Comparing the pixel-pretrained model and the latent-pretrained model I notice fewer patch artifacts in the latent pretrained model. But this could be due to the VAE's decoder being used to decode the pixels.
+
+### Latent space finetuning
+
+I adapted the latent-space model in a short 20k step run. I added pixel projections and trained the weights of the entire model to adapt it from generating vae latents to generating pixel space patches.
+
+I then finetuned the latent pretrained model for a short number of steps. After finetuning for 8k steps, I could finally compare it with the results of the pixel-space model.
+
+<MediaBox>
+The latent space model, after 20k steps of pixel adaption and 8k steps of finetuning. 
+<video controls autoplay muted loop playsinline> <source src="spokester2/wan-1m-8k-finetune-game-square.mp4" /></video>
+<video controls autoplay muted loop playsinline> <source src="spokester2/wan-1m-8k-finetune-real-square.mp4" /></video>
+</MediaBox>
+
+The difference was astounding. The latent space model, after pixel adaption, was much crisper and much smoother. Thank you truly, Jiang et al., this inspires my hope in modern machine learning research.
+
+<MediaBox>
+<video controls autoplay muted loop playsinline><source src="spokester2/pixel-vs-wan-finetune-game.mp4"/></video>
+Left, pixel model after finetuning. Right, latent model after pixel adaption and finetuning.
+</MediaBox>
+
+### Autoresearch mudpit
+
+Spurned by these results, I told claude opus 5.5 to try lots of different experiments and to not stop until it was way better. Much to my chagrin, this didn't work, however, some curiosities arose. For example, strengthening the weight of the discriminator loss applied to game rollouts cause the model to produce deep fried *ganified* outputs given game depth and flow.
+
+<MediaBox>
+<video controls autoplay muted loop playsinline><source src="spokester2/latent-ft-high-game-gan-square.mp4"/></video>
+Increasing the weight of the game gan results in ultra detail and adherence at the cost of playability and cohesion.
+This is the result of finetuning from the pixel adapted latent model for 2k steps.
+<video controls autoplay muted loop playsinline> <source src="spokester2/warped-game-square.mp4"/></video>
+The game's underlying optical flow is 100% pixel accurate and can be used as a loss to improve temporal stability.
+This however resulted in ghosting that couldn't easily be improved. 
+</MediaBox>
+
+Autoresearch resulted in trite experimentation into increasinly complex losses. To ameliorate patch seams, opus 5.5 added a patch halo head. To improve temporal stability, opus added a blending between the model's outputs and the pixels shifted by the game's underlying optical flow. None of these experiments were particularly useful. Autoresearch resulted in too many hyperparameters and lackluster improvements over the simple GAN finetune baseline.
+
+I suspect autoresearch failed for a combination of reasons. Firstly, I used FVD using VJepa 2.1 features as a target goal to decrease. FVD is gameable by increasing the game gan weight. Opus 5.5 never tried adjusting self-conditioning, or adding CFG, as I would have suspected would improve performance. Opus 5.5 didn't by itself obtain different video encoder models and attempt to use better perceptual losses. 
+
+For my final model, I picked some reasonable hyperparameters and extended the simple gan pretraining to 5k steps. 
+
+## Conclusions
+
+For such a tiny and fast model I am quite impressed by the results. I hope you are too! I want to try some other approaches using a larger video diffusion transformer to obtain quasi ground truth game rollouts, and directly train the model to produce those. I think that my simple experiments and results suggest that real time neural graphics are a near-future technology. These will improve game graphics, improve game design, and open up an exiting paradigm where you can make your game look like a reference video.
+
+If you have any questions or want to collaborate, you can message me on X or send me an email! I'd be interested to see other people's approach to this problem.
+
+
